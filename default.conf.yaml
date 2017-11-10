@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc:
+    ~/.colordiffrc:
+    ~/.curlrc:
+    ~/.gitconfig:
+    ~/.gitignore:
+    ~/.git-repositories:
+    ~/.liquidprompt.ps1:
+    ~/.liquidpromptrc:
+    ~/.tmux.conf:
+    ~/.vimrc:

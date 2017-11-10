@@ -1,0 +1,36 @@
+#Temp files.
+.DS_Store
+*~
+*.lock
+*.out
+*.swp
+*.swo
+*.temp/
+*.moved/
+
+*.scssc
+
+# Object files.
+*.o
+*.Plo
+*.lib
+*.so
+*.so.*
+*.a
+*.la
+*.lai
+*.dylib
+*.pyc
+*.pngc
+
+# Xcode user files.
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.xcuserstate
+*~.nib/
+
+# Local .vimrc files.
+.local.vimrc

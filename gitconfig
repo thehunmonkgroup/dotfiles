@@ -1,0 +1,40 @@
+[user]
+  name = Chad Phillips
+  email = chad@apartmentlines.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --name-only
+  st = status -sb
+	conflicts = diff --name-only --diff-filter=U
+[core]
+  pager = less -r
+	excludesfile = ~/.gitignore
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+
+# Kdiff3 integration.
+[difftool "kdiff3"]
+  path = /usr/local/bin/kdiff3
+  trustExitCode = false
+[difftool]
+  prompt = false
+[diff]
+  tool = kdiff3
+[mergetool "kdiff3"]
+  path = /usr/local/bin/kdiff3
+  trustExitCode = false
+[mergetool]
+  keepBackup = false
+[merge]
+  tool = kdiff3
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[rebase]
+	autosquash = true
