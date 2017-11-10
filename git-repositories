@@ -1,0 +1,29 @@
+# Liquid prompt.
+https://github.com/nojhan/liquidprompt.git#488bb5975db9fa8be0b795019f0b6d99ec792f50#~/liquidprompt
+
+# Vim plugins.
+https://github.com/archSeer/colibri.vim.git#75e91e4ad0c0c9a84e105d1c210872cb868bf1b9#~/.vim/bundle/colibri.vim
+https://github.com/tmhedberg/matchit.git#060d9d8aa381d6a650b649d38c992b59db3ed1a3#~/.vim/bundle/matchit
+https://github.com/scrooloose/nerdtree.git#97433edd43f3a4a95c84389bcaafbe7a047cf756#~/.vim/bundle/nerdtree
+https://github.com/Xuyuanp/nerdtree-git-plugin.git#6a9b3122cb89b3a45ec444f9787a895125aca8aa#~/.vim/bundle/nerdtree-git-plugin
+https://github.com/saltstack/salt-vim.git#6ca9e3500cc39dd417b411435d58a1b720b331cc#~/.vim/bundle/salt-vim
+https://github.com/tomtom/tlib_vim.git#c96db6151fde9d06a8fed71b7df05c6dbb3f14fe#~/.vim/bundle/tlib_vim
+https://github.com/Shougo/unite.vim.git#c5c69d5d94e61a67d61730d04c82763196f63b10#~/.vim/bundle/unite.vim
+https://github.com/MarcWeber/vim-addon-mw-utils.git#0c5612fa31ee434ba055e21c76f456244b3b5109#~/.vim/bundle/vim-addon-mw-utils
+https://github.com/bling/vim-airline.git#396cc9226171f8dbf1069800a0ae56700bbf3913#~/.vim/bundle/vim-airline
+https://github.com/vim-airline/vim-airline-themes#26f67b926553555e505ac60e992c97ab5fdfc83f#~/.vim/bundle/vim-airline-themes
+https://github.com/altercation/vim-colors-solarized.git#528a59f26d12278698bb946f8fb82a63711eec21#~/.vim/bundle/vim-colors-solarized
+https://github.com/wilywampa/vim-easymotion.git#9115a668d4e8f4e7bfe14c283a4f574bca5663ae#~/.vim/bundle/vim-easymotion
+https://github.com/elixir-lang/vim-elixir.git#3066d5fb5e1c694e607b2bb5d8277266ca524262#~/.vim/bundle/vim-elixir
+https://github.com/tpope/vim-fugitive.git#7c9b87a3c3ef4b53425aca4a27e11a7359caae9f#~/.vim/bundle/vim-fugitive
+https://github.com/pangloss/vim-javascript.git#cea724c0e1a330fff1d38018667a748c26559a57#~/.vim/bundle/vim-javascript
+https://github.com/lepture/vim-jinja.git#8d330a7aaf0763d080dc82204b4aaba6ac0605c6#~/.vim/bundle/vim-jinja
+https://github.com/mxw/vim-jsx.git#5b968dfa512c57c38ad7fe420f3e8ab75a73949a#~/.vim/bundle/vim-jsx
+https://github.com/tpope/vim-liquid.git#209f77c9550a90b0b88492c93852195c171f6ebd#~/.vim/bundle/vim-liquid
+https://github.com/thinca/vim-localrc.git#e2cc8a661bb3f3215fddf58549913c5115f585bd#~/.vim/bundle/vim-localrc
+https://github.com/bigbrozer/vim-nagios.git#f9cdd32930a740aa47328edba1cb52aa1e66e1c4#~/.vim/bundle/vim-nagios
+https://github.com/garbas/vim-snipmate.git#a9802f2351910f64b70fb10b63651e6ff6b8125e#~/.vim/bundle/vim-snipmate
+https://github.com/thehunmonkgroup/vim-snippets.git#cd67009d8e30b709c05c272532ad84e7f766e96a#~/.vim/bundle/vim-snippets
+https://github.com/wavded/vim-stylus.git#0514757a4795843978517ee73d7fa7d8bf2e5545#~/.vim/bundle/vim-stylus
+https://github.com/tpope/vim-surround.git#e49d6c2459e0f5569ff2d533b4df995dd7f98313#~/.vim/bundle/vim-surround
+https://github.com/bronson/vim-trailing-whitespace.git#4c596548216b7c19971f8fc94e38ef1a2b55fee6#~/.vim/bundle/vim-trailing-whitespace
