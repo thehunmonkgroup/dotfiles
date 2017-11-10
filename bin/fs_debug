@@ -1,0 +1,22 @@
+#!/bin/bash
+
+core=$1
+
+echo > fs_debug.txt
+echo "== Log Output ==" >> fs_debug.txt
+tail -n 100 /usr/local/freeswitch/log/freeswitch.log >> fs_debug.txt
+echo >> fs_debug.txt
+echo >> fs_debug.txt
+echo "== GDB Output ==" >> fs_debug.txt
+echo "bt" > fs_debug.cmd
+echo "bt full" >> fs_debug.cmd
+echo "thread apply all bt" >> fs_debug.cmd
+echo "thread apply all bt full" >> fs_debug.cmd
+
+if [ "$core" = "" ]; then
+	gdb --batch --command=fs_debug.cmd --pid=`cat /usr/local/freeswitch/log/freeswitch.pid` /usr/local/freeswitch/bin/freeswitch >> fs_debug.txt
+else
+	gdb --batch --command=fs_debug.cmd --core=$core /usr/local/freeswitch/bin/freeswitch >> fs_debug.txt
+fi
+
+rm fs_debug.cmd

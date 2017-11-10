@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Provides a shortcut to apply patches directly from URL's.
+
+usage() {
+  echo "Usage: p [-dr] [-p<number>] [URL]
+-l lists patches in the defined local_patches variable.
+-d is for dry run.
+-r is for reverse.
+-p is for strip prefix (defaults to -p1).
+And of course, -c is for cookie -- cookie cookie cookie starts with c.
+
+If no URL is provided, a select list of the files in the defined local_patches
+variable is used.
+"
+  exit 1
+}
+
+local_patches="$HOME/patches"
+dry_run=
+reverse=
+path="-p1"
+
+while getopts ":cldrp:" options; do
+  case $options in
+    c) echo "http://www.youtube.com/watch?v=BovQyphS8kA"
+       exit 0
+       ;;
+    l) ls -al $local_patches
+        exit 0
+        ;;
+    d) dry_run="--dry-run";;
+    r) reverse="-R";;
+    p) path="-p${OPTARG}";;
+    h) usage;;
+   \?) usage;;
+    *) usage;;
+
+  esac
+done
+
+shift $(($OPTIND - 1))
+
+case $# in
+  0) PS3="Select local patch file, any letter to quit: "
+     select i in `ls $local_patches`;
+     do
+       if [ "$i" = "" ]; then
+         exit 0
+       fi
+       patch_file=$local_patches/$i
+       break
+     done
+     ;;
+  1) curl $1 > /tmp/temp.patch
+     if [ $? = 0 ]; then
+	   patch_file="/tmp/temp.patch"
+     else
+       echo "Error: bad URL $1"
+       usage
+     fi
+    ;;
+  *) usage;;
+esac
+
+patch $dry_run $reverse $path < $patch_file
+#rm /tmp/temp.patch

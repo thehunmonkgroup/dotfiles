@@ -1,0 +1,36 @@
+#!/bin/bash
+
+function usage {
+  echo "Usage: deploy_pijaz_file <local file> <remote destination> [server hostnames]"
+}
+
+SERVERS="lb1
+lb2
+www1
+api1
+render1
+dev"
+
+if [ $# -eq 2 ] || [ $# -eq 3 ]; then
+  FILE=$1
+  DESTINATION=$2
+  if [ "$3" != "" ]; then
+    SERVERS=$3
+  fi
+
+  if [ -f $FILE ]; then
+    for server in $SERVERS
+    do
+      full_destination="${server}.pijaz.com:${DESTINATION}"
+      echo "Deploying $FILE to $full_destination"
+      # -r allows directories to be deployed.
+      scp -r $FILE $full_destination
+    done
+  else
+    echo "Error: $FILE does not exist."
+    usage
+  fi
+else
+  usage
+fi
+

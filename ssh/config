@@ -1,0 +1,662 @@
+# Apartment Lines production servers.
+Host admin
+	Hostname admin.apartmentlines.com
+  Port 5000
+	User root
+	HostKeyAlias admin
+
+Host admin-git
+	Hostname admin.apartmentlines.com
+  Port 5000
+  User hunmonk
+  HostKeyAlias admin-git
+
+Host xavier
+	Hostname xavier.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias xavier
+
+Host phoenix
+	Hostname phoenix.apartmentlines.com
+  Port 5000
+	User root
+	HostKeyAlias phoenix
+
+Host storm
+	Hostname storm.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias storm
+
+Host beast
+	Hostname xavier.apartmentlines.com
+	Port 5040
+	User root
+	HostKeyAlias beast
+
+Host mystique
+	Hostname xavier.apartmentlines.com
+	Port 5050
+	User root
+	HostKeyAlias mystique
+
+Host xavier_drac
+	Hostname drac.xavier.apartmentlines.com
+	Port 5000
+	User hunmonk
+	HostKeyAlias xavier_drac
+
+Host phoenix_drac
+	Hostname xavier.apartmentlines.com
+	Port 5062
+	User hunmonk
+	HostKeyAlias phoenix_drac
+
+Host storm_drac
+	Hostname xavier.apartmentlines.com
+	Port 5063
+	User hunmonk
+	HostKeyAlias storm_drac
+
+Host beast_drac
+	Hostname xavier.apartmentlines.com
+	Port 5064
+	User hunmonk
+	HostKeyAlias beast_drac
+
+Host mystique_drac
+	Hostname xavier.apartmentlines.com
+	Port 5065
+	User hunmonk
+	HostKeyAlias mystique_drac
+
+Host shadowcat
+	Hostname shadowcat1.apartmentlines.com
+	Port 22
+	User hunmonk
+	HostKeyAlias shadowcat
+  KexAlgorithms diffie-hellman-group1-sha1
+
+Host shadowcat1
+	Hostname shadowcat1.apartmentlines.com
+	Port 22
+	User hunmonk
+	HostKeyAlias shadowcat1
+  KexAlgorithms diffie-hellman-group1-sha1
+
+Host shadowcat2
+	Hostname shadowcat2.apartmentlines.com
+	Port 22
+	User hunmonk
+	HostKeyAlias shadowcat2
+  KexAlgorithms diffie-hellman-group1-sha1
+
+
+# Apartment Lines testing servers.
+Host nightcrawler
+	Hostname nightcrawler.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias nightcrawler
+
+Host nightcrawler_drac
+	Hostname xavier.apartmentlines.com
+	Port 5060
+	User hunmonk
+	HostKeyAlias nightcrawler_drac
+
+Host donald
+	Hostname donald.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias donald
+
+Host huey
+	Hostname huey.apartmentlines.com
+  Port 5000
+	User root
+	HostKeyAlias huey
+
+Host duey
+	Hostname xavier.apartmentlines.com
+	Port 5002
+	User root
+	HostKeyAlias duey
+
+Host luey
+	Hostname xavier.apartmentlines.com
+	Port 5003
+	User root
+	HostKeyAlias luey
+
+Host scratch
+	Hostname scratch.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias scratch
+
+
+# Apartment Lines PBX servers.
+Host pbx
+	Hostname pbx.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias pbx
+
+Host backup.pbx
+	Hostname backup.pbx.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias backup.pbx
+
+
+# Apartment Lines other servers.
+Host cerebro
+  Hostname cerebro.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias cerebro
+
+Host xylil.com
+  Hostname xylil.com
+	Port 5000
+	User root
+	HostKeyAlias xylil.com
+
+
+# Circle Anywhere servers.
+Host stirlab-video-base
+  Hostname circleanywhere-video-base.stirlab.net
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias stirlab-video-base
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-base
+  Hostname webrtc-test-base.stirlab.net
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias webrtc-test-base
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-0
+  Hostname webrtc-test-0.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-0
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-1
+  Hostname webrtc-test-1.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-1
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-2
+  Hostname webrtc-test-2.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-2
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-3
+  Hostname webrtc-test-3.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-3
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-4
+  Hostname webrtc-test-4.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-4
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-5
+  Hostname webrtc-test-5.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-5
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-6
+  Hostname webrtc-test-6.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-6
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-7
+  Hostname webrtc-test-7.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-7
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-8
+  Hostname webrtc-test-8.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-8
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test-9
+  Hostname webrtc-test-9.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias webrtc-test-9
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host pb-europe
+  Hostname europe1.stirlab.net
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias pb-europe
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host ca-video-production
+  Hostname 158.222.102.5
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias ca-video-production
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host ca-video-staging
+  Hostname 158.222.102.64
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias ca-video-staging
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fa-video-production
+  Hostname 162.254.24.56
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias fa-video-production
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host wilbur.stirlab.net
+  Hostname wilbur.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias wilbur.stirlab.net
+
+Host circleanywhere.com
+  Hostname circleanywhere.com
+  Port 5000
+  User root
+  HostKeyAlias circleanywhere.com
+
+Host turn.stirlab.net
+  Hostname turn.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias turn.stirlab.net
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host ca-payment-staging
+  Hostname staging-payment.stirlab.net
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias ca-payment-staging
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host connect.circleanywhere.com
+  Hostname connect.circleanywhere.com
+  Port 5000
+  User root
+  HostKeyAlias connect.circleanywhere.com
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+
+# Local Vagrant servers.
+Host temp
+  Hostname localhost
+  Port 2202
+  User root
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host cca
+  Hostname localhost
+  Port 2230
+  User root
+  HostKeyAlias cca
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fs
+  Hostname localhost
+  Port 2231
+  User root
+  HostKeyAlias fs
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host turn.local
+  Hostname localhost
+  Port 2232
+  User root
+  HostKeyAlias turn.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host freeswitch-kickstart
+  Hostname localhost
+  Port 2233
+  User root
+  HostKeyAlias freeswitch-kickstart
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host frontaccounting
+  Hostname localhost
+  Port 2234
+  User root
+  HostKeyAlias frontaccounting
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host ca
+  Hostname localhost
+  Port 2236
+  User root
+  HostKeyAlias ca
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  #ForwardX11 yes
+  #ForwardX11Trusted yes
+
+Host lua51
+  Hostname localhost
+  Port 2237
+  User root
+  HostKeyAlias lua51
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host lua52
+  Hostname localhost
+  Port 2238
+  User root
+  HostKeyAlias lua52
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host lua53
+  Hostname localhost
+  Port 2239
+  User root
+  HostKeyAlias lua53
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host killbill
+  Hostname localhost
+  Port 2240
+  User root
+  HostKeyAlias killbill
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host drac.local
+  Hostname localhost
+  Port 2241
+  User root
+  HostKeyAlias drac.local
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host cerebro.local
+  Hostname localhost
+  Port 2290
+  User root
+  HostKeyAlias cerebro.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host admin.local
+  Hostname localhost
+  Port 2294
+  User root
+  HostKeyAlias admin.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host cluster.local
+  Hostname localhost
+  Port 2291
+  User root
+  HostKeyAlias cluster.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host voip.local
+  Hostname localhost
+  Port 2292
+  User root
+  HostKeyAlias voip.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host web.local
+  Hostname localhost
+  Port 2293
+  User root
+  HostKeyAlias web.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host xavier.local
+  Hostname localhost
+  Port 2295
+  User root
+  HostKeyAlias xavier.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host rails.local
+  Hostname localhost
+  Port 2296
+  User root
+  HostKeyAlias rails.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host rails.apartmentlines.com
+  Hostname rails.apartmentlines.com
+  Port 5000
+  User root
+  HostKeyAlias rails.apartmentlines.com
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host heartbeat.local
+  Hostname localhost
+  Port 2243
+  User root
+  HostKeyAlias heartbeat.local
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host vagrant-pijaz
+	Hostname localhost
+	Port 2222
+	User root
+	HostKeyAlias vagrant-pijaz
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host webrtc-test
+  Hostname localhost
+  Port 2246
+  User root
+  HostKeyAlias webrtc-test
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host bsd
+  Hostname localhost
+  Port 2247
+  User root
+  HostKeyAlias bsd
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host elixir
+  Hostname localhost
+  Port 2248
+  User root
+  HostKeyAlias elixir
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+# Misc servers.
+
+
+##############################################################################
+# Pijaz production servers.
+##############################################################################
+
+Host lb1.pijaz.com
+	Hostname lb1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias lb1.pijaz.com
+
+Host primary.db.pijaz
+	Hostname admin.pijaz.com
+	Port 5001
+	User root
+	HostKeyAlias primary.db.pijaz
+
+Host secondary.db.pijaz
+	Hostname admin.pijaz.com
+	Port 5002
+	User root
+	HostKeyAlias secondary.db.pijaz
+
+Host api1.pijaz.com
+	Hostname api1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias api1.pijaz.com
+
+Host render1.pijaz.com
+	Hostname render1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias render1.pijaz.com
+
+Host render2.pijaz.com
+	Hostname render2.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias render2.pijaz.com
+
+Host www1.pijaz.com
+	Hostname www1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias www1.pijaz.com
+
+Host admin.pijaz.com
+	Hostname admin.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias admin.pijaz.com
+
+
+#############################################################################
+# Pijaz staging servers.
+#############################################################################
+
+Host staging.lb1.pijaz.com
+	Hostname staging.lb1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias staging.lb1.pijaz.com
+
+Host staging.www1.pijaz.com
+	Hostname staging.www1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias staging.www1.pijaz.com
+
+Host staging.api1.pijaz.com
+	Hostname staging.api1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias staging.api1.pijaz.com
+
+Host staging.render1.pijaz.com
+	Hostname staging.render1.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias staging.render1.pijaz.com
+
+Host staging.primary.db.pijaz
+	Hostname dev.pijaz.com
+	Port 5001
+	User root
+	HostKeyAlias staging.primary.db.pijaz
+
+Host staging.secondary.db.pijaz
+	Hostname dev.pijaz.com
+	Port 5002
+	User root
+	HostKeyAlias staging.secondary.db.pijaz
+
+Host dev.pijaz.com
+	Hostname dev.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias dev.pijaz.com
+
+
+# Global defaults.
+Host *
+  ServerAliveInterval 60
+
+# These can be added to disable host checking
+  #StrictHostKeyChecking no
+  #UserKnownHostsFile /dev/null
+
+# vi: ft=sshconfig

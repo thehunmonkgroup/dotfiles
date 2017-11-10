@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Simple script to put the machine to sleep.
+
+osascript << EOT
+tell application "System Events"
+sleep
+end
+EOT

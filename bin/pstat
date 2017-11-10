@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo ""
+echo "*************************"
+echo "****** code-source ******"
+echo "*************************"
+echo ""
+cd /usr/local/pijaz/code-source
+git status
+echo ""
+echo "*************************"
+echo "****** assets-source ******"
+echo "*************************"
+echo ""
+cd /usr/local/pijaz/assets-source
+git status
+echo ""
+echo "*************************"
+echo "****** code-deploy ******"
+echo "*************************"
+echo ""
+cd /usr/local/pijaz/code-deploy
+git status
+echo ""
+echo "*************************"
+echo "****** assets-deploy"" ******"
+echo "*************************"
+echo ""
+cd /usr/local/pijaz/assets-deploy
+git status
+echo ""

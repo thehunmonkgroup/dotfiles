@@ -1,0 +1,128 @@
+#!/bin/bash
+usage() {
+  cat <<UEND
+
+usage: tunnel [command]
+
+tunnel creates an SSH tunnel to the appropriate server/service.
+A password is required.
+
+[command] can be one of the following:
+
+'duey' SSH into duey.
+'luey' SSH into luey.
+'beast' SSH into beast.
+'mystique' SSH into mystique.
+'duey_hb_gui' Tunnel for reaching the heartbeat GUI on duey.
+'luey_hb_gui' Tunnel for reaching the heartbeat GUI on luey.
+'beast_hb_gui' Tunnel for reaching the heartbeat GUI on beast.
+'mystique_hb_gui' Tunnel for reaching the heartbeat GUI on mystique.
+'nightcrawler_drac_https' Tunnel for reaching DRAC on nightcrawler via HTTPS.
+'phoenix_drac_https' Tunnel for reaching DRAC on phoenix via HTTPS.
+'storm_drac_https' Tunnel for reaching DRAC on storm via HTTPS.
+'beast_drac_https' Tunnel for reaching DRAC on beast via HTTPS.
+'mystique_drac_https' Tunnel for reaching DRAC on mystique via HTTPS.
+'nightcrawler_drac_ssh' Tunnel for reaching DRAC on nightcrawler via SSH.
+'phoenix_drac_ssh' Tunnel for reaching DRAC on phoenix via SSH.
+'storm_drac_ssh' Tunnel for reaching DRAC on storm via SSH.
+'beast_drac_ssh' Tunnel for reaching DRAC on beast via SSH.
+'mystique_drac_ssh' Tunnel for reaching DRAC on mystique via SSH.
+'primary.db.pijaz' SSH into primary.db.pijaz.
+'secondary.db.pijaz' SSH into secondary.db.pijaz.
+'staging.primary.db.pijaz' SSH into primary.db.pijaz.
+'staging.secondary.db.pijaz' SSH into secondary.db.pijaz.
+
+UEND
+}
+
+list() {
+  cat <<UEND
+duey
+luey
+beast
+mystique
+duey_hb_gui
+luey_hb_gui
+beast_hb_gui
+mystique_hb_gui
+nightcrawler_drac_https
+phoenix_drac_https
+storm_drac_https
+beast_drac_https
+mystique_drac_https
+nightcrawler_drac_ssh
+phoenix_drac_ssh
+storm_drac_ssh
+beast_drac_ssh
+mystique_drac_ssh
+primary.db.pijaz
+secondary.db.pijaz
+staging.primary.db.pijaz
+staging.secondary.db.pijaz
+UEND
+}
+
+if [ "$1" = "" ]; then
+  usage
+  exit 0
+elif [ "$1" = "list" ]; then
+  list
+  exit 0
+fi
+
+echo Tunneling $1...
+
+# See how we were called.
+case "$1" in
+  duey)
+	  ssh -t xavier 'tunnel duey';;
+  luey)
+	  ssh -t xavier 'tunnel luey';;
+  beast)
+	  ssh -t xavier 'tunnel beast';;
+  mystique)
+	  ssh -t xavier 'tunnel mystique';;
+  duey_hb_gui)
+	  ssh -t xavier 'tunnel duey_hb_gui';;
+  luey_hb_gui)
+	  ssh -t xavier 'tunnel luey_hb_gui';;
+  beast_hb_gui)
+	  ssh -t xavier 'tunnel beast_hb_gui';;
+  mystique_hb_gui)
+	  ssh -t xavier 'tunnel mystique_hb_gui';;
+  nightcrawler_drac_https)
+	  ssh -t xavier 'tunnel nightcrawler_drac_https';;
+  phoenix_drac_https)
+	  ssh -t xavier 'tunnel phoenix_drac_https';;
+  storm_drac_https)
+	  ssh -t xavier 'tunnel storm_drac_https';;
+  beast_drac_https)
+	  ssh -t xavier 'tunnel beast_drac_https';;
+  mystique_drac_https)
+	  ssh -t xavier 'tunnel mystique_drac_https';;
+  nightcrawler_drac_ssh)
+	  ssh -t xavier 'tunnel nightcrawler_drac_ssh';;
+  phoenix_drac_ssh)
+	  ssh -t xavier 'tunnel phoenix_drac_ssh';;
+  storm_drac_ssh)
+	  ssh -t xavier 'tunnel storm_drac_ssh';;
+  beast_drac_ssh)
+	  ssh -t xavier 'tunnel beast_drac_ssh';;
+  mystique_drac_ssh)
+	  ssh -t xavier 'tunnel mystique_drac_ssh';;
+  primary.db.pijaz)
+	  ssh -t admin.pijaz.com 'bin/tunnel primary.db.pijaz';;
+  secondary.db.pijaz)
+	  ssh -t admin.pijaz.com 'bin/tunnel secondary.db.pijaz';;
+  staging.primary.db.pijaz)
+	  ssh -t dev.pijaz.com 'bin/tunnel staging.primary.db.pijaz';;
+  staging.secondary.db.pijaz)
+	  ssh -t dev.pijaz.com 'bin/tunnel staging.secondary.db.pijaz';;
+
+  *)
+    echo
+    echo "Error: $1 is not a valid tunnel target"
+		usage;;
+esac
+
+exit $?

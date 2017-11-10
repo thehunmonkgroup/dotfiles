@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+# Parses local git configs to check for configured IP addresses and SSH ports.
+# Helps to discover conflicts.
+
+get_project_name() {
+  local path="`echo ${1} | cut -f 5 -d "/"`"
+  echo "${path}"
+}
+
+generate_ip_list() {
+  local list=`find /usr/local/vagrant -name Vagrantfile`
+  local final_list=""
+
+  for item in ${list}; do
+    local project=`get_project_name ${item}`
+    local ip=`grep 'config.vm.network "private_network"' ${item} | awk '{print $4}'`
+    if [ -n "${ip}" ]; then
+      final_list="${final_list}
+${ip}: ${project}"
+    fi
+  done
+  echo "${final_list}" | sort
+}
+
+generate_ssh_port_list() {
+  local list=`find /usr/local/vagrant -name Vagrantfile`
+  local final_list=""
+
+  for item in ${list}; do
+    local project=`get_project_name ${item}`
+    local ssh_port=`grep 'host: 2' ${item} | cut -f 2 -d ":" | cut -f 1 -d ","`
+    if [ -z "${ssh_port}" ]; then
+      ssh_port="default"
+    fi
+    final_list="${final_list}
+${ssh_port}: ${project}"
+  done
+  echo "${final_list}" | sort
+}
+
+generate_all_vms_list() {
+  local list="`ls -1 /usr/local/vagrant | cut -f 1 -d "/"`"
+  echo "${list}"
+}
+
+echo "CONFIGURED IP LIST"
+generate_ip_list
+
+echo
+echo
+echo "CONFIGURED SSH PORTS"
+generate_ssh_port_list
+
+echo
+echo
+echo "ALL VMS"
+echo
+generate_all_vms_list

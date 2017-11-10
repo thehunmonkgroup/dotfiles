@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Auto attaches to an existing tmux session if is exists, or creates a new
+# one if not.
+
+which tmux &> /dev/null
+if [ $? -eq 0 ]; then
+  tmux ls &> /dev/null
+  if [ $? -eq 0 ]; then
+    tmux a
+  else
+    tmux
+  fi
+fi
+

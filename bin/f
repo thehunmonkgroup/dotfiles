@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# 'Forward' functionality -- provides a one character command to generate some
+# newlines.  Useful for making space between your last mess of output and the
+# next one.
+#
+# Usage: f [newlines]
+#
+# newlines defaults to 10 if not provided.
+
+default_newlines=10
+newlines=${1:-$default_newlines}
+
+for (( c=1; c<=$newlines; c++ ))
+do
+  newline_string="${newline_string}\n"
+done
+
+echo -e $newline_string

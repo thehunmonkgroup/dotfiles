@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Updating source assets..."
+cd /usr/local/pijaz/assets-source
+git pull
+
+echo "Updating deployment assets..."
+cd /usr/local/pijaz/assets-deploy
+git pull
+
+echo "Updating source code..."
+cd /usr/local/pijaz/code-source
+git pull
+
+echo "Updating deployment code..."
+cd /usr/local/pijaz/code-deploy
+git pull
+
+echo "Syncing dependencies..."
+rsync -avz --delete --force dev.pijaz.com:/usr/local/pijaz/dependencies/ /usr/local/pijaz/dependencies
+
+echo "Done!"
+
