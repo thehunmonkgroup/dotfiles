@@ -6,12 +6,17 @@ usage() {
 echo "
 Usage: $SCRIPT_NAME -h
 Usage: $SCRIPT_NAME [-c <path>] -v -s
+Usage: $SCRIPT_NAME [-g <path>]
 
 Check out/update all configured git repositories.
 
   -c: Optional. Path to the config file, default is: ~/.git-repositories
   -v: Optional. Verify if all repositories are up to date.
   -s: Optional. Salt state-aware script output format.
+  -g: Generate a config file from repositories in a parent directory. Only
+      searches one layer deep in the parent directory, and skips any
+      directories that are not git repositories. Fetch URLs are obtained from
+      the 'origin' remote.
 
 The config file syntax is extremly simple:
 
@@ -48,6 +53,38 @@ ${1}"
 
 changed() {
   CHANGED="yes"
+}
+
+generate_repositories_config_from_directory() {
+  local path="${1/#\~/$HOME}"
+  if [[ -d "${path}" ]]; then
+    local cwd=`pwd`
+    cd ${path}
+    local repo_dirs=`ls -1`
+    for repo_dir in $repo_dirs; do
+      if [[ -d "${repo_dir}" ]]; then
+        cd ${repo_dir}
+        head_rev=`git rev-parse HEAD 2>/dev/null`
+        if [ $? -eq 0 ]; then
+          remote=`git remote get-url origin`
+          if [ $? -eq 0 ]; then
+            add_output "${remote}#${head_rev}#${path}/${repo_dir}"
+          else
+            echo "WARN: ${path}/${repo_dir} does not have an origin remote"
+          fi
+        else
+          echo "WARN: ${path} is not a git repository"
+        fi
+        cd ..
+      fi
+    done
+    cd "${cwd}"
+    echo "${OUTPUT}"
+    exit 0
+  else
+    echoerr "ERROR: ${path} is not a valid directory"
+    exit 1
+  fi
 }
 
 update_repo() {
@@ -140,7 +177,8 @@ salt_stateful_output="no"
 OUTPUT=
 CHANGED="no"
 config_file="${HOME}/.git-repositories"
-while getopts ":hc:vs" opt; do
+generate_parent_directory=
+while getopts ":hc:vsg:" opt; do
   case $opt in
     h)
       usage
@@ -154,6 +192,10 @@ while getopts ":hc:vs" opt; do
       ;;
     s)
       salt_stateful_output="yes"
+      ;;
+    g)
+      generate_repositories_config_from_directory "${OPTARG}"
+      exit 0
       ;;
     \?)
       echoerr "Invalid option: -${OPTARG}" >&2
@@ -189,5 +231,5 @@ else
   fi
 fi
 
-echo ${OUTPUT}
+echo "${OUTPUT}"
 exit ${RETVAL}
