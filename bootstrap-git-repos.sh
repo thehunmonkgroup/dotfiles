@@ -115,7 +115,9 @@ update_repo() {
     if [ $? -eq 0 ]; then
       if [ "${head_rev}" != "${rev}" ]; then
         if [ "${verify}" = "yes" ]; then
-            add_output "${url} at ${path} needs update: ${head_rev} => ${rev}"
+            add_output "${url} at ${path} needs update:"
+            add_output "    HEAD: ${head_rev}"
+            add_output "    CONFIG: ${rev}"
         else
           setup_succeeded=1
           git pull
