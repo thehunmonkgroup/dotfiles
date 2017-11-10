@@ -7,6 +7,18 @@
 
 - link:
     ~/.bashrc:
+    ~/.bashrc.d/liquidprompt.sh:
+      create: true
+      path: bashrc.d/liquidprompt.sh
+    ~/bin/f:
+      create: true
+      path: bin/f
+    ~/bin/ix:
+      create: true
+      path: bin/ix
+    ~/bin/speedtest:
+      create: true
+      path: bin/speedtest
     ~/.colordiffrc:
     ~/.curlrc:
     ~/.gitconfig:
