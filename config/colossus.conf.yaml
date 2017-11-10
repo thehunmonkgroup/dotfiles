@@ -1,0 +1,125 @@
+- defaults:
+    link:
+      force: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bash_completion.d/custom-server-tools.sh:
+      create: true
+      path: bash_completion.d/custom-server-tools.sh
+    ~/.bash_completion.d/rebar:
+      create: true
+      path: bash_completion.d/rebar
+    ~/.bash_completion.d/subversion:
+      create: true
+      path: bash_completion.d/subversion
+    ~/.bash_completion.d/tunnel.sh:
+      create: true
+      path: bash_completion.d/tunnel.sh
+    ~/.bash_completion.d/vagrant:
+      create: true
+      path: bash_completion.d/vagrant
+    ~/.bashrc.d/android.sh:
+      create: true
+      path: bashrc.d/android.sh
+    ~/.bashrc.d/apartment_lines.sh:
+      create: true
+      path: bashrc.d/apartment_lines.sh
+    ~/.bashrc.d/awscli.sh:
+      create: true
+      path: bashrc.d/awscli.sh
+    ~/.bashrc.d/bash-completion.sh:
+      create: true
+      path: bashrc.d/bash-completion.sh
+    ~/.bashrc.d/brew-cask.sh:
+      create: true
+      path: bashrc.d/brew-cask.sh
+    ~/.bashrc.d/circleanywhere.sh:
+      create: true
+      path: bashrc.d/circleanywhere.sh
+    ~/.bashrc.d/colossus.sh:
+      create: true
+      path: bashrc.d/colossus.sh
+    ~/.bashrc.d/go.sh:
+      create: true
+      path: bashrc.d/go.sh
+    ~/.bashrc.d/jekyll.sh:
+      create: true
+      path: bashrc.d/jekyll.sh
+    ~/.bashrc.d/nvm.sh:
+      create: true
+      path: bashrc.d/nvm.sh
+    ~/.bashrc.d/openssl.sh:
+      create: true
+      path: bashrc.d/openssl.sh
+    ~/.bashrc.d/pijaz.sh:
+      create: true
+      path: bashrc.d/pijaz.sh
+    ~/.bashrc.d/pyenv.sh:
+      create: true
+      path: bashrc.d/pyenv.sh
+    ~/.bashrc.d/rvm.sh:
+      create: true
+      path: bashrc.d/rvm.sh
+    ~/.bashrc.d/short_prompt.sh:
+      create: true
+      path: bashrc.d/short_prompt.sh
+    ~/.bashrc.d/vagrant.sh:
+      create: true
+      path: bashrc.d/vagrant.sh
+    ~/bin/ca-repo-status.sh:
+      create: true
+      path: bin/ca-repo-status.sh
+    ~/bin/ca-subscription.sh:
+      create: true
+      path: bin/ca-subscription.sh
+    ~/bin/camera-reboot.sh:
+      create: true
+      path: bin/camera-reboot.sh
+    ~/bin/chrome-ignore-certificate-errors.sh:
+      create: true
+      path: bin/chrome-ignore-certificate-errors.sh
+    ~/bin/deploy_pijaz_file:
+      create: true
+      path: bin/deploy_pijaz_file
+    ~/bin/fix-git-dir-perms.sh:
+      create: true
+      path: bin/fix-git-dir-perms.sh
+    ~/bin/p:
+      create: true
+      path: bin/p
+    ~/bin/ppull:
+      create: true
+      path: bin/ppull
+    ~/bin/pstat:
+      create: true
+      path: bin/pstat
+    ~/bin/repo-force-new-hash.sh:
+      create: true
+      path: bin/repo-force-new-hash.sh
+    ~/bin/show-vagrant-configs:
+      create: true
+      path: bin/show-vagrant-configs
+    ~/bin/slp:
+      create: true
+      path: bin/slp
+    ~/bin/stop-test-servers.sh:
+      create: true
+      path: bin/stop-test-servers.sh
+    ~/bin/tunnel:
+      create: true
+      path: bin/tunnel
+    ~/bin/wcr:
+      create: true
+      path: bin/wcr
+    ~/.fscom_config:
+    ~/.gvimrc:
+    ~/.inputrc:
+    ~/.kdiff3rc:
+    ~/.minirc.cisco-console:
+    ~/.muttrc:
+    ~/.my.cnf:
+    ~/.siegerc:
+    ~/.tm_properties:
