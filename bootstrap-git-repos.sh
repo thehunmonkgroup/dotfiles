@@ -13,10 +13,10 @@ Check out/update all configured git repositories.
   -h: This help text.
   -c: Optional. Path to the config file, default is: ~/.git-repositories
   -v: Optional. Verify if all repositories are up to date.
-  -g: Generate a config file from repositories in a parent directory. Only
-      searches one layer deep in the parent directory, and skips any
-      directories that are not git repositories. Fetch URLs are obtained from
-      the 'origin' remote.
+  -g: Generate config file entries, either for a single repository, or
+      from repositories in a parent directory. For parent directories, only
+      searches one layer deep, and skips any directories that are not git
+      repositories. Fetch URLs are obtained from the 'origin' remote.
 
 The config file syntax is extremly simple:
 
@@ -56,24 +56,34 @@ generate_repositories_config_from_directory() {
   if [[ -d "${path}" ]]; then
     local cwd=`pwd`
     cd ${path}
-    local repo_dirs=`ls -1`
-    for repo_dir in $repo_dirs; do
-      if [[ -d "${repo_dir}" ]]; then
-        cd ${repo_dir}
-        head_rev=`git rev-parse HEAD 2>/dev/null`
-        if [ $? -eq 0 ]; then
-          remote=`git remote get-url origin`
-          if [ $? -eq 0 ]; then
-            add_output "${remote}#${head_rev}#${path}/${repo_dir}"
-          else
-            echo "WARN: ${path}/${repo_dir} does not have an origin remote"
-          fi
-        else
-          echo "WARN: ${path} is not a git repository"
-        fi
-        cd ..
+    local head_rev=`git rev-parse HEAD 2>/dev/null`
+    if [ -n "${head_rev}" ]; then
+      local remote=`git remote get-url origin`
+      if [ -n "${remote}" ]; then
+        add_output "${remote}#${head_rev}#${path}"
+      else
+        echo "WARN: ${path} does not have an origin remote"
       fi
-    done
+    else
+      local repo_dirs=`ls -1`
+      for repo_dir in $repo_dirs; do
+        if [[ -d "${repo_dir}" ]]; then
+          cd ${repo_dir}
+          local head_rev=`git rev-parse HEAD 2>/dev/null`
+          if [ -n "${head_rev}" ]; then
+            local remote=`git remote get-url origin`
+            if [ -n "${remote}" ]; then
+              add_output "${remote}#${head_rev}#${path}/${repo_dir}"
+            else
+              echo "WARN: ${path}/${repo_dir} does not have an origin remote"
+            fi
+          else
+            echo "WARN: ${path}/${repo_dir} is not a git repository"
+          fi
+          cd ..
+        fi
+      done
+    fi
     cd "${cwd}"
     echo "${OUTPUT}"
     exit 0
