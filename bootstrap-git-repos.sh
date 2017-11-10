@@ -108,15 +108,15 @@ update_repo() {
     cd "${path}"
     head_rev=`git rev-parse HEAD 2>/dev/null`
     if [ $? -eq 0 ]; then
+      if [ "${head_rev}" != "${rev}" ]; then
         if [ "${verify}" = "yes" ]; then
-          if [ "${head_rev}" != "${rev}" ]; then
             add_output "${url} at ${path} needs update: ${head_rev} => ${rev}"
             changed
-          fi
         else
           setup_succeeded=1
           git pull
         fi
+      fi
     else
       echoerr "ERROR: ${path} does not appear to be a git repository"
     fi
