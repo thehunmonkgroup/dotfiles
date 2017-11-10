@@ -5,14 +5,14 @@ SCRIPT_NAME=`basename $0`
 usage() {
 echo "
 Usage: $SCRIPT_NAME -h
-Usage: $SCRIPT_NAME [-c <path>] -v -s
+Usage: $SCRIPT_NAME [-c <path>] -v
 Usage: $SCRIPT_NAME [-g <path>]
 
 Check out/update all configured git repositories.
 
+  -h: This help text.
   -c: Optional. Path to the config file, default is: ~/.git-repositories
   -v: Optional. Verify if all repositories are up to date.
-  -s: Optional. Salt state-aware script output format.
   -g: Generate a config file from repositories in a parent directory. Only
       searches one layer deep in the parent directory, and skips any
       directories that are not git repositories. Fetch URLs are obtained from
@@ -49,10 +49,6 @@ echoerr() {
 add_output() {
   OUTPUT="${OUTPUT}
 ${1}"
-}
-
-changed() {
-  CHANGED="yes"
 }
 
 generate_repositories_config_from_directory() {
@@ -95,7 +91,6 @@ update_repo() {
   if ! [[ -d "${path}" ]]; then
     if [ "${verify}" = "yes" ]; then
       add_output "Missing repository ${url} at ${path}"
-      changed
     else
       git clone "${url}" "${path}"
       if [ $? -eq 0 ]; then
@@ -111,7 +106,6 @@ update_repo() {
       if [ "${head_rev}" != "${rev}" ]; then
         if [ "${verify}" = "yes" ]; then
             add_output "${url} at ${path} needs update: ${head_rev} => ${rev}"
-            changed
         else
           setup_succeeded=1
           git pull
@@ -173,12 +167,10 @@ main() {
 }
 
 verify="no"
-salt_stateful_output="no"
 OUTPUT=
-CHANGED="no"
 config_file="${HOME}/.git-repositories"
 generate_parent_directory=
-while getopts ":hc:vsg:" opt; do
+while getopts ":hc:vg:" opt; do
   case $opt in
     h)
       usage
@@ -189,9 +181,6 @@ while getopts ":hc:vsg:" opt; do
       ;;
     v)
       verify="yes"
-      ;;
-    s)
-      salt_stateful_output="yes"
       ;;
     g)
       generate_repositories_config_from_directory "${OPTARG}"
@@ -213,21 +202,9 @@ done
 RETVAL=0
 main
 
-if [ "${salt_stateful_output}" = "yes" ]; then
-  if [ ${RETVAL} -eq 0 ]; then
-    if [ "${CHANGED}" = "yes" ]; then
-      OUTPUT="changed=yes comment='Some repositories need updating'"
-    else
-      OUTPUT="changed=no comment='All repositories up to date'"
-    fi
-  else
-    OUTPUT="changed=no comment='ERROR: some repository operations failed'"
-  fi
-else
-  if [ ${RETVAL} -eq 0 ]; then
-    if [ -z "${OUTPUT}" ]; then
-      add_output "All repositories up to date"
-    fi
+if [ ${RETVAL} -eq 0 ]; then
+  if [ -z "${OUTPUT}" ]; then
+    add_output "All repositories up to date"
   fi
 fi
 
