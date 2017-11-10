@@ -4,12 +4,14 @@ SCRIPT_NAME=`basename $0`
 
 usage() {
 echo "
-Usage: $SCRIPT_NAME -h|--help
-Usage: $SCRIPT_NAME [config]
+Usage: $SCRIPT_NAME -h
+Usage: $SCRIPT_NAME [-c <path>] -v -s
 
 Check out/update all configured git repositories.
 
-  config: Path to the config file, default is: ~/.git-repositories
+  -c: Optional. Path to the config file, default is: ~/.git-repositories
+  -v: Optional. Verify if all repositories are up to date.
+  -s: Optional. Salt state-aware script output format.
 
 The config file syntax is extremly simple:
 
@@ -26,7 +28,26 @@ The config file syntax is extremly simple:
 
    Would clone the https://github.com/rg3/youtube-dl repository to
    /usr/local/youtube-dl, then force reset HEAD to the master revision.
+
+CAVEATS:
+
+Full git commit hashes must be used for revisions in the configuration for the
+verify operation to work correctly.
 "
+}
+
+echoerr() {
+  cat <<< "$@" 1>&2;
+  RETVAL=1
+}
+
+add_output() {
+  OUTPUT="${OUTPUT}
+${1}"
+}
+
+changed() {
+  CHANGED="yes"
 }
 
 update_repo() {
@@ -35,33 +56,46 @@ update_repo() {
   local path="${3}"
   local setup_succeeded=
   if ! [[ -d "${path}" ]]; then
-    git clone "${url}" "${path}"
-    if [ $? -eq 0 ]; then
-      setup_succeeded=1
+    if [ "${verify}" = "yes" ]; then
+      add_output "Missing repository ${url} at ${path}"
+      changed
     else
-      echo "ERROR: Could not clone ${url} to ${path}"
+      git clone "${url}" "${path}"
+      if [ $? -eq 0 ]; then
+        setup_succeeded=1
+      else
+        echoerr "ERROR: Could not clone ${url} to ${path}"
+      fi
     fi
   else
     cd "${path}"
-    git rev-parse > /dev/null 2>&1
+    head_rev=`git rev-parse HEAD 2>/dev/null`
     if [ $? -eq 0 ]; then
-      setup_succeeded=1
-      git pull
+        if [ "${verify}" = "yes" ]; then
+          if [ "${head_rev}" != "${rev}" ]; then
+            add_output "${url} at ${path} needs update: ${head_rev} => ${rev}"
+            changed
+          fi
+        else
+          setup_succeeded=1
+          git pull
+        fi
     else
-      echo "ERROR: ${path} does not appear to be a git repository"
+      echoerr "ERROR: ${path} does not appear to be a git repository"
     fi
   fi
   if [ "${setup_succeeded}" = "1" ]; then
     cd "${path}"
     git reset --hard ${rev} > /dev/null 2>&1
     if [ $? -ne 0 ]; then
-      echo "ERROR: could not reset checkout at ${path} to revision ${rev}"
+      echoerr "ERROR: could not reset checkout at ${path} to revision ${rev}"
     fi
   fi
 }
 
 parse_line() {
   local line="${1}"
+  local op="${2}"
   local text=`echo ${line} | xargs`
   if [ -n "${text}" ] && ! [[ "${text:0:1}" = "#" ]]; then
     IFS='#'; parts=(${text}); unset IFS;
@@ -69,36 +103,91 @@ parse_line() {
     local rev="${parts[1]}"
     local path="${parts[2]/#\~/$HOME}"
     if [ -z "${rev}" ]; then
-      echo "ERROR: missing revision on line '${text}'"
+      echoerr "CONFIG ERROR: missing revision on line '${text}'"
     elif [ -z "${path}" ]; then
-      echo "ERROR: missing path on line '${text}'"
+      echoerr "CONFIG ERROR: missing path on line '${text}'"
     else
-      echo "Git clone URL: ${url}"
-      echo "Revision: ${rev}"
-      echo "Checkout path: ${path}"
-      update_repo "${url}" "${rev}" "${path}"
+      if [ "${op}" = "execute" ]; then
+        update_repo "${url}" "${rev}" "${path}"
+      fi
     fi
   fi
 }
 
+read_config() {
+  local op="${1}"
+  while IFS='' read -r line || [[ -n "$line" ]]; do
+    parse_line "${line}" "${op}"
+  done < "${config_file}"
+}
+
 main() {
-  local config_file="${HOME}/.git-repositories"
-  if [ $# -gt 1 ] || [ "${1}" = "-h" ] || [ "${1}" = "--help" ]; then
-    usage
-  elif [ $# -eq 1 ]; then
-    config_file="${1}"
-  fi
   if [ -r "${config_file}" ]; then
     local cwd=`pwd`
-    while IFS='' read -r line || [[ -n "$line" ]]; do
-      parse_line "${line}"
-    done < "${config_file}"
+    read_config
+    if [ ${RETVAL} -eq 0 ]; then
+      read_config execute
+    fi
     cd "${cwd}"
   else
     echo
-    echo "ERROR: file '${config_file}' not readable"
-    usage
+    echoerr "ERROR: file '${config_file}' not readable"
   fi
 }
 
-main $@
+verify="no"
+salt_stateful_output="no"
+OUTPUT=
+CHANGED="no"
+config_file="${HOME}/.git-repositories"
+while getopts ":hc:vs" opt; do
+  case $opt in
+    h)
+      usage
+      exit 0
+      ;;
+    c)
+      config_file="${OPTARG/#\~/$HOME}"
+      ;;
+    v)
+      verify="yes"
+      ;;
+    s)
+      salt_stateful_output="yes"
+      ;;
+    \?)
+      echoerr "Invalid option: -${OPTARG}" >&2
+      usage
+      exit 1
+      ;;
+    :)
+      echoerr "Option -${OPTARG} requires an argument." >&2
+      usage
+      exit 1
+      ;;
+  esac
+done
+
+RETVAL=0
+main
+
+if [ "${salt_stateful_output}" = "yes" ]; then
+  if [ ${RETVAL} -eq 0 ]; then
+    if [ "${CHANGED}" = "yes" ]; then
+      OUTPUT="changed=yes comment='Some repositories need updating'"
+    else
+      OUTPUT="changed=no comment='All repositories up to date'"
+    fi
+  else
+    OUTPUT="changed=no comment='ERROR: some repository operations failed'"
+  fi
+else
+  if [ ${RETVAL} -eq 0 ]; then
+    if [ -z "${OUTPUT}" ]; then
+      add_output "All repositories up to date"
+    fi
+  fi
+fi
+
+echo ${OUTPUT}
+exit ${RETVAL}
