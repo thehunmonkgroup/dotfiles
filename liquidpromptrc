@@ -39,7 +39,7 @@ LP_PATH_KEEP=2
 LP_HOSTNAME_ALWAYS=0
 
 # Use the FQDN instead of the short hostname if the hostname is displayed
-LP_ENABLE_FQDN=0
+LP_ENABLE_FQDN=1
 
 # Do you want to display the user, even if the user is the same as the one logged in?
 # Defaults to 1 (always display the user)
