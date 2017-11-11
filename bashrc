@@ -60,7 +60,7 @@ alias bd="popd"
 
 # Include custom setup if found.
 if [ -d ~/.bashrc.d ]; then
-  files=`ls -1 ~/.bashrc.d/*.sh 2>/dev/null`
+  files=`echo ~/.bashrc.d/*.sh 2>/dev/null`
   for file in $files;
   do
     . $file
