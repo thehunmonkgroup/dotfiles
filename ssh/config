@@ -548,6 +548,14 @@ Host elixir
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host trillium
+  Hostname localhost
+  Port 2249
+  User root
+  HostKeyAlias trillium
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 # Misc servers.
 
 
