@@ -21,6 +21,7 @@
     ~/.bash_completion.d/vagrant:
       create: true
       path: bash_completion.d/vagrant
+
     ~/.bashrc.d/android.sh:
       create: true
       path: bashrc.d/android.sh
@@ -69,6 +70,36 @@
     ~/.bashrc.d/vagrant.sh:
       create: true
       path: bashrc.d/vagrant.sh
+
+    ~/.fscom_config:
+    ~/.gvimrc:
+    ~/.inputrc:
+    ~/.kdiff3rc:
+    ~/.minirc.cisco-console:
+    ~/.muttrc:
+    ~/.my.cnf:
+    ~/.siegerc:
+
+    ~/.ssh/authorized_keys:
+      create: true
+      path: ssh/authorized_keys
+    ~/.ssh/config:
+      create: true
+      path: ssh/config
+
+    ~/.tm_properties:
+
+    ~/.vagrant.d/Vagrantfile:
+      create: true
+      path: vagrant.d/Vagrantfile
+
+    ~/.vnc/config.d/vncviewer:
+      create: true
+      path: vnc/config.d/vncviewer
+    ~/.vnc/identities:
+      create: true
+      path: vnc/identities
+
     ~/bin/ca-repo-status.sh:
       create: true
       path: bin/ca-repo-status.sh
@@ -114,12 +145,3 @@
     ~/bin/wcr:
       create: true
       path: bin/wcr
-    ~/.fscom_config:
-    ~/.gvimrc:
-    ~/.inputrc:
-    ~/.kdiff3rc:
-    ~/.minirc.cisco-console:
-    ~/.muttrc:
-    ~/.my.cnf:
-    ~/.siegerc:
-    ~/.tm_properties:
