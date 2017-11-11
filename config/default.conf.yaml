@@ -27,4 +27,7 @@
     ~/.liquidprompt.ps1:
     ~/.liquidpromptrc:
     ~/.tmux.conf:
+    ~/.vim/autoload/pathogen.vim:
+      create: true
+      path: vim/autoload/pathogen.vim
     ~/.vimrc:
