@@ -658,6 +658,13 @@ Host dev.pijaz.com
 	User root
 	HostKeyAlias dev.pijaz.com
 
+# Other servers.
+Host trilliumhollow.org
+  Hostname trilliumhollow.org
+  Port 22
+  User trillium
+  HostKeyAlias trilliumhollow.org
+
 
 # Global defaults.
 Host *
