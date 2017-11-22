@@ -6,9 +6,9 @@
 #
 # Usage: f [newlines]
 #
-# newlines defaults to 10 if not provided.
+# newlines defaults to 100 if not provided.
 
-default_newlines=10
+default_newlines=100
 newlines=${1:-$default_newlines}
 
 for (( c=1; c<=$newlines; c++ ))
