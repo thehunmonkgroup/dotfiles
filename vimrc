@@ -133,6 +133,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>l <Plug>(easymotion-bd-jk)
 
+" Paste to ix.io
 noremap <silent> <leader>i :w !ix<CR>
 
 " Auto-indent
