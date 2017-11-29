@@ -67,6 +67,9 @@
     ~/.bashrc.d/short_prompt.sh:
       create: true
       path: bashrc.d/short_prompt.sh
+    ~/.bashrc.d/stirlab.sh:
+      create: true
+      path: bashrc.d/stirlab.sh
     ~/.bashrc.d/vagrant.sh:
       create: true
       path: bashrc.d/vagrant.sh
