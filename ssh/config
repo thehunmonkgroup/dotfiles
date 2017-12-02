@@ -312,6 +312,12 @@ Host circleanywhere.com
   User root
   HostKeyAlias circleanywhere.com
 
+Host asn
+  Hostname admin.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias admin.stirlab.net
+
 Host turn.stirlab.net
   Hostname turn.stirlab.net
   Port 5000
@@ -545,6 +551,14 @@ Host elixir
   Port 2248
   User root
   HostKeyAlias elixir
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host asl
+  Hostname localhost
+  Port 2249
+  User root
+  HostKeyAlias asl
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
