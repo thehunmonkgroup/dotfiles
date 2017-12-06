@@ -326,6 +326,12 @@ Host turn.stirlab.net
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host t1sn
+  Hostname turn1.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias t1sn
+
 Host ca-payment-staging
   Hostname staging-payment.stirlab.net
   Port 5000
@@ -370,11 +376,11 @@ Host fs
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host turn.local
+Host tsl
   Hostname localhost
   Port 2232
   User root
-  HostKeyAlias turn.local
+  HostKeyAlias tsl
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
