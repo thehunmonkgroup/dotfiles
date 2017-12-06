@@ -103,9 +103,9 @@
       create: true
       path: vnc/identities
 
-    ~/bin/ca-repo-status.sh:
+    ~/bin/repo-status.sh:
       create: true
-      path: bin/ca-repo-status.sh
+      path: bin/repo-status.sh
     ~/bin/ca-subscription.sh:
       create: true
       path: bin/ca-subscription.sh

@@ -2,14 +2,14 @@
 
 # Shortcut to do 'git status' on all CA-related repositories.
 
-REPOS="janus-gateway
-openhangout
-circleanywhere/branding/circleanywhere
-circleanywhere/branding/facilitateanywhere
-circleanywhere/stirlab-video
-circleanywhere/unhangout
-circleanywhere/connect.circleanywhere.com-salt
-circleanywhere/videoserver-listener"
+REPOS="stirlab/janus-gateway
+stirlab/openhangout
+stirlab/branding/circleanywhere
+stirlab/branding/moxiemeet
+stirlab/video-salt
+stirlab/unhangout
+stirlab/connect-salt
+stirlab/videoserver-listener"
 
 command=${1-git st}
 
