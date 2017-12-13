@@ -368,11 +368,11 @@ Host cca
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host fs
+Host cav
   Hostname localhost
   Port 2231
   User root
-  HostKeyAlias fs
+  HostKeyAlias cav
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
@@ -400,15 +400,15 @@ Host frontaccounting
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host ca
+Host cmm
   Hostname localhost
-  Port 2236
+  Port 2235
   User root
-  HostKeyAlias ca
+  HostKeyAlias cmm
+  ForwardX11 yes
+  ForwardX11Trusted yes
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
-  #ForwardX11 yes
-  #ForwardX11Trusted yes
 
 Host lua51
   Hostname localhost
@@ -451,6 +451,16 @@ Host drac.local
   ForwardX11Trusted yes
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
+
+Host mmv
+  Hostname localhost
+  Port 2242
+  User root
+  HostKeyAlias mmv
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  ForwardX11 yes
+  ForwardX11Trusted yes
 
 Host cerebro.local
   Hostname localhost
