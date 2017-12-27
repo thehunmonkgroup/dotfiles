@@ -1,11 +1,11 @@
 webrtc-test.stirlab.local::5900/extra=0201
-webrtc-test-5.stirlab.net::5900/extra=0201
 webrtc-test-4.stirlab.net::5900/extra=0201
 webrtc-test-3.stirlab.net::5900/extra=0201
 webrtc-test-9.stirlab.net::5900/extra=0201
 webrtc-test-base.stirlab.net::5900/extra=0201
-webrtc-test-0.stirlab.net::5900/extra=0201
 webrtc-test-1.stirlab.net::5900/extra=0201
-webrtc-test-2.stirlab.net::5900/extra=0201
 webrtc-test-7.stirlab.net::5900/extra=0201
 webrtc-test-6.stirlab.net::5900/extra=0201
+webrtc-test-0.stirlab.net::5900/extra=0201
+webrtc-test-2.stirlab.net::5900/extra=0201
+webrtc-test-5.stirlab.net::5900/extra=0201
