@@ -358,6 +358,14 @@ Host temp
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host vagrant-pijaz
+	Hostname localhost
+	Port 2222
+	User root
+	HostKeyAlias vagrant-pijaz
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host cca
   Hostname localhost
   Port 2230
@@ -536,11 +544,11 @@ Host heartbeat.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host vagrant-pijaz
-	Hostname localhost
-	Port 2222
-	User root
-	HostKeyAlias vagrant-pijaz
+Host psl
+  Hostname localhost
+  Port 2244
+  User root
+  HostKeyAlias psl
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
