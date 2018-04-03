@@ -176,7 +176,7 @@ Host stirlab-video-base
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-base
-  Hostname webrtc-test-base.stirlab.net
+  Hostname webrtc-test-pb-las-base.stirlab.net
   Port 5000
   #Port 22
   User root
@@ -185,7 +185,7 @@ Host webrtc-test-base
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-0
-  Hostname webrtc-test-0.stirlab.net
+  Hostname webrtc-test-pb-las-0.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-0
@@ -193,7 +193,7 @@ Host webrtc-test-0
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-1
-  Hostname webrtc-test-1.stirlab.net
+  Hostname webrtc-test-pb-las-1.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-1
@@ -201,7 +201,7 @@ Host webrtc-test-1
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-2
-  Hostname webrtc-test-2.stirlab.net
+  Hostname webrtc-test-pb-las-2.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-2
@@ -209,7 +209,7 @@ Host webrtc-test-2
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-3
-  Hostname webrtc-test-3.stirlab.net
+  Hostname webrtc-test-pb-las-3.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-3
@@ -217,7 +217,7 @@ Host webrtc-test-3
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-4
-  Hostname webrtc-test-4.stirlab.net
+  Hostname webrtc-test-pb-las-4.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-4
@@ -225,7 +225,7 @@ Host webrtc-test-4
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-5
-  Hostname webrtc-test-5.stirlab.net
+  Hostname webrtc-test-pb-las-5.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-5
@@ -233,7 +233,7 @@ Host webrtc-test-5
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-6
-  Hostname webrtc-test-6.stirlab.net
+  Hostname webrtc-test-pb-las-6.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-6
@@ -241,7 +241,7 @@ Host webrtc-test-6
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-7
-  Hostname webrtc-test-7.stirlab.net
+  Hostname webrtc-test-pb-las-7.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-7
@@ -249,7 +249,7 @@ Host webrtc-test-7
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-8
-  Hostname webrtc-test-8.stirlab.net
+  Hostname webrtc-test-pb-las-8.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-8
@@ -257,7 +257,7 @@ Host webrtc-test-8
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-9
-  Hostname webrtc-test-9.stirlab.net
+  Hostname webrtc-test-pb-las-9.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-9
@@ -400,11 +400,11 @@ Host freeswitch-kickstart
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host frontaccounting
+Host xylil.local
   Hostname localhost
   Port 2234
   User root
-  HostKeyAlias frontaccounting
+  HostKeyAlias xylil.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
@@ -415,6 +415,14 @@ Host cmm
   HostKeyAlias cmm
   ForwardX11 yes
   ForwardX11Trusted yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host ca
+  Hostname localhost
+  Port 2236
+  User root
+  HostKeyAlias ca
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
@@ -592,6 +600,12 @@ Host asl
 ##############################################################################
 # Pijaz production servers.
 ##############################################################################
+
+Host combo.pijaz.com
+	Hostname combo.pijaz.com
+	Port 5000
+	User root
+	HostKeyAlias combo.pijaz.com
 
 Host lb1.pijaz.com
 	Hostname lb1.pijaz.com
