@@ -148,6 +148,9 @@ set cinkeys=0{,0},0),:,0#,!^F,o,O,e
 " Toggle auto-indent
 map Q <esc>:setl ai! si! ai? si?<CR>
 
+" Disable bells.
+set visualbell t_vb=
+
 " Screen centering
 nmap <space> zz
 nmap n nzz
