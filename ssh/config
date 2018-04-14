@@ -318,13 +318,11 @@ Host asn
   User root
   HostKeyAlias admin.stirlab.net
 
-Host turn.stirlab.net
-  Hostname turn.stirlab.net
+Host psn
+  Hostname poof.stirlab.net
   Port 5000
   User root
-  HostKeyAlias turn.stirlab.net
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
+  HostKeyAlias poof.stirlab.net
 
 Host t1sn
   Hostname turn1.stirlab.net
