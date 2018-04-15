@@ -347,6 +347,14 @@ Host connect.circleanywhere.com
   ForwardX11 yes
   ForwardX11Trusted yes
 
+Host connect.moxiemeet.com
+  Hostname connect.moxiemeet.com
+  Port 5000
+  User root
+  HostKeyAlias connect.moxiemeet.com
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 
 # Local Vagrant servers.
 Host temp
