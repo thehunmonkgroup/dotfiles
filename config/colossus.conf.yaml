@@ -74,6 +74,10 @@
       create: true
       path: bashrc.d/vagrant.sh
 
+    ~/.config/letsencrypt/cli.ini:
+      create: true
+      path: letsencrypt/cli.ini
+
     ~/.fscom_config:
     ~/.gvimrc:
     ~/.inputrc:
