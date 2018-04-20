@@ -4,4 +4,4 @@
 
 echo "Stopping webrtc-test servers..."
 
-sleep 120 && pb group hard-stop test && pb group status test
+sleep 120 && pb group hard-stop test-10 && pb group status test-10
