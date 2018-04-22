@@ -9,6 +9,9 @@
     ~/.bash_completion.d/custom-server-tools.sh:
       create: true
       path: bash_completion.d/custom-server-tools.sh
+    ~/.bash_completion.d/pssh:
+      create: true
+      path: bash_completion.d/pssh
     ~/.bash_completion.d/rebar:
       create: true
       path: bash_completion.d/rebar

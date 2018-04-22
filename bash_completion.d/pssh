@@ -1,0 +1,1 @@
+shopt -u hostcomplete && complete -F _ssh pssh
