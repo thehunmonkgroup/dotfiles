@@ -273,17 +273,8 @@ Host pb-europe
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host ca-video-production
-  Hostname 158.222.102.5
-  Port 5000
-  #Port 22
-  User root
-  HostKeyAlias ca-video-production
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host ca-video-staging
-  Hostname 158.222.102.64
+  Hostname circleanywhere-video-staging.stirlab.net
   Port 5000
   #Port 22
   User root
