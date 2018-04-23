@@ -321,15 +321,6 @@ Host t1sn
   User root
   HostKeyAlias t1sn
 
-Host ca-payment-staging
-  Hostname staging-payment.stirlab.net
-  Port 5000
-  #Port 22
-  User root
-  HostKeyAlias ca-payment-staging
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host connect.circleanywhere.com
   Hostname connect.circleanywhere.com
   Port 5000
