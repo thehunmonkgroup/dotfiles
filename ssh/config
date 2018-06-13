@@ -176,7 +176,7 @@ Host stirlab-video-base
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-base
-  Hostname webrtc-test-cs-mia-base.stirlab.net
+  Hostname webrtc-test-cs-wdc-base.stirlab.net
   Port 5000
   #Port 22
   User root
@@ -185,7 +185,7 @@ Host webrtc-test-base
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-0
-  Hostname webrtc-test-cs-mia-0.stirlab.net
+  Hostname webrtc-test-cs-wdc-0.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-0
@@ -193,7 +193,7 @@ Host webrtc-test-0
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-1
-  Hostname webrtc-test-cs-mia-1.stirlab.net
+  Hostname webrtc-test-cs-wdc-1.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-1
@@ -201,7 +201,7 @@ Host webrtc-test-1
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-2
-  Hostname webrtc-test-cs-mia-2.stirlab.net
+  Hostname webrtc-test-cs-wdc-2.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-2
@@ -209,7 +209,7 @@ Host webrtc-test-2
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-3
-  Hostname webrtc-test-cs-mia-3.stirlab.net
+  Hostname webrtc-test-cs-wdc-3.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-3
@@ -217,7 +217,7 @@ Host webrtc-test-3
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-4
-  Hostname webrtc-test-cs-mia-4.stirlab.net
+  Hostname webrtc-test-cs-wdc-4.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-4
@@ -225,7 +225,7 @@ Host webrtc-test-4
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-5
-  Hostname webrtc-test-cs-mia-5.stirlab.net
+  Hostname webrtc-test-cs-wdc-5.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-5
@@ -233,7 +233,7 @@ Host webrtc-test-5
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-6
-  Hostname webrtc-test-cs-mia-6.stirlab.net
+  Hostname webrtc-test-cs-wdc-6.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-6
@@ -241,7 +241,7 @@ Host webrtc-test-6
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-7
-  Hostname webrtc-test-cs-mia-7.stirlab.net
+  Hostname webrtc-test-cs-wdc-7.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-7
@@ -249,7 +249,7 @@ Host webrtc-test-7
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-8
-  Hostname webrtc-test-cs-mia-8.stirlab.net
+  Hostname webrtc-test-cs-wdc-8.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-8
@@ -257,7 +257,7 @@ Host webrtc-test-8
   UserKnownHostsFile /dev/null
 
 Host webrtc-test-9
-  Hostname webrtc-test-cs-mia-9.stirlab.net
+  Hostname webrtc-test-cs-wdc-9.stirlab.net
   Port 5000
   User root
   HostKeyAlias webrtc-test-9
