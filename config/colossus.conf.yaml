@@ -103,6 +103,10 @@
       create: true
       path: vagrant.d/Vagrantfile
 
+    ~/.vim/bundle/rmvim.vim:
+      create: true
+      path: ~/git/rmvim.vim
+
     ~/.vnc/config.d/vncviewer:
       create: true
       path: vnc/config.d/vncviewer
