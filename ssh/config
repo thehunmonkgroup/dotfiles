@@ -264,15 +264,6 @@ Host webrtc-test-9
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host pb-europe
-  Hostname europe1.stirlab.net
-  Port 5000
-  #Port 22
-  User root
-  HostKeyAlias pb-europe
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host ca-video-staging
   Hostname circleanywhere-video-staging.stirlab.net
   Port 5000
@@ -696,6 +687,15 @@ Host trilliumhollow.org
   Port 22
   User trillium
   HostKeyAlias trilliumhollow.org
+
+Host fstest
+  Hostname freeswitch-kickstart.stirlab.net
+  Port 5000
+  #Port 22
+  User root
+  HostKeyAlias freeswitch-kickstart.stirlab.net
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
 
 
 # Global defaults.
