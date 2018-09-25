@@ -10,9 +10,15 @@
     ~/.bashrc.d/liquidprompt.sh:
       create: true
       path: bashrc.d/liquidprompt.sh
+    ~/bin/cugrep:
+      create: true
+      path: bin/cugrep
     ~/bin/f:
       create: true
       path: bin/f
+    ~/bin/gugrep:
+      create: true
+      path: bin/gugrep
     ~/bin/ix:
       create: true
       path: bin/ix
