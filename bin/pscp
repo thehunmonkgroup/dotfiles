@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+function usage() {
+  echo "
+Usage: pscp <local-filepath> <server-ip:filepath>
+
+Shortcut for SCP'ing a single file to a poofed server by IP address
+"
+}
+
+if [ $# -ne 2 ]; then
+  usage
+  exit 1
+fi
+
+local_filepath=$1
+server_ip_filepath=$2
+
+scp -P 5000 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${local_filepath} root@${server_ip_filepath}
+
+# vi: ft=sh

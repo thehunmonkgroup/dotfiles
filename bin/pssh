@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+function usage() {
+  echo "
+Usage: pssh <server_ip>
+
+Shortcut for SSH'ing into a poofed server by IP address
+"
+}
+
+if [ $# -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+server_ip=$1
+
+ssh -p 5000 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@${server_ip}
+
+# vi: ft=sh

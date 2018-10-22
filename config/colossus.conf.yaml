@@ -114,9 +114,6 @@
       create: true
       path: vnc/identities
 
-    ~/bin/repo-status.sh:
-      create: true
-      path: bin/repo-status.sh
     ~/bin/ca-subscription.sh:
       create: true
       path: bin/ca-subscription.sh
@@ -138,12 +135,21 @@
     ~/bin/ppull:
       create: true
       path: bin/ppull
+    ~/bin/pscp:
+      create: true
+      path: bin/pscp
+    ~/bin/pssh:
+      create: true
+      path: bin/pssh
     ~/bin/pstat:
       create: true
       path: bin/pstat
     ~/bin/repo-force-new-hash.sh:
       create: true
       path: bin/repo-force-new-hash.sh
+    ~/bin/repo-status.sh:
+      create: true
+      path: bin/repo-status.sh
     ~/bin/show-vagrant-configs:
       create: true
       path: bin/show-vagrant-configs
