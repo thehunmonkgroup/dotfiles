@@ -175,7 +175,7 @@ let g:javascript_plugin_jsdoc = 1
 
 " Alternate color schemes.
 syntax enable
-set background=light
+set background=dark
 " colorscheme colibri
 colorscheme solarized
 
