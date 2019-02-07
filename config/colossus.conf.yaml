@@ -97,15 +97,19 @@
       create: true
       path: ssh/config
 
+    ~/.taskrc:
+      create: true
+      path: taskrc
+
+    ~/.taskrc.d:
+      create: true
+      path: taskrc.d
+
     ~/.tm_properties:
 
     ~/.vagrant.d/Vagrantfile:
       create: true
       path: vagrant.d/Vagrantfile
-
-    ~/.vim/bundle/rmvim.vim:
-      create: true
-      path: ~/git/rmvim.vim
 
     ~/.vnc/config.d/vncviewer:
       create: true

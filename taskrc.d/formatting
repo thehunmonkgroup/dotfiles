@@ -1,0 +1,15 @@
+# Search.
+search.case.sensitive=no
+
+# Reports.
+column.padding=2
+
+# Date formatting.
+dateformat.edit=Y-M-D
+dateformat.info=Y-M-D (a)
+
+# Calendar.
+weekstart=Monday
+calendar.offset=on
+
+# vi: ft=dosini

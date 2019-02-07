@@ -1,0 +1,6 @@
+context.home=project:Home
+context.biz=project:Biz
+context.al=project:Biz.AL
+context.sl=project:Biz.Stirlab
+
+# vi: ft=dosini

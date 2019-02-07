@@ -1,0 +1,9 @@
+urgency.tags.coefficient=0.0
+urgency.annotations.coefficient=0.0
+
+urgency.user.project.Checklist.coefficient=-10.0
+urgency.user.project.Ticklers.coefficient=-10.0
+urgency.user.project.Values.coefficient=-10.0
+urgency.user.project.Maybe.coefficient=-100.0
+
+# vi: ft=dosini
