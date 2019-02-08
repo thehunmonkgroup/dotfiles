@@ -5,6 +5,9 @@ search.case.sensitive=no
 column.padding=2
 
 # Date formatting.
+dateformat=db
+dateformat.annotation=Y-M-D
+dateformat.report=Y-M-D
 dateformat.edit=Y-M-D
 dateformat.info=Y-M-D (a)
 
