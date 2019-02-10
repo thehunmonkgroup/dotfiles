@@ -88,6 +88,7 @@
     ~/.minirc.cisco-console:
     ~/.muttrc:
     ~/.my.cnf:
+    ~/.netrc:
     ~/.siegerc:
 
     ~/.ssh/authorized_keys:
