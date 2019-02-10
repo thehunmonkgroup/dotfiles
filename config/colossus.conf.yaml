@@ -98,18 +98,14 @@
       path: ssh/config
 
     ~/.taskrc:
-      create: true
-      path: taskrc
-
     ~/.taskrc.d:
-      create: true
-      path: taskrc.d
-
     ~/.tm_properties:
 
     ~/.vagrant.d/Vagrantfile:
       create: true
       path: vagrant.d/Vagrantfile
+
+    ~/.vitrc:
 
     ~/.vnc/config.d/vncviewer:
       create: true
@@ -118,9 +114,6 @@
       create: true
       path: vnc/identities
 
-    ~/bin/ca-subscription.sh:
-      create: true
-      path: bin/ca-subscription.sh
     ~/bin/camera-reboot.sh:
       create: true
       path: bin/camera-reboot.sh

@@ -20,13 +20,6 @@ exit.on.missing.db=yes
 uda.notes.type=string
 uda.notes.label=Notes
 
-# Sync.
-taskd.certificate=\/home\/hunmonk\/.task\/hunmonk.cert.pem
-taskd.key=\/home\/hunmonk\/.task\/hunmonk.key.pem
-taskd.ca=\/home\/hunmonk\/.task\/ca.cert.pem
-taskd.server=www.xylil.com:53589
-taskd.credentials=Public\/hunmonk\/4655e7f2-da3c-4ffa-a0f6-852038804f32
-
 # Defaults.
 default.project=inbox
 default.command=next

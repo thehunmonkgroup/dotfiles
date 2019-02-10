@@ -1,0 +1,6 @@
+# Open OneNote for the current task.
+map o=:!wr onenote %TASKID<Return>
+map i=:inbox<Return>
+map h=:hot<Return>
+map x=:next<Return>
+map s=:scheduled<Return>
