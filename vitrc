@@ -3,4 +3,6 @@ map o=:!wr onenote %TASKID<Return>
 map i=:inbox<Return>
 map h=:hot<Return>
 map x=:next<Return>
+# Temporary until it can be baked into contexts.
+map r=f rc.report.next.sort:project+/,urgency-<Return>
 map s=:scheduled<Return>
