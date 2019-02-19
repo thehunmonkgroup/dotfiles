@@ -10,6 +10,9 @@
     ~/.bashrc.d/liquidprompt.sh:
       create: true
       path: bashrc.d/liquidprompt.sh
+    ~/.config/liquidpromptrc:
+      create: true
+      path: liquidpromptrc
     ~/bin/cugrep:
       create: true
       path: bin/cugrep
@@ -31,7 +34,6 @@
     ~/.gitignore:
     ~/.git-repositories:
     ~/.liquidprompt.ps1:
-    ~/.liquidpromptrc:
     ~/.tmux.conf:
     ~/.vim/autoload/pathogen.vim:
       create: true
