@@ -1,4 +1,4 @@
-
+logger "Parsing liquidprompt.ps1"
 #######################################
 # LIQUID PROMPT DEFAULT TEMPLATE FILE #
 #######################################

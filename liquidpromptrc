@@ -1,4 +1,4 @@
-
+logger "Parsing liquidpromptrc"
 ####################################
 # LIQUID PROMPT CONFIGURATION FILE #
 ####################################
