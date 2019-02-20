@@ -11,7 +11,7 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Ugly hack to force proper version of Python on CentOS 5.x systems.
 python_bin=`which python`
-if [ "$(python -V 2>&1 | cut -c7-10)" = "2.4" ]; then
+if [ "$(python -V 2>&1 | cut -c8-10)" = "2.4" ]; then
   alt_python_bin="/usr/bin/python2.6"
   echo "Using alt Python ${alt_python_bin}"
   python_bin="${alt_python_bin}"
