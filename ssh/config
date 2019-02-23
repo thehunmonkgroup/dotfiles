@@ -512,6 +512,8 @@ Host rails.local
   HostKeyAlias rails.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
+  ForwardX11 yes
+  ForwardX11Trusted yes
 
 Host rails.apartmentlines.com
   Hostname rails.apartmentlines.com
