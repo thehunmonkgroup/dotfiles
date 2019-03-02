@@ -12,7 +12,7 @@ https://github.com/Shougo/unite.vim.git#c5c69d5d94e61a67d61730d04c82763196f63b10
 https://github.com/MarcWeber/vim-addon-mw-utils.git#0c5612fa31ee434ba055e21c76f456244b3b5109#~/.vim/bundle/vim-addon-mw-utils
 https://github.com/bling/vim-airline.git#396cc9226171f8dbf1069800a0ae56700bbf3913#~/.vim/bundle/vim-airline
 https://github.com/vim-airline/vim-airline-themes#26f67b926553555e505ac60e992c97ab5fdfc83f#~/.vim/bundle/vim-airline-themes
-https://github.com/altercation/vim-colors-solarized.git#528a59f26d12278698bb946f8fb82a63711eec21#~/.vim/bundle/vim-colors-solarized
+https://github.com/lifepillar/vim-solarized8.git#4e511a561d95e7f8d3e0dbdea59cf018ca8c3035#~/.vim/bundle/vim-solarized8
 https://github.com/wilywampa/vim-easymotion.git#9115a668d4e8f4e7bfe14c283a4f574bca5663ae#~/.vim/bundle/vim-easymotion
 https://github.com/elixir-lang/vim-elixir.git#3066d5fb5e1c694e607b2bb5d8277266ca524262#~/.vim/bundle/vim-elixir
 https://github.com/tpope/vim-fugitive.git#7c9b87a3c3ef4b53425aca4a27e11a7359caae9f#~/.vim/bundle/vim-fugitive
