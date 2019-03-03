@@ -6,20 +6,26 @@ report.inbox.filter=project:inbox -COMPLETED -DELETED
 
 report.hot.description=All tasks with a scheduled date, sorted ascending
 report.hot.columns=id,project,description.count,due
-report.hot.labels=ID,Proj,Description,Due
+report.hot.labels=ID,Project,Description,Due
 report.hot.sort=due+
 report.hot.filter=priority:H -COMPLETED -DELETED
 
 report.scheduled.description=All tasks with a scheduled date, sorted ascending
 report.scheduled.columns=id,scheduled,project,description.count,due
-report.scheduled.labels=ID,Starts,Proj,Description,Due
+report.scheduled.labels=ID,Starts,Project,Description,Due
 report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED -COMPLETED -DELETED
 
 report.delegated.description=All tasks with a delegated tag
 report.delegated.columns=id,project,description.count,scheduled,due
-report.delegated.labels=ID,Proj,Description,Starts,Due
+report.delegated.labels=ID,Project,Description,Starts,Due
 report.delegated.sort=project+
 report.delegated.filter=+delegated -COMPLETED -DELETED
+
+report.out.description=All tasks with a errand tag
+report.out.columns=id,project,description.count,due
+report.out.labels=ID,Project,Description,Due
+report.out.sort=project+
+report.out.filter=+errand -COMPLETED -DELETED
 
 # vi: ft=dosini
