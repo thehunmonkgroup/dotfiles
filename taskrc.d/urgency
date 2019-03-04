@@ -1,4 +1,5 @@
 urgency.tags.coefficient=0.0
+urgency.user.tag.archive.coefficient=-10.0
 urgency.annotations.coefficient=0.0
 
 urgency.user.project.Checklist.coefficient=-10.0
