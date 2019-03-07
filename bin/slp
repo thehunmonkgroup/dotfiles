@@ -1,9 +1,16 @@
 #!/bin/bash
 
 # Simple script to put the machine to sleep.
-
-osascript << EOT
+OS=`uname -s`
+case "$OS" in
+  Linux)
+    systemctl suspend
+    ;;
+  Darwin)
+    osascript << EOT
 tell application "System Events"
 sleep
 end
 EOT
+    ;;
+esac
