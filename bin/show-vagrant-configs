@@ -9,7 +9,7 @@ get_project_name() {
 }
 
 generate_ip_list() {
-  local list=`find /usr/local/vagrant -name Vagrantfile`
+  local list=`find ${HOME}/vagrant -name Vagrantfile`
   local final_list=""
 
   for item in ${list}; do
@@ -24,7 +24,7 @@ ${ip}: ${project}"
 }
 
 generate_ssh_port_list() {
-  local list=`find /usr/local/vagrant -name Vagrantfile`
+  local list=`find ${HOME}/vagrant -name Vagrantfile`
   local final_list=""
 
   for item in ${list}; do
@@ -40,7 +40,7 @@ ${ssh_port}: ${project}"
 }
 
 generate_all_vms_list() {
-  local list="`ls -1 /usr/local/vagrant | cut -f 1 -d "/"`"
+  local list="`ls -1 ${HOME}/vagrant | cut -f 1 -d "/"`"
   echo "${list}"
 }
 

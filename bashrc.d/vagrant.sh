@@ -1,4 +1,4 @@
 #!/bin/bash
 
-alias vg="cd /usr/local/vagrant/"
+alias vg="cd ${HOME}/vagrant/"
 alias vls="VBoxManage list runningvms"
