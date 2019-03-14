@@ -52,6 +52,9 @@
     ~/.bashrc.d/jekyll.sh:
       create: true
       path: bashrc.d/jekyll.sh
+    ~/.bashrc.d/luaver.sh:
+      create: true
+      path: bashrc.d/luaver.sh
     ~/.bashrc.d/nvm.sh:
       create: true
       path: bashrc.d/nvm.sh
