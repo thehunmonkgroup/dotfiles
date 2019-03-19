@@ -3,6 +3,7 @@ search.case.sensitive=no
 
 # Reports.
 column.padding=2
+journal.info=off
 
 # Date formatting.
 dateformat=db
