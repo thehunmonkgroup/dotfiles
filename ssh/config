@@ -379,11 +379,11 @@ Host freeswitch-kickstart
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host xylil.local
+Host taskwarrior
   Hostname localhost
   Port 2234
   User root
-  HostKeyAlias xylil.local
+  HostKeyAlias taskwarrior
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
