@@ -28,4 +28,10 @@ report.out.labels=ID,Project,Description,Due
 report.out.sort=project+
 report.out.filter=+errand -COMPLETED -DELETED
 
+report.weekly.description=Weekly review
+report.weekly.columns=id,project,description.count,tags,scheduled,due
+report.weekly.labels=ID,Project,Description,Tags,Starts,Due
+report.weekly.sort=project+/,urgency-
+report.weekly.filter=-COMPLETED -DELETED -delegated -archive -errand project.not:Maybe project.not:Checklist project.not:Ticklers project.not:Values project.not:inbox
+
 # vi: ft=dosini
