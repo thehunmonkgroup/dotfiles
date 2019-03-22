@@ -120,6 +120,9 @@
     ~/bin/camera-reboot.sh:
       create: true
       path: bin/camera-reboot.sh
+    ~/bin/check-isavi-firmware.sh:
+      create: true
+      path: bin/check-isavi-firmware.sh
     ~/bin/chrome-ignore-certificate-errors.sh:
       create: true
       path: bin/chrome-ignore-certificate-errors.sh
