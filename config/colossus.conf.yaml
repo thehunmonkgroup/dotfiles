@@ -126,6 +126,9 @@
     ~/bin/chrome-ignore-certificate-errors.sh:
       create: true
       path: bin/chrome-ignore-certificate-errors.sh
+    ~/bin/coffee.sh:
+      create: true
+      path: bin/coffee.sh
     ~/bin/deploy_pijaz_file:
       create: true
       path: bin/deploy_pijaz_file
