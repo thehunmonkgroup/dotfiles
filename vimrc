@@ -166,7 +166,7 @@ if has("autocmd")
    autocmd BufRead,BufNewFile *.txt set wrap
    autocmd BufRead,BufNewFile *.txt set linebreak
    autocmd BufRead,BufNewFile *.txt set nolist " list disables linebreak.
-   autocmd FileType python setlocal shiftwidth=2 tabstop=2
+   " autocmd FileType python setlocal shiftwidth=2 tabstop=2
 
 endif
 
