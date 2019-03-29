@@ -101,6 +101,7 @@
       path: ssh/config
 
     ~/.taskrc:
+    ~/.taskdebugrc:
     ~/.taskrc.d:
     ~/.tm_properties:
 
