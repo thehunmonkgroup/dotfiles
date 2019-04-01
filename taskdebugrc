@@ -27,7 +27,6 @@ default.command=next
 # Includes.
 include /usr/share/taskwarrior/solarized-dark-256.theme
 include /usr/share/taskwarrior/holidays.en-US.rc
-include ~/.taskrc.d/sync
 include ~/.taskrc.d/contexts
 include ~/.taskrc.d/formatting
 include ~/.taskrc.d/reports
