@@ -115,6 +115,8 @@ map gB :bprev<cr>
 
 " Toggle NerdTREE
 map X <esc>:NERDTreeToggle<CR>
+" Hide binary files in NerdTREE
+let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
 
 " Close all other open windows.
 map Y <esc>:only<CR>
