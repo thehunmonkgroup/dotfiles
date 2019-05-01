@@ -1,35 +1,35 @@
 report.inbox.description=Inbox
-report.inbox.columns=id,entry.age,priority,description.count
+report.inbox.columns=id,entry.age,priority,description.desc
 report.inbox.labels=ID,Age,P,Description
 report.inbox.sort=entry+
 report.inbox.filter=project:inbox +PENDING
 
 report.hot.description=All tasks with a scheduled date, sorted ascending
-report.hot.columns=id,project,description.count,due
+report.hot.columns=id,project,description.desc,due
 report.hot.labels=ID,Project,Description,Due
 report.hot.sort=due+
 report.hot.filter=priority:H +PENDING
 
 report.scheduled.description=All tasks with a scheduled date, sorted ascending
-report.scheduled.columns=id,scheduled,project,description.count,due
+report.scheduled.columns=id,scheduled,project,description.desc,due
 report.scheduled.labels=ID,Starts,Project,Description,Due
 report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED +PENDING
 
 report.delegated.description=All tasks with a delegated tag
-report.delegated.columns=id,project,description.count,scheduled,due
+report.delegated.columns=id,project,description.desc,scheduled,due
 report.delegated.labels=ID,Project,Description,Starts,Due
 report.delegated.sort=project+
 report.delegated.filter=+delegated +PENDING
 
 report.out.description=All tasks with a errand tag
-report.out.columns=id,project,description.count,due
+report.out.columns=id,project,description.desc,due
 report.out.labels=ID,Project,Description,Due
 report.out.sort=project+
 report.out.filter=+errand +PENDING
 
 report.weekly.description=Weekly review
-report.weekly.columns=id,project,description.count,tags,scheduled,due
+report.weekly.columns=id,project,description.desc,tags,scheduled,due
 report.weekly.labels=ID,Project,Description,Tags,Starts,Due
 report.weekly.sort=project+/,urgency-
 report.weekly.filter=+PENDING -delegated -archive -errand project.not:Maybe project.not:Checklist project.not:Ticklers project.not:Values project.not:inbox
