@@ -16,4 +16,8 @@ dateformat.info=Y-M-D (a)
 weekstart=Monday
 calendar.offset=on
 
+# Colors.
+color.project.none=white on red
+color.uda.notes=yellow
+
 # vi: ft=dosini
