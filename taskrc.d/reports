@@ -5,8 +5,8 @@ report.inbox.sort=entry+
 report.inbox.filter=project:inbox +PENDING
 
 report.hot.description=All tasks with a scheduled date, sorted ascending
-report.hot.columns=id,project,description.desc,due
-report.hot.labels=ID,Project,Description,Due
+report.hot.columns=id,project,description.desc,due,priority
+report.hot.labels=ID,Project,Description,Due,P
 report.hot.sort=due+
 report.hot.filter=priority:H +PENDING
 
@@ -17,14 +17,14 @@ report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED +PENDING
 
 report.delegated.description=All tasks with a delegated tag
-report.delegated.columns=id,project,description.desc,scheduled,due
-report.delegated.labels=ID,Project,Description,Starts,Due
+report.delegated.columns=id,project,description.desc,scheduled,due,tags
+report.delegated.labels=ID,Project,Description,Starts,Due,Tags
 report.delegated.sort=project+
 report.delegated.filter=+delegated +PENDING
 
 report.out.description=All tasks with a errand tag
-report.out.columns=id,project,description.desc,due
-report.out.labels=ID,Project,Description,Due
+report.out.columns=id,project,description.desc,due,tags
+report.out.labels=ID,Project,Description,Due,Tags
 report.out.sort=project+
 report.out.filter=+errand +PENDING
 
