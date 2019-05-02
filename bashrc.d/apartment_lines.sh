@@ -9,5 +9,5 @@ alias sc="ssh cerebro"
 
 # Site aliases.
 alias al="cd ~/git/apartmentlines"
-alias alm="cd ~/Sites/apartmentlines.com/sites/all/modules"
+alias alm="cd ~/git/apartmentlines/apartmentlines.com/sites/all/modules"
 
