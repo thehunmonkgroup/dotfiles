@@ -7,7 +7,7 @@ report.inbox.filter=project:inbox +PENDING
 report.hot.description=All tasks with a scheduled date, sorted ascending
 report.hot.columns=id,project,description.desc,due,priority
 report.hot.labels=ID,Project,Description,Due,P
-report.hot.sort=due+
+report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
 report.scheduled.description=All tasks with a scheduled date, sorted ascending
