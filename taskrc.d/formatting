@@ -17,6 +17,8 @@ weekstart=Monday
 calendar.offset=on
 
 # Colors.
+color.completed=bold green
+color.deleted=bold red
 color.project.none=white on red
 color.uda.notes=yellow
 
