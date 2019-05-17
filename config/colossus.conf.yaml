@@ -79,6 +79,9 @@
     ~/.bashrc.d/vagrant.sh:
       create: true
       path: bashrc.d/vagrant.sh
+    ~/.bashrc.d/vit.sh:
+      create: true
+      path: bashrc.d/vit.sh
 
     ~/.config/letsencrypt/cli.ini:
       create: true
