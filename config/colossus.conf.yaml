@@ -21,6 +21,9 @@
     ~/.bash_completion.d/tunnel.sh:
       create: true
       path: bash_completion.d/tunnel.sh
+    ~/.bash_completion.d/vit:
+      create: true
+      path: bash_completion.d/vit
     ~/.bash_completion.d/vagrant:
       create: true
       path: bash_completion.d/vagrant
