@@ -1,6 +1,8 @@
+USER_COMPLETION_DIR="${HOME}/.bash_completion.d"
+
 prefix=""
 brewpath=`which brew`
-if [ -n "$brewpath" ]; then
+if [ "${OS}" = "Darwin" ] && [ -n "$brewpath" ]; then
   prefix="$(brew --prefix)"
 fi
 
@@ -8,6 +10,8 @@ if [ -f ${prefix}/etc/bash_completion ]; then
   . ${prefix}/etc/bash_completion
 fi
 
-if [ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && [ -d ${HOME}/.bash_completion.d ]; then
-  export BASH_COMPLETION_COMPAT_DIR=${HOME}/.bash_completion.d
+if [ -d ${USER_COMPLETION_DIR} ]; then
+  for i in "${USER_COMPLETION_DIR}"/*; do
+    . "$i"
+  done
 fi

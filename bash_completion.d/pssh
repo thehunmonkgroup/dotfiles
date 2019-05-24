@@ -1,1 +1,2 @@
+_xfunc ssh _ssh
 shopt -u hostcomplete && complete -F _ssh pssh
