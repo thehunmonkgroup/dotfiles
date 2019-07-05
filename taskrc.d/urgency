@@ -8,4 +8,6 @@ urgency.user.project.Ticklers.coefficient=-10.0
 urgency.user.project.Values.coefficient=-10.0
 urgency.user.project.Maybe.coefficient=-100.0
 
+urgency.uda.priority.L.coefficient=-2
+
 # vi: ft=dosini
