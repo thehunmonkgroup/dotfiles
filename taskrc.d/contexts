@@ -1,6 +1,6 @@
 context.home=project:Home -archive
-context.biz=project:Biz -archive
-context.al=project:Biz.AL -archive
-context.sl=project:Biz.Stirlab -archive
+context.business=project:Biz -archive
+context.apartmentlines=project:Biz.AL -archive
+context.stirlab=project:Biz.Stirlab -archive
 
 # vi: ft=dosini
