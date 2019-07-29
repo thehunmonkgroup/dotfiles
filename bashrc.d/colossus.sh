@@ -7,10 +7,38 @@ alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 # FUNCTIONS
 ###############################################################################
 
+fswp() {
+  find . -name *.swp
+}
+
+kswp() {
+  swp_files=`fswp`
+  if [ -z "${swp_files}" ]; then
+    echo "No .swp files to kill"
+  else
+    echo "${swp_files}"
+    read -r -p "Kill .swp files in `pwd`? [y/N] " response
+    if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+    then
+      find . -name *.swp -exec rm  {} \;
+    else
+      echo "Aborted"
+    fi
+  fi
+}
+
 # Man pages in preview.
 pman()
 {
   man -t "${1}" | open -f -a /Applications/Preview.app/
+}
+
+vman()
+{
+  T=/tmp/$$.pdf
+  man -t $1 | ps2pdf - >$T
+  xpdf $T
+  rm -f $T;
 }
 
 # function for setting terminal titles in OSX
