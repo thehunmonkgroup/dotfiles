@@ -28,6 +28,11 @@ report.out.labels=ID,Project,Description,Due,Tags
 report.out.sort=project+
 report.out.filter=+errand +PENDING
 
+report.travel.description=Pre-travel checklist
+report.travel.columns=id,description.desc
+report.travel.labels=ID,Description
+report.travel.filter=project:Checklist.Travel +PENDING
+
 report.weekly.description=Weekly review
 report.weekly.columns=id,project,description.desc,tags,scheduled,due
 report.weekly.labels=ID,Project,Description,Tags,Starts,Due
