@@ -115,8 +115,6 @@
       create: true
       path: vagrant.d/Vagrantfile
 
-    ~/.vitrc:
-
     ~/.vnc/config.d/vncviewer:
       create: true
       path: vnc/config.d/vncviewer
@@ -178,3 +176,6 @@
     ~/bin/wcr:
       create: true
       path: bin/wcr
+    ~/.vit/config.ini:
+      create: true
+      path: vit/config.ini
