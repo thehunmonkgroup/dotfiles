@@ -288,11 +288,11 @@ Host wilbur.stirlab.net
   User root
   HostKeyAlias wilbur.stirlab.net
 
-Host circleanywhere.com
-  Hostname circleanywhere.com
+Host payment.circleanywhere.com
+  Hostname payment.circleanywhere.com
   Port 5000
   User root
-  HostKeyAlias circleanywhere.com
+  HostKeyAlias payment.circleanywhere.com
 
 Host asn
   Hostname admin.stirlab.net
