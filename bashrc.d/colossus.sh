@@ -1,5 +1,4 @@
 # Misc aliases.
-alias e="/usr/local/bin/mate"
 alias sy="cat ~/sync-status.txt"
 alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 
