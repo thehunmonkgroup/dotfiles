@@ -264,24 +264,6 @@ Host webrtc-test-9
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host ca-video-staging
-  Hostname circleanywhere-video-staging.stirlab.net
-  Port 5000
-  #Port 22
-  User root
-  HostKeyAlias ca-video-staging
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host fa-video-production
-  Hostname 162.254.24.56
-  Port 5000
-  #Port 22
-  User root
-  HostKeyAlias fa-video-production
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host wilbur.stirlab.net
   Hostname wilbur.stirlab.net
   Port 5000
@@ -307,7 +289,7 @@ Host t1sn
   HostKeyAlias t1sn
 
 Host connect.circleanywhere.com
-  Hostname connect.circleanywhere.com
+  Hostname 45.33.21.94
   Port 5000
   User root
   HostKeyAlias connect.circleanywhere.com
@@ -338,24 +320,6 @@ Host vagrant-pijaz
 	Port 2222
 	User root
 	HostKeyAlias vagrant-pijaz
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host cca
-  Hostname localhost
-  Port 2230
-  User root
-  HostKeyAlias cca
-  ForwardX11 yes
-  ForwardX11Trusted yes
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host cav
-  Hostname localhost
-  Port 2231
-  User root
-  HostKeyAlias cav
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
@@ -390,14 +354,6 @@ Host cmm
   HostKeyAlias cmm
   ForwardX11 yes
   ForwardX11Trusted yes
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host ca
-  Hostname localhost
-  Port 2236
-  User root
-  HostKeyAlias ca
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
