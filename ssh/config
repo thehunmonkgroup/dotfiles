@@ -165,7 +165,7 @@ Host xylil.com
 	HostKeyAlias xylil.com
 
 
-# Circle Anywhere servers.
+# Stirlab servers.
 Host stirlab-video-base
   Hostname circleanywhere-video-base.stirlab.net
   Port 5000
@@ -264,12 +264,6 @@ Host webrtc-test-9
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host wilbur.stirlab.net
-  Hostname wilbur.stirlab.net
-  Port 5000
-  User root
-  HostKeyAlias wilbur.stirlab.net
-
 Host asn
   Hostname admin.stirlab.net
   Port 5000
@@ -295,6 +289,12 @@ Host connect.moxiemeet.com
   HostKeyAlias connect.moxiemeet.com
   ForwardX11 yes
   ForwardX11Trusted yes
+
+Host video-test.stirlab.net
+  Hostname video-test.stirlab.net
+  Port 5000
+  User root
+  HostKeyAlias video-test.stirlab.net
 
 
 # Local Vagrant servers.
