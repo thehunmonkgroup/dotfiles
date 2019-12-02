@@ -73,6 +73,9 @@
     ~/.bashrc.d/short_prompt.sh:
       create: true
       path: bashrc.d/short_prompt.sh
+    ~/.bashrc.d/ssh.sh:
+      create: true
+      path: bashrc.d/ssh.sh
     ~/.bashrc.d/stirlab.sh:
       create: true
       path: bashrc.d/stirlab.sh
