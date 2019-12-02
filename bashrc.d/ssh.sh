@@ -1,1 +1,1 @@
-alias sshtemp="ssh -q -o 'UserKnownHostsFile /dev/null'"
+alias sshtemp="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
