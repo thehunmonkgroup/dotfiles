@@ -61,6 +61,9 @@
     ~/.bashrc.d/openssl.sh:
       create: true
       path: bashrc.d/openssl.sh
+    ~/.bashrc.d/packer.sh:
+      create: true
+      path: bashrc.d/packer.sh
     ~/.bashrc.d/pijaz.sh:
       create: true
       path: bashrc.d/pijaz.sh
@@ -82,6 +85,9 @@
     ~/.bashrc.d/vagrant.sh:
       create: true
       path: bashrc.d/vagrant.sh
+    ~/.bashrc.d/vault.sh:
+      create: true
+      path: bashrc.d/vault.sh
     ~/.bashrc.d/vit.sh:
       create: true
       path: bashrc.d/vit.sh
