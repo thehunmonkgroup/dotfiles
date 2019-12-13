@@ -158,6 +158,12 @@ Host cerebro
 	User root
 	HostKeyAlias cerebro
 
+Host dev.apartmentlines.com
+	Hostname dev.apartmentlines.com
+	Port 5000
+	User root
+	HostKeyAlias dev.apartmentlines.com
+
 Host xylil.com
   Hostname xylil.com
 	Port 5000
@@ -406,6 +412,14 @@ Host cerebro.local
   Port 2290
   User root
   HostKeyAlias cerebro.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host dev.local
+  Hostname localhost
+  Port 2298
+  User root
+  HostKeyAlias dev.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
