@@ -164,6 +164,14 @@ Host dev.apartmentlines.com
 	User root
 	HostKeyAlias dev.apartmentlines.com
 
+Host staging-admin.apartmentlines.net
+	Hostname staging-admin.apartmentlines.net
+	Port 5000
+	User root
+	HostKeyAlias staging-admin.apartmentlines.net
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host xylil.com
   Hostname xylil.com
 	Port 5000
@@ -428,6 +436,30 @@ Host admin.local
   Port 2294
   User root
   HostKeyAlias admin.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host db1.local
+  Hostname localhost
+  Port 2251
+  User root
+  HostKeyAlias db1.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host db2.local
+  Hostname localhost
+  Port 2252
+  User root
+  HostKeyAlias db2.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host db3.local
+  Hostname localhost
+  Port 2253
+  User root
+  HostKeyAlias db3.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
