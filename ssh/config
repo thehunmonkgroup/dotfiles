@@ -463,6 +463,30 @@ Host db3.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host fs1.local
+  Hostname localhost
+  Port 2261
+  User root
+  HostKeyAlias fs1.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fs2.local
+  Hostname localhost
+  Port 2262
+  User root
+  HostKeyAlias fs2.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fs3.local
+  Hostname localhost
+  Port 2263
+  User root
+  HostKeyAlias fs3.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host cluster.local
   Hostname localhost
   Port 2291
