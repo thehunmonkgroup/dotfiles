@@ -463,9 +463,33 @@ Host db3.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host fs1.local
+Host fm1.local
   Hostname localhost
   Port 2261
+  User root
+  HostKeyAlias fm1.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fm2.local
+  Hostname localhost
+  Port 2262
+  User root
+  HostKeyAlias fm2.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fm3.local
+  Hostname localhost
+  Port 2263
+  User root
+  HostKeyAlias fm3.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host fs1.local
+  Hostname localhost
+  Port 2264
   User root
   HostKeyAlias fs1.local
   StrictHostKeyChecking no
@@ -473,7 +497,7 @@ Host fs1.local
 
 Host fs2.local
   Hostname localhost
-  Port 2262
+  Port 2265
   User root
   HostKeyAlias fs2.local
   StrictHostKeyChecking no
@@ -481,7 +505,7 @@ Host fs2.local
 
 Host fs3.local
   Hostname localhost
-  Port 2263
+  Port 2266
   User root
   HostKeyAlias fs3.local
   StrictHostKeyChecking no
