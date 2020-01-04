@@ -415,6 +415,14 @@ Host mmv
   ForwardX11 yes
   ForwardX11Trusted yes
 
+Host admin-staging.local
+  Hostname localhost
+  Port 2301
+  User root
+  HostKeyAlias admin-staging.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host cerebro.local
   Hostname localhost
   Port 2290
@@ -439,9 +447,25 @@ Host admin.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host lb1.local
+  Hostname localhost
+  Port 5131
+  User root
+  HostKeyAlias lb1.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host lb2.local
+  Hostname localhost
+  Port 5132
+  User root
+  HostKeyAlias lb2.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host db1.local
   Hostname localhost
-  Port 2251
+  Port 5111
   User root
   HostKeyAlias db1.local
   StrictHostKeyChecking no
@@ -449,7 +473,7 @@ Host db1.local
 
 Host db2.local
   Hostname localhost
-  Port 2252
+  Port 5112
   User root
   HostKeyAlias db2.local
   StrictHostKeyChecking no
@@ -457,7 +481,7 @@ Host db2.local
 
 Host db3.local
   Hostname localhost
-  Port 2253
+  Port 5113
   User root
   HostKeyAlias db3.local
   StrictHostKeyChecking no
