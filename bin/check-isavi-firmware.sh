@@ -5,7 +5,7 @@
 # *VERY* basic and brittle, just grepping the HTML for a magic string.
 
 url="https://www.addvaluetech.com/pdf_categories/firmware/"
-firmware_version="R02.0.1"
+firmware_version="R02.0.2"
 label="[iSavi firmware]"
 message="${label} check for version ${firmware_version}"
 
