@@ -20,6 +20,7 @@ result=`curl -sS "${url}" | grep "<p>iSavi Firmware &#8211; ${firmware_version}<
 if [ $? -ne 0 ] || [ -z "${result}" ]; then
   message="${message} FAILURE"
   /usr/bin/zenity --info --text="${message}" &
+  touch ~/Downloads/ISAVI_FIRWARE_OUT_OF_DATE
 else
   message="${message} SUCCESS"
 fi
