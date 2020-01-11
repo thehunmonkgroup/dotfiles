@@ -417,7 +417,7 @@ Host mmv
 
 Host admin.local
   Hostname localhost
-  Port 2301
+  Port 10110
   User root
   HostKeyAlias admin.local
   StrictHostKeyChecking no
@@ -516,6 +516,14 @@ Host cluster.local
   Port 2291
   User root
   HostKeyAlias cluster.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host data1-las.local
+  Hostname localhost
+  Port 10210
+  User root
+  HostKeyAlias data1-las.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
