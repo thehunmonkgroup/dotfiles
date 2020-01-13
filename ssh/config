@@ -527,6 +527,22 @@ Host data1-las.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host web1-las.local
+  Hostname localhost
+  Port 10230
+  User root
+  HostKeyAlias web1-las.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host repo.local
+  Hostname localhost
+  Port 10111
+  User root
+  HostKeyAlias repo.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host voip.local
   Hostname localhost
   Port 2292
