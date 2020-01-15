@@ -433,7 +433,7 @@ Host cerebro.local
 
 Host dev.local
   Hostname localhost
-  Port 2298
+  Port 10530
   User root
   HostKeyAlias dev.local
   StrictHostKeyChecking no
