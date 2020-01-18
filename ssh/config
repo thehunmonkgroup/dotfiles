@@ -519,6 +519,22 @@ Host cluster.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host gw-chi.local
+  Hostname localhost
+  Port 10101
+  User root
+  HostKeyAlias gw-chi.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host gw-las.local
+  Hostname localhost
+  Port 10201
+  User root
+  HostKeyAlias gw-las.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host data1-las.local
   Hostname localhost
   Port 10210
