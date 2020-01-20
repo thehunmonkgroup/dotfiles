@@ -521,7 +521,7 @@ Host cluster.local
 
 Host gw-chi.local
   Hostname localhost
-  Port 10101
+  Port 10102
   User root
   HostKeyAlias gw-chi.local
   StrictHostKeyChecking no
@@ -529,7 +529,7 @@ Host gw-chi.local
 
 Host gw-las.local
   Hostname localhost
-  Port 10201
+  Port 10202
   User root
   HostKeyAlias gw-las.local
   StrictHostKeyChecking no
