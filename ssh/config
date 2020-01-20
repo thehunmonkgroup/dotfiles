@@ -535,11 +535,27 @@ Host gw-las.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host gw-wdc.local
+  Hostname localhost
+  Port 10302
+  User root
+  HostKeyAlias gw-wdc.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host data1-las.local
   Hostname localhost
   Port 10210
   User root
   HostKeyAlias data1-las.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host data1-wdc.local
+  Hostname localhost
+  Port 10310
+  User root
+  HostKeyAlias data1-wdc.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
