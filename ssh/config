@@ -415,14 +415,6 @@ Host mmv
   ForwardX11 yes
   ForwardX11Trusted yes
 
-Host admin.local
-  Hostname localhost
-  Port 10110
-  User root
-  HostKeyAlias admin.local
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host cerebro.local
   Hostname localhost
   Port 2290
@@ -439,11 +431,11 @@ Host dev.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host old-admin.local
+Host admin.local
   Hostname localhost
   Port 2294
   User root
-  HostKeyAlias old-admin.local
+  HostKeyAlias admin.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
@@ -519,59 +511,67 @@ Host cluster.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host gw-chi.local
+Host orch.local
+  Hostname localhost
+  Port 10110
+  User root
+  HostKeyAlias orch.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host gw-admin.local
   Hostname localhost
   Port 10102
   User root
-  HostKeyAlias gw-chi.local
+  HostKeyAlias gw-admin.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host gw-las.local
+Host gw-west.local
   Hostname localhost
   Port 10202
   User root
-  HostKeyAlias gw-las.local
+  HostKeyAlias gw-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host gw-wdc.local
+Host gw-east.local
   Hostname localhost
   Port 10302
   User root
-  HostKeyAlias gw-wdc.local
+  HostKeyAlias gw-east.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host data1-las.local
+Host data1-west.local
   Hostname localhost
   Port 10210
   User root
-  HostKeyAlias data1-las.local
+  HostKeyAlias data1-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host data1-wdc.local
+Host data1-east.local
   Hostname localhost
   Port 10310
   User root
-  HostKeyAlias data1-wdc.local
+  HostKeyAlias data1-east.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host web1-las.local
+Host web1-west.local
   Hostname localhost
   Port 10230
   User root
-  HostKeyAlias web1-las.local
+  HostKeyAlias web1-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host web1-wdc.local
+Host web1-east.local
   Hostname localhost
   Port 10330
   User root
-  HostKeyAlias web1-wdc.local
+  HostKeyAlias web1-east.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
