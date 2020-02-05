@@ -1,0 +1,106 @@
+# Defaults.
+default.project=inbox
+
+# UDAs.
+uda.notes.type=string
+uda.notes.label=Notes
+
+# vi: ft=dosini
+# Search.
+search.case.sensitive=no
+
+# Reports.
+column.padding=2
+journal.info=off
+
+# Date formatting.
+dateformat=db
+dateformat.annotation=Y-M-D
+dateformat.report=Y-M-D
+dateformat.edit=Y-M-D
+dateformat.info=Y-M-D (a)
+
+# Calendar.
+weekstart=Monday
+calendar.offset=on
+
+# Colors.
+color.completed=bold green
+color.deleted=bold red
+color.project.none=white on red
+color.uda.notes=yellow
+
+# Reports.
+report.inbox.description=Inbox
+report.inbox.columns=id,entry.age,priority,description.desc
+report.inbox.labels=ID,Age,P,Description
+report.inbox.sort=entry+
+report.inbox.filter=project:inbox +PENDING
+
+report.out.description=Errand
+report.out.columns=id,project,description.desc,due,tags
+report.out.labels=ID,Project,Description,Due,Tags
+report.out.sort=project+
+report.out.filter=+errand +PENDING
+
+report.hot.description=High priority
+report.hot.columns=id,project,description.desc,due,priority
+report.hot.labels=ID,Project,Description,Due,P
+report.hot.sort=project+
+report.hot.filter=priority:H +PENDING
+
+report.scheduled.description=Scheduled
+report.scheduled.columns=id,scheduled,project,description.desc,due
+report.scheduled.labels=ID,Starts,Project,Description,Due
+report.scheduled.sort=scheduled+
+report.scheduled.filter=+SCHEDULED +PENDING
+
+report.delegated.description=Delegated
+report.delegated.columns=id,project,description.desc,scheduled,due,tags
+report.delegated.labels=ID,Project,Description,Starts,Due,Tags
+report.delegated.sort=project+
+report.delegated.filter=+delegated +PENDING
+
+report.travel.description=Travel
+report.travel.columns=id,description.desc
+report.travel.labels=ID,Description
+report.travel.filter=project:Checklist.Travel +PENDING
+
+report.weekly.description=Weekly review
+report.weekly.columns=id,project,description.desc,tags,scheduled,due
+report.weekly.labels=ID,Project,Description,Tags,Starts,Due
+report.weekly.sort=project+/,urgency-
+report.weekly.filter=+PENDING -delegated -archive -errand project.not:Maybe project.not:Checklist project.not:Ticklers project.not:Values project.not:inbox
+
+# NOTE: This is not kept in dotfiles for security reasons.
+# Sync.
+taskd.certificate=hunmonk.cert.pem
+taskd.key=hunmonk.key.pem
+taskd.ca=ca.cert.pem
+taskd.server=www.xylil.com:53589
+taskd.credentials=Public\/hunmonk\/4655e7f2-da3c-4ffa-a0f6-852038804f32
+
+# Urgency.
+urgency.tags.coefficient=0.0
+urgency.user.tag.archive.coefficient=-10.0
+urgency.user.tag.hold.coefficient=-5.0
+urgency.annotations.coefficient=0.0
+
+urgency.user.project.Checklist.coefficient=-10.0
+urgency.user.project.Ticklers.coefficient=-10.0
+urgency.user.project.Values.coefficient=-10.0
+urgency.user.project.Maybe.coefficient=-100.0
+
+urgency.uda.priority.L.coefficient=-2
+
+# Android-specific.
+
+android.sync.periodical=60
+android.sync.onchange=3
+android.sync.onerror=10
+android.sync.notification=none
+
+android.reports=inbox,hot,out,scheduled,delegated,travel,weekly
+android.report.default=inbox
+
+# vi: ft=dosini
