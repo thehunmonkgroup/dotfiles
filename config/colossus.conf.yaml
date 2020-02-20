@@ -67,6 +67,9 @@
     ~/.bashrc.d/pijaz.sh:
       create: true
       path: bashrc.d/pijaz.sh
+    ~/.bashrc.d/poor-mans-vault.sh:
+      create: true
+      path: bashrc.d/poor-mans-vault.sh
     ~/.bashrc.d/pyenv.sh:
       create: true
       path: bashrc.d/pyenv.sh
