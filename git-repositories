@@ -25,3 +25,4 @@ https://github.com/tpope/vim-repeat.git#070ee903245999b2b79f7386631ffd29ce9b8e9f
 https://github.com/wavded/vim-stylus.git#0514757a4795843978517ee73d7fa7d8bf2e5545#~/.vim/bundle/vim-stylus
 https://github.com/tpope/vim-surround.git#e49d6c2459e0f5569ff2d533b4df995dd7f98313#~/.vim/bundle/vim-surround
 https://github.com/bronson/vim-trailing-whitespace.git#4c596548216b7c19971f8fc94e38ef1a2b55fee6#~/.vim/bundle/vim-trailing-whitespace
+https://github.com/hashivim/vim-terraform.git#c8c9bbd70da65e2c0bcba2947c4061a7c3e24e69#~/.vim/bundle/vim-terraform
