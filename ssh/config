@@ -93,6 +93,16 @@ Host shadowcat2
   KexAlgorithms diffie-hellman-group1-sha1
 
 
+# Apartment Lines staging servers.
+Host orch.al-staging.com
+	Hostname 66.42.115.176
+	Port 5000
+	User root
+	HostKeyAlias orch.al-staging.com
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+
 # Apartment Lines testing servers.
 Host nightcrawler
 	Hostname nightcrawler.apartmentlines.com
