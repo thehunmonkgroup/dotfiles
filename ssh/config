@@ -102,6 +102,15 @@ Host orch.al-staging.com
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+# Apartment Lines staging servers.
+Host orch-gcp
+	Hostname 35.236.212.36
+	Port 5000
+	User root
+	HostKeyAlias orch-gcp
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 
 # Apartment Lines testing servers.
 Host nightcrawler
@@ -537,14 +546,6 @@ Host gw-admin.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host gw-west.local
-  Hostname localhost
-  Port 10202
-  User root
-  HostKeyAlias gw-west.local
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host gw-east.local
   Hostname localhost
   Port 10302
@@ -553,35 +554,67 @@ Host gw-east.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host data1-west.local
+Host gw-central.local
   Hostname localhost
-  Port 10210
+  Port 10302
   User root
-  HostKeyAlias data1-west.local
+  HostKeyAlias gw-central.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host gw-west.local
+  Hostname localhost
+  Port 10202
+  User root
+  HostKeyAlias gw-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
 Host data1-east.local
   Hostname localhost
-  Port 10310
+  Port 10210
   User root
   HostKeyAlias data1-east.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host web1-west.local
+Host data1-central.local
   Hostname localhost
-  Port 10230
+  Port 10310
   User root
-  HostKeyAlias web1-west.local
+  HostKeyAlias data1-central.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host data1-west.local
+  Hostname localhost
+  Port 10410
+  User root
+  HostKeyAlias data1-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
 Host web1-east.local
   Hostname localhost
-  Port 10330
+  Port 10230
   User root
   HostKeyAlias web1-east.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host web1-central.local
+  Hostname localhost
+  Port 10330
+  User root
+  HostKeyAlias web1-central.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host web1-west.local
+  Hostname localhost
+  Port 10430
+  User root
+  HostKeyAlias web1-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
