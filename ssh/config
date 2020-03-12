@@ -95,7 +95,7 @@ Host shadowcat2
 
 # Apartment Lines staging servers.
 Host orch.al-staging.com
-	Hostname 66.42.115.176
+	Hostname 168.62.110.18
 	Port 5000
 	User root
 	HostKeyAlias orch.al-staging.com
@@ -104,7 +104,7 @@ Host orch.al-staging.com
 
 # Apartment Lines staging servers.
 Host orch-gcp
-	Hostname 35.236.212.36
+	Hostname 35.245.80.10
 	Port 5000
 	User root
 	HostKeyAlias orch-gcp
@@ -540,7 +540,7 @@ Host orch.local
 
 Host gw-admin.local
   Hostname localhost
-  Port 10102
+  Port 10105
   User root
   HostKeyAlias gw-admin.local
   StrictHostKeyChecking no
@@ -548,7 +548,7 @@ Host gw-admin.local
 
 Host gw-east.local
   Hostname localhost
-  Port 10302
+  Port 10305
   User root
   HostKeyAlias gw-east.local
   StrictHostKeyChecking no
@@ -556,7 +556,7 @@ Host gw-east.local
 
 Host gw-central.local
   Hostname localhost
-  Port 10302
+  Port 10305
   User root
   HostKeyAlias gw-central.local
   StrictHostKeyChecking no
@@ -564,7 +564,7 @@ Host gw-central.local
 
 Host gw-west.local
   Hostname localhost
-  Port 10202
+  Port 10205
   User root
   HostKeyAlias gw-west.local
   StrictHostKeyChecking no
