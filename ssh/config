@@ -95,7 +95,7 @@ Host shadowcat2
 
 # Apartment Lines staging servers.
 Host orch.al-staging.com
-	Hostname 168.62.110.18
+	Hostname 23.96.219.199
 	Port 5000
 	User root
 	HostKeyAlias orch.al-staging.com

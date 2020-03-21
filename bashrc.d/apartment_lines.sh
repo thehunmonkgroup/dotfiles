@@ -10,4 +10,5 @@ alias sc="ssh cerebro"
 # Site aliases.
 alias al="cd ~/git/apartmentlines"
 alias alm="cd ~/git/apartmentlines/apartmentlines.com/sites/all/modules"
-
+alias iac="al && cd iac"
+alias ter="iac && cd terraform"
