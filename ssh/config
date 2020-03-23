@@ -94,19 +94,17 @@ Host shadowcat2
 
 
 # Apartment Lines staging servers.
-Host gw-admin.al-staging.com
-  Hostname gw-admin.al-staging.com
+Host *.al-staging.com
   Port 5000
   User root
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host gw-admin.al-staging.com
+  Hostname gw-admin.al-staging.com
+
 Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com
-  Port 5000
-  User root
   ProxyCommand ssh -W %h:%p gw-admin.al-staging.com
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host orch.al-staging.com
   Hostname 10.1.1.10
@@ -116,17 +114,9 @@ Host repo.al-staging.com
 
 Host gw-east.al-staging.com
   Hostname gw-east.al-staging.com
-  Port 5000
-  User root
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host !gw-east.al-staging.com *-east.al-staging.com
-  Port 5000
-  User root
   ProxyCommand ssh -W %h:%p gw-east.al-staging.com
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host data1-east.al-staging.com
   Hostname 10.1.2.10
@@ -136,17 +126,9 @@ Host web1-east.al-staging.com
 
 Host gw-central.al-staging.com
   Hostname gw-central.al-staging.com
-  Port 5000
-  User root
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host !gw-central.al-staging.com *-central.al-staging.com
-  Port 5000
-  User root
   ProxyCommand ssh -W %h:%p gw-central.al-staging.com
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host data1-central.al-staging.com
   Hostname 10.1.3.10
@@ -156,17 +138,9 @@ Host web1-central.al-staging.com
 
 Host gw-west.al-staging.com
   Hostname gw-west.al-staging.com
-  Port 5000
-  User root
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host !gw-west.al-staging.com *-west.al-staging.com
-  Port 5000
-  User root
   ProxyCommand ssh -W %h:%p gw-west.al-staging.com
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
 Host data1-west.al-staging.com
   Hostname 10.1.4.10
