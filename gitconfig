@@ -18,21 +18,22 @@
 [push]
   default = simple
 
-# Kdiff3 integration.
-[difftool "kdiff3"]
-  path = /usr/local/bin/kdiff3
-  trustExitCode = false
+# Meld integration.
+[diff]
+  tool = meld
 [difftool]
   prompt = false
-[diff]
-  tool = kdiff3
-[mergetool "kdiff3"]
-  path = /usr/local/bin/kdiff3
-  trustExitCode = false
+[difftool "meld"]
+  cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+  tool = meld
 [mergetool]
   keepBackup = false
-[merge]
-  tool = kdiff3
+[mergetool "meld"]
+  # Choose one of these 2 lines (not both!) explained below.
+  cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+  #cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
