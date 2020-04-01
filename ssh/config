@@ -367,6 +367,22 @@ Host video-test.stirlab.net
   HostKeyAlias video-test.stirlab.net
 
 
+# MaestroConference servers
+Host poof.maestroconference.com
+  Hostname poof.maestroconference.com
+  Port 5000
+  User root
+  HostKeyAlias poof.maestroconference.com
+
+Host video.maestroconference.com
+  Hostname video.maestroconference.com
+  Port 5000
+  User root
+  HostKeyAlias video.maestroconference.com
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+
 # Local Vagrant servers.
 Host temp
   Hostname localhost
