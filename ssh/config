@@ -601,7 +601,7 @@ Host gw-admin.local
 
 Host gw-east.local
   Hostname localhost
-  Port 10305
+  Port 10205
   User root
   HostKeyAlias gw-east.local
   StrictHostKeyChecking no
@@ -617,7 +617,7 @@ Host gw-central.local
 
 Host gw-west.local
   Hostname localhost
-  Port 10205
+  Port 10405
   User root
   HostKeyAlias gw-west.local
   StrictHostKeyChecking no
