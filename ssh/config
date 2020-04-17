@@ -679,6 +679,14 @@ Host repo.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host monitor.local
+  Hostname localhost
+  Port 10112
+  User root
+  HostKeyAlias monitor.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host voip.local
   Hostname localhost
   Port 2292
