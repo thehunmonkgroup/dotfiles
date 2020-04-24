@@ -639,6 +639,14 @@ Host data1-central.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host data2-central.local
+  Hostname localhost
+  Port 10312
+  User root
+  HostKeyAlias data2-central.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host data1-west.local
   Hostname localhost
   Port 10410
@@ -890,6 +898,15 @@ Host dev.pijaz.com
 	HostKeyAlias dev.pijaz.com
 
 # Other servers.
+
+Host vicibox
+  Hostname localhost
+  Port 2299
+  User root
+  HostKeyAlias vicibox
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host trilliumhollow.org
   Hostname trilliumhollow.org
   Port 22
