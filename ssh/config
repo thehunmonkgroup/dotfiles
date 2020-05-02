@@ -119,10 +119,10 @@ Host !gw-east.al-staging.com *-east.al-staging.com
   ProxyCommand ssh -W %h:%p gw-east.al-staging.com
 
 Host data1-east.al-staging.com
-  Hostname 10.1.2.10
+  Hostname 10.1.2.11
 
 Host web1-east.al-staging.com
-  Hostname 10.1.2.30
+  Hostname 10.1.2.31
 
 Host gw-central.al-staging.com
   Hostname gw-central.al-staging.com
@@ -131,10 +131,10 @@ Host !gw-central.al-staging.com *-central.al-staging.com
   ProxyCommand ssh -W %h:%p gw-central.al-staging.com
 
 Host data1-central.al-staging.com
-  Hostname 10.1.3.10
+  Hostname 10.1.3.11
 
 Host web1-central.al-staging.com
-  Hostname 10.1.3.30
+  Hostname 10.1.3.31
 
 Host gw-west.al-staging.com
   Hostname gw-west.al-staging.com
@@ -143,10 +143,10 @@ Host !gw-west.al-staging.com *-west.al-staging.com
   ProxyCommand ssh -W %h:%p gw-west.al-staging.com
 
 Host data1-west.al-staging.com
-  Hostname 10.1.4.10
+  Hostname 10.1.4.11
 
 Host web1-west.al-staging.com
-  Hostname 10.1.4.30
+  Hostname 10.1.4.31
 
 
 # Apartment Lines testing servers.
@@ -625,7 +625,7 @@ Host gw-west.local
 
 Host data1-east.local
   Hostname localhost
-  Port 10210
+  Port 10211
   User root
   HostKeyAlias data1-east.local
   StrictHostKeyChecking no
@@ -633,7 +633,7 @@ Host data1-east.local
 
 Host data1-central.local
   Hostname localhost
-  Port 10310
+  Port 10311
   User root
   HostKeyAlias data1-central.local
   StrictHostKeyChecking no
@@ -649,7 +649,7 @@ Host data2-central.local
 
 Host data1-west.local
   Hostname localhost
-  Port 10410
+  Port 10411
   User root
   HostKeyAlias data1-west.local
   StrictHostKeyChecking no
@@ -657,7 +657,7 @@ Host data1-west.local
 
 Host web1-east.local
   Hostname localhost
-  Port 10230
+  Port 10231
   User root
   HostKeyAlias web1-east.local
   StrictHostKeyChecking no
@@ -665,7 +665,7 @@ Host web1-east.local
 
 Host web1-central.local
   Hostname localhost
-  Port 10330
+  Port 10331
   User root
   HostKeyAlias web1-central.local
   StrictHostKeyChecking no
@@ -673,7 +673,7 @@ Host web1-central.local
 
 Host web1-west.local
   Hostname localhost
-  Port 10430
+  Port 10431
   User root
   HostKeyAlias web1-west.local
   StrictHostKeyChecking no
