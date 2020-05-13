@@ -103,7 +103,7 @@ Host *.al-staging.com
 Host gw-admin.al-staging.com
   Hostname gw-admin.al-staging.com
 
-Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com
+Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com monitor.al-staging.com
   ProxyCommand ssh -W %h:%p gw-admin.al-staging.com
 
 Host orch.al-staging.com
