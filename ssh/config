@@ -133,6 +133,9 @@ Host !gw-central.al-staging.com *-central.al-staging.com
 Host data1-central.al-staging.com
   Hostname 10.1.3.11
 
+Host data2-central.al-staging.com
+  Hostname 10.1.3.12
+
 Host web1-central.al-staging.com
   Hostname 10.1.3.31
 
