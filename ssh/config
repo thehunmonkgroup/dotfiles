@@ -112,6 +112,9 @@ Host orch.al-staging.com
 Host repo.al-staging.com
   Hostname 10.1.1.11
 
+Host monitor.al-staging.com
+  Hostname 10.1.1.20
+
 Host gw-east.al-staging.com
   Hostname gw-east.al-staging.com
 
