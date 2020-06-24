@@ -130,6 +130,9 @@ Host voice1-east.al-staging.com
 Host web1-east.al-staging.com
   Hostname 10.1.2.31
 
+Host union1-east.al-staging.com
+  Hostname 10.1.2.91
+
 Host gw-central.al-staging.com
   Hostname gw-central.al-staging.com
 
@@ -148,6 +151,9 @@ Host voice1-central.al-staging.com
 Host web1-central.al-staging.com
   Hostname 10.1.3.31
 
+Host union1-central.al-staging.com
+  Hostname 10.1.3.91
+
 Host gw-west.al-staging.com
   Hostname gw-west.al-staging.com
 
@@ -162,6 +168,9 @@ Host voice1-west.al-staging.com
 
 Host web1-west.al-staging.com
   Hostname 10.1.4.31
+
+Host union1-west.al-staging.com
+  Hostname 10.1.4.91
 
 
 # Apartment Lines testing servers.
@@ -715,6 +724,30 @@ Host web1-west.local
   Port 10431
   User root
   HostKeyAlias web1-west.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host union1-east.local
+  Hostname localhost
+  Port 10291
+  User root
+  HostKeyAlias union1-east.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host union1-central.local
+  Hostname localhost
+  Port 10391
+  User root
+  HostKeyAlias union1-central.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host union1-west.local
+  Hostname localhost
+  Port 10491
+  User root
+  HostKeyAlias union1-west.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
