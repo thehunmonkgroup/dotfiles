@@ -767,6 +767,14 @@ Host monitor.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host xylil.local
+  Hostname localhost
+  Port 10190
+  User root
+  HostKeyAlias xylil.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host voip.local
   Hostname localhost
   Port 2292
