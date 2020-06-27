@@ -115,6 +115,9 @@ Host repo.al-staging.com
 Host monitor.al-staging.com
   Hostname 10.1.1.20
 
+Host xylil.al-staging.com
+  Hostname 10.1.1.91
+
 Host gw-east.al-staging.com
   Hostname gw-east.al-staging.com
 
