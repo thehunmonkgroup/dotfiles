@@ -102,10 +102,6 @@ set tags=tags;/
 set modeline
 set modelines=5
 
-" CTRL+x opens the buffer list
-map <C-x> <esc>:Unite buffer<cr>
-map <C-c> <esc>:UniteWithProjectDir -start-insert file_rec<cr>
-
 " gz in command mode closes the current buffer
 map gz :bdelete<cr>
 
