@@ -27,3 +27,4 @@ https://github.com/bronson/vim-trailing-whitespace.git#4c596548216b7c19971f8fc94
 https://github.com/hashivim/vim-terraform.git#c8c9bbd70da65e2c0bcba2947c4061a7c3e24e69#~/.vim/bundle/vim-terraform
 https://github.com/aserebryakov/vim-todo-lists.git#c9d08ded8594ee562f5b19c89020cbb5e82811bb#~/.vim/bundle/vim-todo-lists
 https://github.com/junegunn/fzf.vim.git#2bf85d25e203a536edb2c072c0d41b29e8e4cc1b#~/.vim/bundle/fzf.vim
+https://github.com/dbakker/vim-projectroot.git#68787126ebbbe50e120e497ff63696b22f636840#~/.vim/bundle/vim-projectroot
