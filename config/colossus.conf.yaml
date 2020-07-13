@@ -159,6 +159,12 @@
     ~/bin/fix-git-dir-perms.sh:
       create: true
       path: bin/fix-git-dir-perms.sh
+    ~/bin/onenote_outline:
+      create: true
+      path: bin/onenote_outline
+    ~/bin/onenote_todo:
+      create: true
+      path: bin/onenote_todo
     ~/bin/p:
       create: true
       path: bin/p

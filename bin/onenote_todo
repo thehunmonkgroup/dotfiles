@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ONENOTE_DEFAULT_CONTENT="# vi: ft=todo" onenote ${1}
