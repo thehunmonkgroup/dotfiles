@@ -154,7 +154,8 @@ Host *.apartmentlines.com
   UserKnownHostsFile /dev/null
 
 Host gw-admin.apartmentlines.com
-  Hostname gw-admin.apartmentlines.com
+  #Hostname gw-admin.apartmentlines.com
+  Hostname 45.76.230.222
 
 Host !gw-admin.apartmentlines.com orch.apartmentlines.com repo.apartmentlines.com monitor.apartmentlines.com xylil.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-admin.apartmentlines.com
@@ -172,7 +173,8 @@ Host xylil.apartmentlines.com
   Hostname 10.1.1.90
 
 Host gw-east.apartmentlines.com
-  Hostname gw-east.apartmentlines.com
+  #Hostname gw-east.apartmentlines.com
+  Hostname 144.202.20.154
 
 Host !gw-east.apartmentlines.com *-east.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-east.apartmentlines.com
@@ -181,7 +183,8 @@ Host union1-east.apartmentlines.com
   Hostname 10.1.2.91
 
 Host gw-central.apartmentlines.com
-  Hostname gw-central.apartmentlines.com
+  #Hostname gw-central.apartmentlines.com
+  Hostname 35.184.241.115
 
 Host !gw-central.apartmentlines.com *-central.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-central.apartmentlines.com
@@ -279,7 +282,7 @@ Host staging-admin.apartmentlines.net
   UserKnownHostsFile /dev/null
 
 Host xylil.com
-  Hostname xylil.com
+  Hostname 67.212.153.156
 	Port 5000
 	User root
 	HostKeyAlias xylil.com

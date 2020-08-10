@@ -154,6 +154,16 @@ set visualbell t_vb=
 nmap n nzz
 nmap N Nzz
 
+" fzf.vim
+noremap <silent> <leader>f :Files<CR>
+noremap <silent> <leader>r :ProjectRootExe Files<CR>
+noremap <silent> <leader>s :Rg<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>' :Marks<CR>
+nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <Leader>c :History:<CR>
+nnoremap <silent> <Leader>/ :History/<CR>
+
 if has("autocmd")
    augroup module
    autocmd BufRead,BufNewFile *.module,*.install,*.profile,*.theme set filetype=php
