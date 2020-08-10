@@ -135,3 +135,8 @@ autocmd FileType votl execute "silent! CocDisable"
 
 " fzf settings.
 set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+
+" This eliminates filenames when searching for content in files.
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" Replace grep with rg.
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
