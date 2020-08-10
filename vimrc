@@ -164,6 +164,11 @@ nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <Leader>c :History:<CR>
 nnoremap <silent> <Leader>/ :History/<CR>
 
+" This eliminates filenames when searching for content in files.
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" Replace grep with rg.
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
 if has("autocmd")
    augroup module
    autocmd BufRead,BufNewFile *.module,*.install,*.profile,*.theme set filetype=php
