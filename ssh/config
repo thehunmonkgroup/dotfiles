@@ -115,9 +115,6 @@ Host repo.al-staging.com
 Host monitor.al-staging.com
   Hostname 10.1.1.20
 
-Host xylil.al-staging.com
-  Hostname 10.1.1.90
-
 Host gw-east.al-staging.com
   Hostname gw-east.al-staging.com
 
@@ -246,46 +243,12 @@ Host scratch
 	HostKeyAlias scratch
 
 
-# Apartment Lines PBX servers.
-Host pbx
-	Hostname pbx.apartmentlines.com
-	Port 5000
-	User root
-	HostKeyAlias pbx
-
-Host backup.pbx
-	Hostname backup.pbx.apartmentlines.com
-	Port 5000
-	User root
-	HostKeyAlias backup.pbx
-
-
 # Apartment Lines other servers.
 Host cerebro
   Hostname cerebro.apartmentlines.com
 	Port 5000
 	User root
 	HostKeyAlias cerebro
-
-Host dev.apartmentlines.com
-	Hostname dev.apartmentlines.com
-	Port 5000
-	User root
-	HostKeyAlias dev.apartmentlines.com
-
-Host staging-admin.apartmentlines.net
-	Hostname staging-admin.apartmentlines.net
-	Port 5000
-	User root
-	HostKeyAlias staging-admin.apartmentlines.net
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host xylil.com
-  Hostname 67.212.153.156
-	Port 5000
-	User root
-	HostKeyAlias xylil.com
 
 
 # Stirlab servers.
