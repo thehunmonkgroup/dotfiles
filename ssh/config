@@ -9,7 +9,7 @@ Host *.apartmentlines.com *.al-staging.com
 Host gw-admin.al-staging.com
   Hostname gw-admin.al-staging.com
 
-Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com monitor.al-staging.com xylil.al-staging.com
+Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com git-repo.al-staging.com monitor.al-staging.com xylil.al-staging.com
   ProxyCommand ssh -W %h:%p gw-admin.al-staging.com
 
 Host gw-east.al-staging.com
@@ -29,7 +29,7 @@ Host !gw-central.al-staging.com *-central.al-staging.com
 Host gw-admin.apartmentlines.com
   Hostname gw-admin.apartmentlines.com
 
-Host !gw-admin.apartmentlines.com orch.apartmentlines.com repo.apartmentlines.com monitor.apartmentlines.com xylil.apartmentlines.com
+Host !gw-admin.apartmentlines.com orch.apartmentlines.com repo.apartmentlines.com git-repo.apartmentlines.com monitor.apartmentlines.com xylil.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-admin.apartmentlines.com
 
 Host gw-east.apartmentlines.com
