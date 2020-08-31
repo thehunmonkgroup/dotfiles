@@ -1,15 +1,89 @@
+######################################
 # Apartment Lines servers.
-Host *.apartmentlines.com *.al-staging.com
-  Port 5000
-  User root
-  #StrictHostKeyChecking no
-  #UserKnownHostsFile /dev/null
+######################################
+
+# Apartment Lines individual servers.
+Host orch.apartmentlines.com
+  HostKeyAlias orch.apartmentlines.com
+
+Host orch.al-staging.com
+  HostKeyAlias orch.al-staging.com
+
+Host orch.apartmentlines.com orch.al-staging.com
+  Hostname 10.1.1.10
+
+Host git-repo.apartmentlines.com git-repo.al-staging.com
+  User hunmonk
+
+Host repo.al-staging.com git-repo.al-staging.com
+  Hostname repo.al-staging.com
+
+Host repo.apartmentlines.com git-repo.apartmentlines.com
+  Hostname repo.apartmentlines.com
+
+Host monitor.apartmentlines.com
+  HostKeyAlias monitor.apartmentlines.com
+
+Host monitor.al-staging.com
+  HostKeyAlias monitor.al-staging.com
+
+Host monitor.apartmentlines.com monitor.al-staging.com
+  Hostname 10.1.1.20
+
+Host xylil.apartmentlines.com
+  Hostname 10.1.1.90
+  HostKeyAlias xylil.apartmentlines.com
+
+Host union1-east.apartmentlines.com
+  HostKeyAlias union1-east.apartmentlines.com
+
+Host union1-east.al-staging.com
+  HostKeyAlias union1-east.al-staging.com
+
+Host union1-east.apartmentlines.com union1-east.al-staging.com
+  Hostname 10.1.2.91
+
+Host data1-central.apartmentlines.com
+  HostKeyAlias data1-central.apartmentlines.com
+
+Host data1-central.al-staging.com
+  HostKeyAlias data1-central.al-staging.com
+
+Host data1-central.apartmentlines.com data1-central.al-staging.com
+  Hostname 10.1.3.11
+
+Host data2-central.apartmentlines.com
+  HostKeyAlias data2-central.apartmentlines.com
+
+Host data2-central.al-staging.com
+  HostKeyAlias data2-central.al-staging.com
+
+Host data2-central.apartmentlines.com data2-central.al-staging.com
+  Hostname 10.1.3.12
+
+Host voice1-central.apartmentlines.com
+  HostKeyAlias voice1-central.apartmentlines.com
+
+Host voice1-central.al-staging.com
+  HostKeyAlias voice1-central.al-staging.com
+
+Host voice1-central.apartmentlines.com voice1-central.al-staging.com
+  Hostname 10.1.3.21
+
+Host web1-central.apartmentlines.com
+  HostKeyAlias web1-central.apartmentlines.com
+
+Host web1-central.al-staging.com
+  HostKeyAlias web1-central.al-staging.com
+
+Host web1-central.apartmentlines.com web1-central.al-staging.com
+  Hostname 10.1.3.31
 
 # Apartment Lines staging gateways.
 Host gw-admin.al-staging.com
   Hostname gw-admin.al-staging.com
 
-Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com git-repo.al-staging.com monitor.al-staging.com xylil.al-staging.com
+Host !gw-admin.al-staging.com orch.al-staging.com repo.al-staging.com monitor.al-staging.com xylil.al-staging.com
   ProxyCommand ssh -W %h:%p gw-admin.al-staging.com
 
 Host gw-east.al-staging.com
@@ -29,7 +103,7 @@ Host !gw-central.al-staging.com *-central.al-staging.com
 Host gw-admin.apartmentlines.com
   Hostname gw-admin.apartmentlines.com
 
-Host !gw-admin.apartmentlines.com orch.apartmentlines.com repo.apartmentlines.com git-repo.apartmentlines.com monitor.apartmentlines.com xylil.apartmentlines.com
+Host !gw-admin.apartmentlines.com orch.apartmentlines.com repo.apartmentlines.com monitor.apartmentlines.com xylil.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-admin.apartmentlines.com
 
 Host gw-east.apartmentlines.com
@@ -44,99 +118,12 @@ Host gw-central.apartmentlines.com
 Host !gw-central.apartmentlines.com *-central.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-central.apartmentlines.com
 
-# Apartment Lines servers.
-Host orch.apartmentlines.com orch.al-staging.com
-  Hostname 10.1.1.10
-
-Host orch.apartmentlines.com
-  HostKeyAlias orch.apartmentlines.com
-
-Host orch.al-staging.com
-  HostKeyAlias orch.al-staging.com
-
-Host repo.apartmentlines.com repo.al-staging.com
-  Hostname 10.1.1.11
-
-Host repo.apartmentlines.com
-  HostKeyAlias repo.apartmentlines.com
-
-Host repo.al-staging.com
-  HostKeyAlias repo.al-staging.com
-
-
-Host git-repo.apartmentlines.com git-repo.al-staging.com
-  Hostname 10.1.1.11
-  User hunmonk
-
-Host git-repo.apartmentlines.com
-  HostKeyAlias git-repo.apartmentlines.com
-
-Host git-repo.al-staging.com
-  HostKeyAlias git-repo.al-staging.com
-
-Host monitor.apartmentlines.com monitor.al-staging.com
-  Hostname 10.1.1.20
-
-Host monitor.apartmentlines.com
-  HostKeyAlias monitor.apartmentlines.com
-
-Host monitor.al-staging.com
-  HostKeyAlias monitor.al-staging.com
-
-
-Host xylil.apartmentlines.com
-  Hostname 10.1.1.90
-  HostKeyAlias xylil.apartmentlines.com
-
-Host union1-east.apartmentlines.com union1-east.al-staging.com
-  Hostname 10.1.2.91
-
-Host union1-east.apartmentlines.com
-  HostKeyAlias union1-east.apartmentlines.com
-
-Host union1-east.al-staging.com
-  HostKeyAlias union1-east.al-staging.com
-
-
-Host data1-central.apartmentlines.com data1-central.al-staging.com
-  Hostname 10.1.3.11
-
-Host data1-central.apartmentlines.com
-  HostKeyAlias data1-central.apartmentlines.com
-
-Host data1-central.al-staging.com
-  HostKeyAlias data1-central.al-staging.com
-
-
-Host data2-central.apartmentlines.com data2-central.al-staging.com
-  Hostname 10.1.3.12
-
-Host data2-central.apartmentlines.com
-  HostKeyAlias data2-central.apartmentlines.com
-
-Host data2-central.al-staging.com
-  HostKeyAlias data2-central.al-staging.com
-
-
-Host voice1-central.apartmentlines.com voice1-central.al-staging.com
-  Hostname 10.1.3.21
-
-Host voice1-central.apartmentlines.com
-  HostKeyAlias voice1-central.apartmentlines.com
-
-Host voice1-central.al-staging.com
-  HostKeyAlias voice1-central.al-staging.com
-
-
-Host web1-central.apartmentlines.com web1-central.al-staging.com
-  Hostname 10.1.3.31
-
-Host web1-central.apartmentlines.com
-  HostKeyAlias web1-central.apartmentlines.com
-
-Host web1-central.al-staging.com
-  HostKeyAlias web1-central.al-staging.com
-
+# Apartment Lines domain-wide.
+Host *.apartmentlines.com *.al-staging.com
+  Port 5000
+  User root
+  #StrictHostKeyChecking no
+  #UserKnownHostsFile /dev/null
 
 
 # Stirlab servers.
