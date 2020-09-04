@@ -192,9 +192,6 @@
     ~/bin/stop-test-servers.sh:
       create: true
       path: bin/stop-test-servers.sh
-    ~/bin/tunnel:
-      create: true
-      path: bin/tunnel
     ~/bin/wcr:
       create: true
       path: bin/wcr
