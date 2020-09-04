@@ -18,9 +18,6 @@
     ~/.bash_completion.d/subversion:
       create: true
       path: bash_completion.d/subversion
-    ~/.bash_completion.d/tunnel.sh:
-      create: true
-      path: bash_completion.d/tunnel.sh
     ~/.bash_completion.d/vit:
       create: true
       path: bash_completion.d/vit
