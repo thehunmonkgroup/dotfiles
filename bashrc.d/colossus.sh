@@ -57,8 +57,12 @@ function cvsdiff () {
 # Color diffs for SVN.
 function svndiff () {
   if [ "$1" != "" ]; then
-    svn diff $@ | colordiff;
+    svn diff $@ | colordiff
   else
-    svn diff | colordiff;
+    svn diff | colordiff
   fi
+}
+
+function svndiffmeld () {
+  svn diff --diff-cmd="meld" $@
 }
