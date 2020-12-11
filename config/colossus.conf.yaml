@@ -153,6 +153,9 @@
     ~/bin/deploy_pijaz_file:
       create: true
       path: bin/deploy_pijaz_file
+    ~/bin/demux-video.sh:
+      create: true
+      path: bin/demux-video.sh
     ~/bin/fix-git-dir-perms.sh:
       create: true
       path: bin/fix-git-dir-perms.sh
