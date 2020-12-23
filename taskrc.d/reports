@@ -2,7 +2,7 @@ report.inbox.description=Inbox
 report.inbox.columns=id,entry.age,priority,description.desc
 report.inbox.labels=ID,Age,P,Description
 report.inbox.sort=entry+
-report.inbox.filter=project:inbox +PENDING
+report.inbox.filter=project:INBOX +PENDING
 
 report.hot.description=All tasks with a scheduled date, sorted ascending
 report.hot.columns=id,project,description.desc,due,priority
@@ -31,7 +31,7 @@ report.out.filter=+errand +PENDING
 report.travel.description=Pre-travel checklist
 report.travel.columns=id,description.desc
 report.travel.labels=ID,Description
-report.travel.filter=project:Checklist.Travel +PENDING
+report.travel.filter=project:checklist.travel +PENDING
 
 report.weekly.description=Weekly review
 report.weekly.columns=id,project,description.desc,tags,scheduled,due
@@ -43,6 +43,6 @@ report.mcg.description=midlifecrisisguy.com
 report.mcg.columns=id,project,description.desc,tags,scheduled,due
 report.mcg.labels=ID,Project,Description,Tags,Starts,Due
 report.mcg.sort=project+/,urgency-
-report.mcg.filter=+PENDING project:Art.MCG
+report.mcg.filter=+PENDING project:art.mcg
 
 # vi: ft=dosini
