@@ -21,7 +21,7 @@ uda.notes.type=string
 uda.notes.label=Notes
 
 # Defaults.
-default.project=inbox
+default.project=INBOX
 default.command=next
 
 # Includes.

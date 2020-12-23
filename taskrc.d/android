@@ -1,5 +1,5 @@
 # Defaults.
-default.project=inbox
+default.project=INBOX
 
 # UDAs.
 uda.notes.type=string
@@ -35,7 +35,7 @@ report.inbox.description=Inbox
 report.inbox.columns=id,entry.age,priority,description.desc
 report.inbox.labels=ID,Age,P,Description
 report.inbox.sort=entry+
-report.inbox.filter=project:inbox +PENDING
+report.inbox.filter=project:INBOX +PENDING
 
 report.out.description=Errand
 report.out.columns=id,project,description.desc,due,tags
@@ -64,13 +64,7 @@ report.delegated.filter=+delegated +PENDING
 report.travel.description=Travel
 report.travel.columns=id,description.desc
 report.travel.labels=ID,Description
-report.travel.filter=project:Checklist.Travel +PENDING
-
-report.weekly.description=Weekly review
-report.weekly.columns=id,project,description.desc,tags,scheduled,due
-report.weekly.labels=ID,Project,Description,Tags,Starts,Due
-report.weekly.sort=project+/,urgency-
-report.weekly.filter=+PENDING -delegated -archive -errand project.not:Maybe project.not:Checklist project.not:Ticklers project.not:Values project.not:inbox
+report.travel.filter=project:checklist.travel +PENDING
 
 # NOTE: This is not kept in dotfiles for security reasons.
 # Sync.
