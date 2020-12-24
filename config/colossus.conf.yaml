@@ -195,6 +195,9 @@
     ~/bin/stop-test-servers.sh:
       create: true
       path: bin/stop-test-servers.sh
+    ~/bin/tw-move-project.sh:
+      create: true
+      path: bin/tw-move-project.sh
     ~/bin/wcr:
       create: true
       path: bin/wcr
