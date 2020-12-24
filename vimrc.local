@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""
 " Taskwarrior settings.
 """"""""""""""""""""""""""""""""""""
-nnoremap <silent> <Leader>t :.w !/home/hunmonk/bin/vim-line-to-task.sh<CR>
+nnoremap <silent> <Leader>t :.w !/usr/local/bin/vim-line-to-task.sh<CR>
 
 """"""""""""""""""""""""""""""""""""
 " Settings necessary for coc.vim.
