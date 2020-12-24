@@ -195,9 +195,6 @@
     ~/bin/stop-test-servers.sh:
       create: true
       path: bin/stop-test-servers.sh
-    ~/bin/vim-line-to-task.sh:
-      create: true
-      path: bin/vim-line-to-task.sh
     ~/bin/wcr:
       create: true
       path: bin/wcr
