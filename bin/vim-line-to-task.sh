@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEFAULT_PROJECT="INBOX"
+DEFAULT_PROJECT="$(task _show | grep default\.project | cut -f 2 -d =)"
 DEFAULT_TASK="None"
 
 while read line; do
