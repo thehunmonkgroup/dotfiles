@@ -94,7 +94,7 @@ android.sync.onchange=3
 android.sync.onerror=10
 android.sync.notification=none
 
-android.reports=inbox,hot,out,scheduled,delegated,travel,weekly
+android.reports=inbox,hot,out,scheduled,delegated,travel
 android.report.default=inbox
 
 # vi: ft=dosini
