@@ -51,6 +51,12 @@ report.next.labels=ID,Project,Description,Tags,Starts,Due
 report.next.sort=project+/,urgency-
 report.next.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
 
+report.easy.description=Easy actions
+report.easy.columns=id,project,description.desc,tags,scheduled,due
+report.easy.labels=ID,Project,Description,Tags,Starts,Due
+report.easy.sort=project+/,urgency-
+report.easy.filter=+PENDING -archive -errand -hold +easy
+
 report.hold.description=Items on hold
 report.hold.columns=id,project,description.desc,tags,scheduled,due
 report.hold.labels=ID,Project,Description,Tags,Starts,Due
@@ -61,7 +67,7 @@ report.mcg.description=midlifecrisisguy.com
 report.mcg.columns=id,project,description.desc,tags,scheduled,due
 report.mcg.labels=ID,Project,Description,Tags,Starts,Due
 report.mcg.sort=project+/,urgency-
-report.mcg.filter=+PENDING project:art.mcg
+report.mcg.filter=+PENDING project:art.mcg -hold -archive
 
 report.maybe.description=Maybe/somday
 report.maybe.columns=id,project,description.desc,tags
