@@ -39,11 +39,11 @@ report.travel.columns=id,description.desc
 report.travel.labels=ID,Description
 report.travel.filter=project:checklist.travel +PENDING
 
-report.weekly.description=Weekly review
-report.weekly.columns=id,project,description.desc,tags,scheduled,due
-report.weekly.labels=ID,Project,Description,Tags,Starts,Due
-report.weekly.sort=project+/,urgency-
-report.weekly.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
+report.review.description=Weekly review
+report.review.columns=id,project,description.desc,tags,scheduled,due
+report.review.labels=ID,Project,Description,Tags,Starts,Due
+report.review.sort=project+/,urgency-
+report.review.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
 
 report.next.description=Next actions
 report.next.columns=id,project,description.desc,tags,scheduled,due
@@ -80,5 +80,29 @@ report.archive.columns=id,project,description.desc,tags
 report.archive.labels=ID,Project,Description,Tags
 report.archive.sort=project+/
 report.archive.filter=+PENDING +archive
+
+report.morning.description=Morning checklist
+report.morning.columns=id,description.desc,tags
+report.morning.labels=ID,Description,Tags
+report.morning.sort=urgency-
+report.morning.filter=+PENDING project:checklist.morning
+
+report.midday.description=Midday checklist
+report.midday.columns=id,description.desc,tags
+report.midday.labels=ID,Description,Tags
+report.midday.sort=urgency-
+report.midday.filter=+PENDING project:checklist.midday
+
+report.evening.description=Evening checklist
+report.evening.columns=id,description.desc,tags
+report.evening.labels=ID,Description,Tags
+report.evening.sort=urgency-
+report.evening.filter=+PENDING project:checklist.evening
+
+report.weekly.description=Weekly checklist
+report.weekly.columns=id,description.desc,tags
+report.weekly.labels=ID,Description,Tags
+report.weekly.sort=urgency-
+report.weekly.filter=+PENDING project:checklist.weekly
 
 # vi: ft=dosini
