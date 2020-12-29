@@ -48,5 +48,5 @@ for uuid in $uuids; do
   project="$(task verbose=nothing ${uuid} | grep -m 1 ^Project | awk '{print $2}')"
   subproject="${project:${old_base_project_size}}"
   new_project="${NEW_BASE_PROJECT}${subproject}"
-  #task rc.confirmation=off ${uuid} modify project:"${new_project}"
+  task rc.confirmation=off ${uuid} modify project:"${new_project}"
 done
