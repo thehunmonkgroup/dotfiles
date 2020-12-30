@@ -10,6 +10,12 @@ report.hot.labels=ID,Project,Description,Due,P
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
+report.ticklers.description=All ticklers, sorted ascending by scheduled date
+report.ticklers.columns=id,scheduled,description.desc,due
+report.ticklers.labels=ID,Starts,Description,Due
+report.ticklers.sort=scheduled+
+report.ticklers.filter=+SCHEDULED +PENDING project:ticklers
+
 report.scheduled.description=All tasks with a scheduled date, sorted ascending
 report.scheduled.columns=id,scheduled,project,description.desc,due
 report.scheduled.labels=ID,Starts,Project,Description,Due
