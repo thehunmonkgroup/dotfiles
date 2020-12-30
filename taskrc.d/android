@@ -37,41 +37,125 @@ report.inbox.labels=ID,Age,P,Description
 report.inbox.sort=entry+
 report.inbox.filter=project:INBOX +PENDING
 
-report.out.description=Errand
-report.out.columns=id,project,description.desc,due,tags
-report.out.labels=ID,Project,Description,Due,Tags
-report.out.sort=project+
-report.out.filter=+errand +PENDING
-
-report.hot.description=High priority
+report.hot.description=Hot
 report.hot.columns=id,project,description.desc,due,priority
 report.hot.labels=ID,Project,Description,Due,P
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
-report.scheduled.description=Scheduled
+report.ticklers.description=Ticklers
+report.ticklers.columns=id,scheduled,description.desc,due
+report.ticklers.labels=ID,Starts,Description,Due
+report.ticklers.sort=scheduled+
+report.ticklers.filter=+SCHEDULED +PENDING project:ticklers
+
+report.scheduled.description=All tasks with a scheduled date, sorted ascending
 report.scheduled.columns=id,scheduled,project,description.desc,due
 report.scheduled.labels=ID,Starts,Project,Description,Due
 report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED +PENDING
 
-report.delegated.description=Delegated
+report.yearly.description=All scheduled tasks with a yearly occurrence, sorted ascending
+report.yearly.columns=id,scheduled,project,description.desc,tags
+report.yearly.labels=ID,Starts,Project,Description,Tags
+report.yearly.sort=scheduled+
+report.yearly.filter=+SCHEDULED +PENDING +yearly
+
+report.delegated.description=All tasks with a delegated tag
 report.delegated.columns=id,project,description.desc,scheduled,due,tags
 report.delegated.labels=ID,Project,Description,Starts,Due,Tags
 report.delegated.sort=project+
 report.delegated.filter=+delegated +PENDING
 
-report.travel.description=Travel
+report.out.description=Errands
+report.out.columns=id,project,description.desc,due,tags
+report.out.labels=ID,Project,Description,Due,Tags
+report.out.sort=project+
+report.out.filter=+errand +PENDING
+
+report.travel.description=Travel checklist
 report.travel.columns=id,description.desc
 report.travel.labels=ID,Description
 report.travel.filter=project:checklist.travel +PENDING
+
+report.review.description=Weekly review
+report.review.columns=id,project,description.desc,tags,scheduled,due
+report.review.labels=ID,Project,Description,Tags,Starts,Due
+report.review.sort=project+/,urgency-
+report.review.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
+
+report.next.description=Next actions
+report.next.columns=id,project,description.desc,tags,scheduled,due
+report.next.labels=ID,Project,Description,Tags,Starts,Due
+report.next.sort=project+/,urgency-
+report.next.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
+
+report.easy.description=Easy actions
+report.easy.columns=id,project,description.desc,tags,scheduled,due
+report.easy.labels=ID,Project,Description,Tags,Starts,Due
+report.easy.sort=project+/,urgency-
+report.easy.filter=+PENDING -archive -errand -hold +easy
+
+report.hold.description=Items on hold
+report.hold.columns=id,project,description.desc,tags,scheduled,due
+report.hold.labels=ID,Project,Description,Tags,Starts,Due
+report.hold.sort=project+/,urgency-
+report.hold.filter=+PENDING +hold
+
+report.phone.description=Phone
+report.phone.columns=id,project,description.desc,tags,scheduled,due
+report.phone.labels=ID,Project,Description,Tags,Starts,Due
+report.phone.sort=project+/,urgency-
+report.phone.filter=+PENDING +phone
+
+report.mcg.description=midlifecrisisguy.com
+report.mcg.columns=id,project,description.desc,tags,scheduled,due
+report.mcg.labels=ID,Project,Description,Tags,Starts,Due
+report.mcg.sort=project+/,urgency-
+report.mcg.filter=+PENDING project:art.mcg -hold -archive
+
+report.maybe.description=Maybe/somday
+report.maybe.columns=id,project,description.desc,tags
+report.maybe.labels=ID,Project,Description,Tags
+report.maybe.sort=project+/
+report.maybe.filter=+PENDING project:maybe -archive
+
+report.archive.description=Archived
+report.archive.columns=id,project,description.desc,tags
+report.archive.labels=ID,Project,Description,Tags
+report.archive.sort=project+/
+report.archive.filter=+PENDING +archive
+
+report.morning.description=Morning checklist
+report.morning.columns=id,description.desc,tags
+report.morning.labels=ID,Description,Tags
+report.morning.sort=urgency-
+report.morning.filter=+PENDING project:checklist.morning
+
+report.midday.description=Midday checklist
+report.midday.columns=id,description.desc,tags
+report.midday.labels=ID,Description,Tags
+report.midday.sort=urgency-
+report.midday.filter=+PENDING project:checklist.midday
+
+report.evening.description=Evening checklist
+report.evening.columns=id,description.desc,tags
+report.evening.labels=ID,Description,Tags
+report.evening.sort=urgency-
+report.evening.filter=+PENDING project:checklist.evening
+
+report.weekly.description=Weekly checklist
+report.weekly.columns=id,description.desc,tags
+report.weekly.labels=ID,Description,Tags
+report.weekly.sort=urgency-
+report.weekly.filter=+PENDING project:checklist.weekly
 
 # NOTE: This is not kept in dotfiles for security reasons.
 # Sync.
 taskd.certificate=hunmonk.cert.pem
 taskd.key=hunmonk.key.pem
 taskd.ca=ca.cert.pem
-taskd.server=www.xylil.com:53589
+taskd.server=xylil.apartmentlines.com:53589
 taskd.credentials=Public\/hunmonk\/4655e7f2-da3c-4ffa-a0f6-852038804f32
 
 # Urgency.
@@ -94,7 +178,7 @@ android.sync.onchange=3
 android.sync.onerror=10
 android.sync.notification=none
 
-android.reports=inbox,hot,out,scheduled,delegated,travel
+android.reports=inbox,hot,out,ticklers,next,phone,travel
 android.report.default=inbox
 
 # vi: ft=dosini

@@ -4,13 +4,13 @@ report.inbox.labels=ID,Age,P,Description
 report.inbox.sort=entry+
 report.inbox.filter=project:INBOX +PENDING
 
-report.hot.description=All tasks with a scheduled date, sorted ascending
+report.hot.description=Hot
 report.hot.columns=id,project,description.desc,due,priority
 report.hot.labels=ID,Project,Description,Due,P
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
-report.ticklers.description=All ticklers, sorted ascending by scheduled date
+report.ticklers.description=Ticklers
 report.ticklers.columns=id,scheduled,description.desc,due
 report.ticklers.labels=ID,Starts,Description,Due
 report.ticklers.sort=scheduled+
@@ -34,13 +34,13 @@ report.delegated.labels=ID,Project,Description,Starts,Due,Tags
 report.delegated.sort=project+
 report.delegated.filter=+delegated +PENDING
 
-report.out.description=All tasks with a errand tag
+report.out.description=Errands
 report.out.columns=id,project,description.desc,due,tags
 report.out.labels=ID,Project,Description,Due,Tags
 report.out.sort=project+
 report.out.filter=+errand +PENDING
 
-report.travel.description=Pre-travel checklist
+report.travel.description=Travel checklist
 report.travel.columns=id,description.desc
 report.travel.labels=ID,Description
 report.travel.filter=project:checklist.travel +PENDING
@@ -68,6 +68,12 @@ report.hold.columns=id,project,description.desc,tags,scheduled,due
 report.hold.labels=ID,Project,Description,Tags,Starts,Due
 report.hold.sort=project+/,urgency-
 report.hold.filter=+PENDING +hold
+
+report.phone.description=Phone
+report.phone.columns=id,project,description.desc,tags,scheduled,due
+report.phone.labels=ID,Project,Description,Tags,Starts,Due
+report.phone.sort=project+/,urgency-
+report.phone.filter=+PENDING +phone
 
 report.mcg.description=midlifecrisisguy.com
 report.mcg.columns=id,project,description.desc,tags,scheduled,due
