@@ -22,6 +22,12 @@ report.scheduled.labels=ID,Starts,Project,Description,Due
 report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED +PENDING
 
+report.milestone.description=Milestones
+report.milestone.columns=id,scheduled,project,description.desc,due
+report.milestone.labels=ID,Starts,Project,Description,Due
+report.milestone.sort=scheduled+
+report.milestone.filter=+SCHEDULED +PENDING +milestone
+
 report.yearly.description=All scheduled tasks with a yearly occurrence, sorted ascending
 report.yearly.columns=id,scheduled,project,description.desc,tags
 report.yearly.labels=ID,Starts,Project,Description,Tags
