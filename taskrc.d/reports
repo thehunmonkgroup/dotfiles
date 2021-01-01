@@ -57,6 +57,12 @@ report.review.labels=ID,Project,Description,Tags,Starts,Due
 report.review.sort=project+/,urgency-
 report.review.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
 
+report.reviewprojects.description=Weekly review, projects only
+report.reviewprojects.columns=id,project,description.desc,tags,scheduled,due
+report.reviewprojects.labels=ID,Project,Description,Tags,Starts,Due
+report.reviewprojects.sort=project+/,urgency-
+report.reviewprojects.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description:Notes
+
 report.next.description=Next actions
 report.next.columns=id,project,description.desc,tags,scheduled,due
 report.next.labels=ID,Project,Description,Tags,Starts,Due
