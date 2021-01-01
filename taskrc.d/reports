@@ -5,8 +5,8 @@ report.inbox.sort=entry+
 report.inbox.filter=project:INBOX +PENDING
 
 report.hot.description=Hot
-report.hot.columns=id,project,description.desc,due,priority
-report.hot.labels=ID,Project,Description,Due,P
+report.hot.columns=id,project,description.desc,due,tags
+report.hot.labels=ID,Project,Description,Due,Tags
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
@@ -34,7 +34,7 @@ report.yearly.labels=ID,Starts,Project,Description,Tags
 report.yearly.sort=scheduled+
 report.yearly.filter=+SCHEDULED +PENDING +yearly
 
-report.delegated.description=All tasks with a delegated tag
+report.delegated.description=Delgated tasks
 report.delegated.columns=id,project,description.desc,scheduled,due,tags
 report.delegated.labels=ID,Project,Description,Starts,Due,Tags
 report.delegated.sort=project+

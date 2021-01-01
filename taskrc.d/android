@@ -38,8 +38,8 @@ report.inbox.sort=entry+
 report.inbox.filter=project:INBOX +PENDING
 
 report.hot.description=Hot
-report.hot.columns=id,project,description.desc,due,priority
-report.hot.labels=ID,Project,Description,Due,P
+report.hot.columns=id,project,description.desc,due,tags
+report.hot.labels=ID,Project,Description,Due,Tags
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
@@ -55,13 +55,19 @@ report.scheduled.labels=ID,Starts,Project,Description,Due
 report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED +PENDING
 
+report.milestone.description=Milestones
+report.milestone.columns=id,scheduled,description.desc,project,due
+report.milestone.labels=ID,Starts,Description,Project,Due
+report.milestone.sort=scheduled+
+report.milestone.filter=+SCHEDULED +PENDING +milestone
+
 report.yearly.description=All scheduled tasks with a yearly occurrence, sorted ascending
 report.yearly.columns=id,scheduled,project,description.desc,tags
 report.yearly.labels=ID,Starts,Project,Description,Tags
 report.yearly.sort=scheduled+
 report.yearly.filter=+SCHEDULED +PENDING +yearly
 
-report.delegated.description=All tasks with a delegated tag
+report.delegated.description=Delgated tasks
 report.delegated.columns=id,project,description.desc,scheduled,due,tags
 report.delegated.labels=ID,Project,Description,Starts,Due,Tags
 report.delegated.sort=project+
@@ -82,13 +88,19 @@ report.review.description=Weekly review
 report.review.columns=id,project,description.desc,tags,scheduled,due
 report.review.labels=ID,Project,Description,Tags,Starts,Due
 report.review.sort=project+/,urgency-
-report.review.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
+report.review.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
+
+report.reviewprojects.description=Weekly review, projects only
+report.reviewprojects.columns=id,project,description.desc,tags,scheduled,due
+report.reviewprojects.labels=ID,Project,Description,Tags,Starts,Due
+report.reviewprojects.sort=project+/,urgency-
+report.reviewprojects.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description:Notes
 
 report.next.description=Next actions
 report.next.columns=id,project,description.desc,tags,scheduled,due
 report.next.labels=ID,Project,Description,Tags,Starts,Due
 report.next.sort=project+/,urgency-
-report.next.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
+report.next.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
 
 report.easy.description=Easy actions
 report.easy.columns=id,project,description.desc,tags,scheduled,due
@@ -178,7 +190,7 @@ android.sync.onchange=3
 android.sync.onerror=10
 android.sync.notification=none
 
-android.reports=inbox,hot,out,ticklers,next,phone,travel
+android.reports=inbox,hot,out,easy,ticklers,next,phone,travel,delegated,review,milestone,morning,midday,evening,weekly
 android.report.default=inbox
 
 # vi: ft=dosini
