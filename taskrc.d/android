@@ -1,3 +1,8 @@
+##########################################
+# CONFIGURATION INSTRUCTIONS
+#   See https://bitbucket.org/kvorobyev/taskwarriorandroid/wiki/Configuration
+##########################################
+
 # Defaults.
 default.project=INBOX
 
