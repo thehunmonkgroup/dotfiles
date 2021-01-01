@@ -67,7 +67,7 @@ report.next.description=Next actions
 report.next.columns=id,project,description.desc,tags,scheduled,due
 report.next.labels=ID,Project,Description,Tags,Starts,Due
 report.next.sort=project+/,urgency-
-report.next.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
+report.next.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
 
 report.easy.description=Easy actions
 report.easy.columns=id,project,description.desc,tags,scheduled,due
