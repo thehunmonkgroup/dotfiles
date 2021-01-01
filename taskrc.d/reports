@@ -23,8 +23,8 @@ report.scheduled.sort=scheduled+
 report.scheduled.filter=+SCHEDULED +PENDING
 
 report.milestone.description=Milestones
-report.milestone.columns=id,scheduled,project,description.desc,due
-report.milestone.labels=ID,Starts,Project,Description,Due
+report.milestone.columns=id,scheduled,description.desc,project,due
+report.milestone.labels=ID,Starts,Description,Project,Due
 report.milestone.sort=scheduled+
 report.milestone.filter=+SCHEDULED +PENDING +milestone
 
@@ -55,7 +55,7 @@ report.review.description=Weekly review
 report.review.columns=id,project,description.desc,tags,scheduled,due
 report.review.labels=ID,Project,Description,Tags,Starts,Due
 report.review.sort=project+/,urgency-
-report.review.filter=+PENDING -delegated -archive -errand -hold project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
+report.review.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX
 
 report.next.description=Next actions
 report.next.columns=id,project,description.desc,tags,scheduled,due
