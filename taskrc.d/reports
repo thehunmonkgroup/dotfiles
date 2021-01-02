@@ -35,8 +35,8 @@ report.yearly.sort=scheduled+
 report.yearly.filter=+SCHEDULED +PENDING +yearly
 
 report.delegated.description=Delgated tasks
-report.delegated.columns=id,project,description.desc,scheduled,due,tags
-report.delegated.labels=ID,Project,Description,Starts,Due,Tags
+report.delegated.columns=id,project,description.desc,scheduled,due
+report.delegated.labels=ID,Project,Description,Starts,Due
 report.delegated.sort=project+
 report.delegated.filter=+delegated +PENDING
 
