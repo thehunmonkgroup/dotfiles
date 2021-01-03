@@ -28,6 +28,12 @@ report.milestone.labels=ID,Starts,Description,Project,Due
 report.milestone.sort=scheduled+
 report.milestone.filter=+SCHEDULED +PENDING +milestone
 
+report.milestoneproject.description=Milestones by project
+report.milestoneproject.columns=id,scheduled,description.desc,project,due
+report.milestoneproject.labels=ID,Starts,Description,Project,Due
+report.milestoneproject.sort=project+,scheduled+
+report.milestoneproject.filter=+SCHEDULED +PENDING +milestone
+
 report.yearly.description=All scheduled tasks with a yearly occurrence, sorted ascending
 report.yearly.columns=id,scheduled,project,description.desc,tags
 report.yearly.labels=ID,Starts,Project,Description,Tags
