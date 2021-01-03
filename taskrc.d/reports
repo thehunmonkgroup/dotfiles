@@ -47,8 +47,9 @@ report.out.sort=project+
 report.out.filter=+errand +PENDING
 
 report.travel.description=Travel checklist
-report.travel.columns=id,description.desc
-report.travel.labels=ID,Description
+report.travel.columns=id,description.desc,order
+report.travel.labels=ID,Description,Order
+report.travel.sort=order+
 report.travel.filter=project:checklist.travel +PENDING
 
 report.review.description=Weekly review
@@ -106,27 +107,27 @@ report.archive.sort=project+/
 report.archive.filter=+PENDING +archive
 
 report.morning.description=Morning checklist
-report.morning.columns=id,description.desc,tags
-report.morning.labels=ID,Description,Tags
-report.morning.sort=urgency-
+report.morning.columns=id,description.desc,tags,order
+report.morning.labels=ID,Description,Tags,Order
+report.morning.sort=order+
 report.morning.filter=+PENDING project:checklist.morning
 
 report.midday.description=Midday checklist
-report.midday.columns=id,description.desc,tags
-report.midday.labels=ID,Description,Tags
-report.midday.sort=urgency-
+report.midday.columns=id,description.desc,tags,order
+report.midday.labels=ID,Description,Tags,Order
+report.midday.sort=order+
 report.midday.filter=+PENDING project:checklist.midday
 
 report.evening.description=Evening checklist
-report.evening.columns=id,description.desc,tags
-report.evening.labels=ID,Description,Tags
-report.evening.sort=urgency-
+report.evening.columns=id,description.desc,tags,order
+report.evening.labels=ID,Description,Tags,Order
+report.evening.sort=order+
 report.evening.filter=+PENDING project:checklist.evening
 
 report.weekly.description=Weekly checklist
-report.weekly.columns=id,description.desc,tags
-report.weekly.labels=ID,Description,Tags
-report.weekly.sort=urgency-
+report.weekly.columns=id,description.desc,tags,order
+report.weekly.labels=ID,Description,Tags,Order
+report.weekly.sort=order+
 report.weekly.filter=+PENDING project:checklist.weekly
 
 # vi: ft=dosini

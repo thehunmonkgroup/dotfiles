@@ -19,6 +19,8 @@ exit.on.missing.db=yes
 # UDAs.
 uda.notes.type=string
 uda.notes.label=Notes
+uda.order.type=numeric
+uda.order.label=Order
 
 # Defaults.
 default.project=INBOX
