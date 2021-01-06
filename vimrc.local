@@ -4,7 +4,7 @@
 nnoremap <silent> <Leader>t :.w !/usr/local/bin/vim-line-to-task.sh<CR>
 
 if has("autocmd")
-   autocmd BufNewFile,BufReadPost *.task set modelines=1
+   autocmd BufNewFile,BufReadPost *.task set modelines=0
 endif
 
 """"""""""""""""""""""""""""""""""""
