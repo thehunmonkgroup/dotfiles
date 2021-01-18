@@ -3,10 +3,10 @@ urgency.user.tag.archive.coefficient=-10.0
 urgency.user.tag.hold.coefficient=-5.0
 urgency.annotations.coefficient=0.0
 
-urgency.user.project.Checklist.coefficient=-10.0
-urgency.user.project.Ticklers.coefficient=-10.0
-urgency.user.project.Values.coefficient=-10.0
-urgency.user.project.Maybe.coefficient=-100.0
+urgency.user.project.checklist.coefficient=-10.0
+urgency.user.project.ticklers.coefficient=-10.0
+urgency.user.project.values.coefficient=-10.0
+urgency.user.project.maybe.coefficient=-100.0
 
 urgency.uda.priority.L.coefficient=-2
 
