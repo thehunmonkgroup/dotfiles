@@ -158,7 +158,6 @@ if has("autocmd")
    augroup module
    autocmd BufRead,BufNewFile *.module,*.install,*.profile,*.theme set filetype=php
    au BufNewFile,BufRead *.ejs set filetype=html
-   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
    autocmd BufNewFile,BufReadPost *.twig set filetype=jinja
    augroup END
    autocmd BufRead,BufNewFile *.txt set wrap
