@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPT_NAME=$(basename $0)
-AUDIO_EXTENSION="aac"
+AUDIO_EXTENSION="wav"
 
 function usage() {
     echo "
@@ -37,7 +37,7 @@ function split_file() {
   if [ "${has_audio_track}" = "1" ]; then
     if [ ! -f ${video_filepath} ]; then
       echo "Extracting video-only file to ${video_filepath}"
-      ffmpeg -i "${filepath}" -c copy -an "${video_filepath}"
+      ffmpeg -i "${filepath}" -vcodec copy -an "${video_filepath}"
     fi
   else
     mv -v ${filepath} ${video_filepath}
@@ -46,7 +46,7 @@ function split_file() {
     local audio_filepath="${audio_dir}/${filename}.${AUDIO_EXTENSION}"
     if [ ! -f ${audio_filepath} ]; then
       echo "Extracting audio-only file to ${audio_filepath}"
-      ffmpeg -i "${filepath}" "${audio_filepath}"
+      ffmpeg -i "${filepath}" -vn "${audio_filepath}"
     fi
   fi
   if [ -f ${filepath} ] && [ -f ${video_filepath} ] && ( [ -z "${has_audio_track}" ] || ( [ "${has_audio_track}" = "1" ] &&  [ -f ${audio_filepath} ] ) ); then
