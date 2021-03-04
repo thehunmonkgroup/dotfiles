@@ -1,11 +1,5 @@
 # SSH aliases.
-alias sn="ssh nightcrawler"
-alias sx="ssh xavier"
-alias sp="ssh phoenix"
-alias ss="ssh storm"
-alias sb="ssh beast"
-alias sm="ssh mystique"
-alias sc="ssh cerebro"
+alias sc="ssh cerebro.apartmentlines.com"
 
 # Site aliases.
 alias al="cd ~/git/apartmentlines"

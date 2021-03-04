@@ -118,6 +118,13 @@ Host gw-central.apartmentlines.com
 Host !gw-central.apartmentlines.com *-central.apartmentlines.com
   ProxyCommand ssh -W %h:%p gw-central.apartmentlines.com
 
+
+# Apartment Lines other servers.
+Host cerebro.apartmentlines.com
+  Hostname 45.33.112.199
+  HostKeyAlias cerebro.apartmentlines.com
+
+
 # Apartment Lines domain-wide.
 Host *.apartmentlines.com *.al-staging.com
   Port 5000
@@ -256,22 +263,6 @@ Host video-test.stirlab.net
   Port 5000
   User root
   HostKeyAlias video-test.stirlab.net
-
-
-# MaestroConference servers
-Host poof.maestroconference.com
-  Hostname poof.maestroconference.com
-  Port 5000
-  User root
-  HostKeyAlias poof.maestroconference.com
-
-Host video.maestroconference.com
-  Hostname video.maestroconference.com
-  Port 5000
-  User root
-  HostKeyAlias video.maestroconference.com
-  ForwardX11 yes
-  ForwardX11Trusted yes
 
 
 # Local Vagrant servers.
