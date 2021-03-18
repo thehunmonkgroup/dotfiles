@@ -10,7 +10,10 @@ DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Ugly hack to force proper version of Python on CentOS 5.x systems.
-python_bin=`which python`
+python_bin=`which python3`
+if [ -z "${python_bin}" ]; then
+  python_bin=`which python`
+fi
 if [ "$(python -V 2>&1 | cut -c8-10)" = "2.4" ]; then
   alt_python_bin="/usr/bin/python2.6"
   echo "Using alt Python ${alt_python_bin}"
