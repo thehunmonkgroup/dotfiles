@@ -138,6 +138,9 @@
       create: true
       path: vnc/identities
 
+    ~/bin/al-vagrant.sh:
+      create: true
+      path: bin/al-vagrant.sh
     ~/bin/camera-reboot.sh:
       create: true
       path: bin/camera-reboot.sh
