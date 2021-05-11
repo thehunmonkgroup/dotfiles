@@ -20,13 +20,22 @@ function split_file() {
   local fullname="$(basename -- "${filepath}")"
   local filename="${fullname%.*}"
   local extension="${fullname##*.}"
+  local image_dir="${dir}/image"
   local video_dir="${dir}/video"
   local audio_dir="${dir}/audio"
+  if [ ! -d ${image_dir} ]; then
+    mkdir -v ${image_dir}
+  fi
   if [ ! -d ${video_dir} ]; then
     mkdir -v ${video_dir}
   fi
   if [ ! -d ${audio_dir} ]; then
     mkdir -v ${audio_dir}
+  fi
+  if [ "${extension}" = "JPG" ]; then
+    echo "Image file, moving to ${image_dir}"
+    mv -v ${filepath} ${image_dir}/
+    return
   fi
   local test_audio_track="$(ffprobe -i ${filepath} -show_streams -select_streams a -loglevel error)"
   local has_audio_track=
