@@ -136,4 +136,10 @@ report.weekly.labels=ID,Description,Tags,Order
 report.weekly.sort=order+
 report.weekly.filter=+PENDING project:checklist.weekly
 
+report.checklists.description=Checklists
+report.checklists.columns=id,description.desc,project
+report.checklists.labels=ID,Description,Project
+report.checklists.sort=project+
+report.checklists.filter=project:checklist +PENDING
+
 # vi: ft=dosini
