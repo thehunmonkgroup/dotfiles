@@ -2,6 +2,7 @@
 
 SCRIPT_NAME=$(basename $0)
 AUDIO_EXTENSION="wav"
+COMBINED_CONTAINER_EXTENSION="mkv"
 
 function usage() {
     echo "
@@ -23,6 +24,8 @@ function split_file() {
   local image_dir="${dir}/image"
   local video_dir="${dir}/video"
   local audio_dir="${dir}/audio"
+  local combined_filepath="${video_dir}/${filename}.${COMBINED_CONTAINER_EXTENSION}"
+  local combine_result=1
   if [ ! -d ${image_dir} ]; then
     mkdir -v ${image_dir}
   fi
@@ -56,11 +59,20 @@ function split_file() {
     if [ ! -f ${audio_filepath} ]; then
       echo "Extracting audio-only file to ${audio_filepath}"
       ffmpeg -i "${filepath}" -vn "${audio_filepath}"
+      if [ ! -f ${combined_filepath} ]; then
+        echo "Recombining  ${video_filepath} and ${audio_filepath} to ${combined_filepath}..."
+        ffmpeg -i ${video_filepath} -i ${audio_filepath} -c copy ${combined_filepath}
+        combine_result=$?
+      fi
     fi
   fi
   if [ -f ${filepath} ] && [ -f ${video_filepath} ] && ( [ -z "${has_audio_track}" ] || ( [ "${has_audio_track}" = "1" ] &&  [ -f ${audio_filepath} ] ) ); then
     echo "File already split, removing original: ${filepath}"
     rm -v ${filepath}
+    if [ -f ${combined_filepath} ] && [ ${combine_result} -eq 0 ]; then
+      echo "Cleaning up uneeded files ${video_filepath} and ${audio_filepath}..."
+      rm -v ${video_filepath} ${audio_filepath}
+    fi
   fi
 }
 
