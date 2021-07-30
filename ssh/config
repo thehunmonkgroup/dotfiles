@@ -528,6 +528,14 @@ Host fstest
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host osx-virtualbox
+  Hostname 127.0.0.1
+  Port 5679
+  User hunmonk
+  HostKeyAlias osx-virtualbox
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 
 # Global defaults.
 Host *
