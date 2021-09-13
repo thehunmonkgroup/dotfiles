@@ -4,7 +4,7 @@ alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 
 # lifetolive.one aliases
 alias vlog="vim ~/Documents/mcg/video-log.otl"
-alias writ="vim ~/Documents/mcg/writing-ideas.txt"
+alias writ="vim ~/Documents/mcg/writing-ideas.otl"
 
 ###############################################################################
 # FUNCTIONS
