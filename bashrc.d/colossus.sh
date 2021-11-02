@@ -6,6 +6,9 @@ alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 alias vlog="vim ~/Documents/mcg/video-log.otl"
 alias writ="vim ~/Documents/mcg/writing-ideas.otl"
 
+# Secure access.
+alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && cd security"
+
 ###############################################################################
 # FUNCTIONS
 ###############################################################################
