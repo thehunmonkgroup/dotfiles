@@ -201,6 +201,9 @@
     ~/bin/tw-move-project.sh:
       create: true
       path: bin/tw-move-project.sh
+    ~/bin/video-backup.sh:
+      create: true
+      path: bin/video-backup.sh
     ~/bin/wcr:
       create: true
       path: bin/wcr
