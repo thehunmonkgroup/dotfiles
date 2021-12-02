@@ -83,7 +83,7 @@ fi
 
 if [ "${1}" = "all" ]; then
   echo "Splitting all files in current directory..."
-  for filepath in $(find . -maxdepth 1 -not -type d); do
+  for filepath in $(find . -maxdepth 1 -type f -regextype posix-egrep -iregex '.+\.(jpg|png|mp4)$'); do
     split_file "${filepath}"
   done
 else
