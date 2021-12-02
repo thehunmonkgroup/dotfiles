@@ -2,5 +2,5 @@
 
 # Quick opening of Google Chrome with SSL certificate checks disabled.
 
-chromium --ignore-certificate-errors
+google-chrome --ignore-certificate-errors
 
