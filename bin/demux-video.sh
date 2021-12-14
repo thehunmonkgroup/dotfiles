@@ -35,7 +35,7 @@ function split_file() {
   if [ ! -d ${audio_dir} ]; then
     mkdir -v ${audio_dir}
   fi
-  if [ "${extension}" = "JPG" ]; then
+  if [ "${extension}" = "JPG" ] || [ "${extension}" = "GPR" ]; then
     echo "Image file, moving to ${image_dir}"
     mv -v ${filepath} ${image_dir}/
     return
@@ -83,7 +83,7 @@ fi
 
 if [ "${1}" = "all" ]; then
   echo "Splitting all files in current directory..."
-  for filepath in $(find . -maxdepth 1 -type f -regextype posix-egrep -iregex '.+\.(jpg|png|mp4)$'); do
+  for filepath in $(find . -maxdepth 1 -type f -regextype posix-egrep -iregex '.+\.(jpg|png|gpr|mp4)$'); do
     split_file "${filepath}"
   done
 else

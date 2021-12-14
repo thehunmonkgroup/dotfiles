@@ -13,7 +13,7 @@ Move media out of a DCIM storage directory, and into a storage location,
 grouped by YYYY-MM-DD folders based on file created time.
 
 All directory names in /media/${DEFAULT_USER} will be searched for any
-directories named 'DCIM', and all .MP4 and .JPG files in any directories found
+directories named 'DCIM', and all .MP4/.JPG/.GPR files in any directories found
 will be:
 
  * Examined for creation time
@@ -53,7 +53,7 @@ _find_dcim_dirs() {
 _move_media_files() {
   local source_dir="${1}"
   echo "Moving files from ${source_dir} to ${location}..."
-  local files="$(find ${source_dir} -type f \( -name "*.JPG" -o -name "*.MP4" \))"
+  local files="$(find ${source_dir} -type f \( -name "*.JPG" -o -name "*.GPR" -o -name "*.MP4" \))"
   for file in $files; do
     local modify_date="$(stat -c %y ${file} | awk '{print $1}')"
     local location_subdir="${location}/${modify_date}"
