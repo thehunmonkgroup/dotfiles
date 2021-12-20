@@ -156,6 +156,9 @@
     ~/bin/demux-video.sh:
       create: true
       path: bin/demux-video.sh
+    ~/bin/file-media.sh:
+      create: true
+      path: bin/file-media.sh
     ~/bin/fix-git-dir-perms.sh:
       create: true
       path: bin/fix-git-dir-perms.sh
