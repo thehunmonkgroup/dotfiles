@@ -162,6 +162,9 @@
     ~/bin/fix-git-dir-perms.sh:
       create: true
       path: bin/fix-git-dir-perms.sh
+    ~/bin/home-backup.sh:
+      create: true
+      path: bin/home-backup.sh
     ~/bin/onenote_outline:
       create: true
       path: bin/onenote_outline
