@@ -1,6 +1,7 @@
 # Misc aliases.
 alias sy="cat ~/sync-status.txt"
 alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
+alias now="echo [$(date '+%r %Z')]: "
 
 # lifetolive.one aliases
 alias vlog="vim ~/Documents/mcg/video-log.otl"
