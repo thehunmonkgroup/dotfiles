@@ -13,7 +13,7 @@ alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && 
 # FUNCTIONS
 ###############################################################################
 now() {
-  echo "[$(date '+%r %Z')]: "
+  echo "[$(date '+%a, %I:%M%p %Z')]: "
 }
 
 fswp() {
