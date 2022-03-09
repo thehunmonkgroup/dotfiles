@@ -174,6 +174,9 @@
     ~/bin/p:
       create: true
       path: bin/p
+    ~/bin/power-profile.sh:
+      create: true
+      path: bin/power-profile.sh
     ~/bin/ppull:
       create: true
       path: bin/ppull
