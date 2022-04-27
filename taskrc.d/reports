@@ -10,6 +10,12 @@ report.hot.labels=ID,Project,Description,Due,Tags
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
+report.bs.description=BS tasks
+report.bs.columns=id,project,description.desc,due,tags
+report.bs.labels=ID,Project,Description,Due,Tags
+report.bs.sort=project+
+report.bs.filter=project:bs +PENDING
+
 report.ticklers.description=Ticklers
 report.ticklers.columns=id,scheduled,description.desc,due
 report.ticklers.labels=ID,Starts,Description,Due
