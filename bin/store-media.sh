@@ -85,4 +85,8 @@ execute() {
   done
 }
 
-execute
+if [ -w "${location}" ]; then
+  execute
+else
+  echo "ERROR: ${location} does not exist, or is not writable"
+fi
