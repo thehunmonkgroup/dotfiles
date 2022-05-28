@@ -13,8 +13,12 @@ if [ -r "${VIDEO_DIR}" ] && [ -w "${BACKUP_DIR}" ]; then
     --exclude 'lost+found' \
     --exclude '.Trash*' \
     ${VIDEO_DIR}/ ${BACKUP_DIR}
-  exit $?
+  ret=$?
+  logger "[VIDEO BACKUP] Completed successfully"
+  exit ${ret}
 else
-  echo "ERROR: ${VIDEO_DIR} not readable, or ${BACKUP_DIR} not writeable"
+  message="ERROR: ${VIDEO_DIR} not readable, ${BACKUP_DIR} not writeable, or rsync error"
+  logger "[VIDEO BACKUP] ${message}"
+  /usr/bin/notify-send "Video backup error" "${message}"
   exit 1
 fi
