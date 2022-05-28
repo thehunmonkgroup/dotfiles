@@ -13,6 +13,8 @@ if [ -r "${VIDEO_DIR}" ] && [ -w "${BACKUP_DIR}" ]; then
     --exclude 'lost+found' \
     --exclude '.Trash*' \
     ${VIDEO_DIR}/ ${BACKUP_DIR}
+  exit $?
 else
   echo "ERROR: ${VIDEO_DIR} not readable, or ${BACKUP_DIR} not writeable"
+  exit 1
 fi
