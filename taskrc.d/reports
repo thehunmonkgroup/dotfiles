@@ -11,9 +11,9 @@ report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
 report.bs.description=BS tasks
-report.bs.columns=id,project,description.desc,due,tags
-report.bs.labels=ID,Project,Description,Due,Tags
-report.bs.sort=project+
+report.bs.columns=id,entry,description.desc,tags
+report.bs.labels=ID,Created,Description,Tags
+report.bs.sort=entry+
 report.bs.filter=project:bs +PENDING
 
 report.ticklers.description=Ticklers
