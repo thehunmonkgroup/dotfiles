@@ -2,5 +2,5 @@
 
 # Quick opening of Google Chrome with SSL certificate checks disabled.
 
-google-chrome --ignore-certificate-errors
+flatpak run org.chromium.Chromium --ignore-certificate-errors
 
