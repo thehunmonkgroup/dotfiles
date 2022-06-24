@@ -141,6 +141,9 @@
     ~/bin/al-vagrant.sh:
       create: true
       path: bin/al-vagrant.sh
+    ~/bin/btc-balance.sh:
+      create: true
+      path: bin/btc-balance.sh
     ~/bin/camera-reboot.sh:
       create: true
       path: bin/camera-reboot.sh
