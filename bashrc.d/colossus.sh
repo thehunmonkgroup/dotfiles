@@ -8,6 +8,7 @@ alias writ="vim ~/Documents/mcg/writing-ideas.otl"
 
 # Secure access.
 alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && cd security"
+alias fin="cd ~/Documents/reference && gocryptfs finance.encrypted security && cd security"
 
 ###############################################################################
 # FUNCTIONS
