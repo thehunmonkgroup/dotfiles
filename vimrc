@@ -134,6 +134,9 @@ map <Leader>l <Plug>(easymotion-bd-jk)
 " Paste to ix.io
 noremap <silent> <leader>i :w !ix<CR>
 
+" Simple buffer picker
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
 " Auto-indent
 set cindent
 set smartindent
