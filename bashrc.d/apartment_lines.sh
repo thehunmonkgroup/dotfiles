@@ -9,3 +9,6 @@ alias alm="cd ~/git/apartmentlines/apartmentlines.com/sites/all/modules"
 alias iac="al && cd iac"
 alias fsa="al && cd freeswitch-apartmentlines"
 alias tf="iac && cd terraform"
+
+# Git aliases
+alias qpush="git push && git checkout production && git merge staging && git push && git checkout staging && git log"
