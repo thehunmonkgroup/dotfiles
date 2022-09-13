@@ -501,6 +501,8 @@ Host combo.pijaz.com
 	Port 5000
 	User root
 	HostKeyAlias combo.pijaz.com
+  HostkeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
 
 
 # Other servers.
