@@ -6,7 +6,7 @@ https://github.com/tmhedberg/matchit.git#060d9d8aa381d6a650b649d38c992b59db3ed1a
 https://github.com/scrooloose/nerdtree.git#97433edd43f3a4a95c84389bcaafbe7a047cf756#~/.vim/bundle/nerdtree
 https://github.com/Xuyuanp/nerdtree-git-plugin.git#6a9b3122cb89b3a45ec444f9787a895125aca8aa#~/.vim/bundle/nerdtree-git-plugin
 https://github.com/saltstack/salt-vim.git#6ca9e3500cc39dd417b411435d58a1b720b331cc#~/.vim/bundle/salt-vim
-https://github.com/tomtom/tlib_vim.git#c96db6151fde9d06a8fed71b7df05c6dbb3f14fe#~/.vim/bundle/tlib_vim
+https://github.com/tomtom/tlib_vim.git#d3bdad7b5e4253dc7ce6793342d7b8755c67ff0c#~/.vim/bundle/tlib_vim
 https://github.com/MarcWeber/vim-addon-mw-utils.git#0c5612fa31ee434ba055e21c76f456244b3b5109#~/.vim/bundle/vim-addon-mw-utils
 https://github.com/bling/vim-airline.git#396cc9226171f8dbf1069800a0ae56700bbf3913#~/.vim/bundle/vim-airline
 https://github.com/vim-airline/vim-airline-themes#26f67b926553555e505ac60e992c97ab5fdfc83f#~/.vim/bundle/vim-airline-themes
