@@ -10,6 +10,8 @@ usage() {
 echo "
 ${PROG} help
   This help.
+${PROG} show
+  Show current profile.
 ${PROG} list
   List available profiles.
 ${PROG} [custom_profile]
@@ -17,9 +19,14 @@ ${PROG} [custom_profile]
 "
 }
 
+power_profile_get_current() {
+  local current_profile="$(${POWER_BIN} charge-thresholds)"
+  echo "${current_profile}"
+}
+
 power_profile_is_current() {
   local profile="${1}"
-  local contains_current_profile="$(${POWER_BIN} charge-thresholds | grep "${profile}")"
+  local contains_current_profile="$(power_profile_get_current | grep "${profile}")"
   if [ -z "${contains_current_profile}" ]; then
     return 1
   else
@@ -46,6 +53,8 @@ set_power_profile() {
 if [ "${1}" == "help" ]; then
   usage
   exit 1
+elif [ "${1}" == "show" ]; then
+  power_profile_get_current
 elif [ "${1}" == "list" ]; then
   list_power_profiles
 else
