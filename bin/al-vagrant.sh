@@ -11,6 +11,7 @@ Start/stop all Apartment Lines development servers.
   start: Start servers.
   standalone: Start standalone server.
   stop: Stop servers.
+  stopalone: Stop standalone server.
 
 With no arguments, show this help.
 "
@@ -33,7 +34,7 @@ monitor.local"
 
 standalone_server="union1-east.local"
 
-if [ $# -ne 1 ] || ( [ "${op}" != "start" ] && [ "${op}" != "standalone" ] && [ "${op}" != "stop" ] ); then
+if [ $# -ne 1 ] || ( [ "${op}" != "start" ] && [ "${op}" != "standalone" ] && [ "${op}" != "stop" ] && [ "${op}" != "stopalone" ] ); then
   usage
   exit 1
 fi
@@ -70,6 +71,10 @@ function stop_servers() {
   _box_command halt $(reverse $server_list)
 }
 
+function stop_standalone_server() {
+  _box_command halt $(echo ${standalone_server})
+}
+
 case $op in
   start)
     start_servers
@@ -79,5 +84,8 @@ case $op in
     ;;
   stop)
     stop_servers
+    ;;
+  stopalone)
+    stop_standalone_server
     ;;
 esac
