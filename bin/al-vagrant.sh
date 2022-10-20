@@ -9,6 +9,7 @@ Usage: ${PROGNAME} start | stop
 Start/stop all Apartment Lines development servers.
 
   start: Start servers.
+  standalone: Start standalone server.
   stop: Stop servers.
 
 With no arguments, show this help.
@@ -30,7 +31,9 @@ orch.local
 repo.local
 monitor.local"
 
-if [ $# -ne 1 ] || ( [ "${op}" != "start" ] && [ "${op}" != "stop" ] ); then
+standalone_server="union1-east.local"
+
+if [ $# -ne 1 ] || ( [ "${op}" != "start" ] && [ "${op}" != "standalone" ] && [ "${op}" != "stop" ] ); then
   usage
   exit 1
 fi
@@ -58,6 +61,11 @@ function start_servers() {
   _box_command up $(echo $server_list)
 }
 
+function start_standalone_server() {
+  _box_command up $(echo ${standalone_server})
+  ssh ${standalone_server} /root/bin/standalone-server.sh
+}
+
 function stop_servers() {
   _box_command halt $(reverse $server_list)
 }
@@ -65,6 +73,9 @@ function stop_servers() {
 case $op in
   start)
     start_servers
+    ;;
+  standalone)
+    start_standalone_server
     ;;
   stop)
     stop_servers
