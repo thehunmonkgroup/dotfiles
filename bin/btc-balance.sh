@@ -18,5 +18,9 @@ for address in ${ADDRESSES}; do
 done
 
 echo "Total: ${total} BTC"
+btc_price=$(curl -s https://blockchain.info/ticker | jq .USD.last)
+echo "Current BTC price: \$${btc_price}"
+total_value=$(echo "scale=2; ${total} * ${btc_price} / 1" | bc -l)
+echo "Total BTC value: \$${total_value}"
 
 exit 0
