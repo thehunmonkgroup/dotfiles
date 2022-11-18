@@ -138,9 +138,13 @@
       create: true
       path: vnc/identities
 
+    ~/bin/al-s3-operations.sh:
+      create: true
+      path: bin/al-s3-operations.sh
     ~/bin/al-vagrant.sh:
       create: true
       path: bin/al-vagrant.sh
+
     ~/bin/btc-balance.sh:
       create: true
       path: bin/btc-balance.sh
