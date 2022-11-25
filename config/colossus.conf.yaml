@@ -141,6 +141,9 @@
     ~/bin/al-s3-operations.sh:
       create: true
       path: bin/al-s3-operations.sh
+    ~/bin/al-update-staging-database.sh:
+      create: true
+      path: bin/al-update-staging-database.sh
     ~/bin/al-vagrant.sh:
       create: true
       path: bin/al-vagrant.sh
