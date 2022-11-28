@@ -43,7 +43,7 @@ update_staging_databases() {
           ssh ${ORCH_STAGING} "salt-run state.orch orch.configure-database-replication"
           if [ $? -eq 0 ]; then
             echo "Successfully upgraded staging databases!"
-            exit 0
+            return 0
           else
             echo "ERROR: could not reconfigure database replication from ${ORCH_STAGING}"
           fi
