@@ -544,6 +544,12 @@ Host btc
   User standup
   HostKeyAlias btc
 
+Host pi
+  Hostname 192.168.1.7
+  Port 22
+  User hunmonk
+  HostKeyAlias pi
+
 
 # Global defaults.
 Host *
