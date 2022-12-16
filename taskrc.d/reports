@@ -148,4 +148,9 @@ report.checklists.labels=ID,Description,Project
 report.checklists.sort=project+
 report.checklists.filter=project:checklist +PENDING
 
+report.last_modified.description=Last modified
+report.last_modified.columns=id,description.desc,modified
+report.last_modified.labels=ID,Description,Modified
+report.last_modified.sort=modified-
+
 # vi: ft=dosini
