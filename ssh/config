@@ -538,12 +538,6 @@ Host osx-virtualbox
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host btc
-  Hostname 172.104.25.87
-  Port 22
-  User standup
-  HostKeyAlias btc
-
 Host pi
   Hostname 192.168.1.7
   Port 22
