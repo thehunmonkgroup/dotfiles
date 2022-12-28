@@ -25,9 +25,15 @@
     ~/bin/ix:
       create: true
       path: bin/ix
-    ~/bin/speedtest:
+    ~/.config/nvim/after:
       create: true
-      path: bin/speedtest
+      path: nvim/after
+    ~/.config/nvim/ginit.vim:
+      create: true
+      path: nvim/ginit.vim
+    ~/.config/nvim/lua/user:
+      create: true
+      path: nvim/lua/user
     ~/.colordiffrc:
     ~/.curlrc:
     ~/.gitconfig:
