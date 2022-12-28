@@ -272,8 +272,8 @@ Host temp
   User root
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
-  ForwardX11 yes
-  ForwardX11Trusted yes
+  #ForwardX11 yes
+  #ForwardX11Trusted yes
 
 Host vagrant-pijaz
 	Hostname localhost
