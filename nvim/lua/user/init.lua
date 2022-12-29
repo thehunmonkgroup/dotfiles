@@ -249,6 +249,9 @@ local config = {
       {
         "hashivim/vim-terraform",
       },
+      {
+        "vimoutliner/vimoutliner",
+      },
       -- TODO: 'config' attr breaks :Mason interface when enabled,
       -- *after* a PackerSync call.
       {
