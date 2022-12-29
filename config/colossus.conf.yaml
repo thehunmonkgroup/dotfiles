@@ -104,6 +104,9 @@
     ~/.config/letsencrypt/cli.ini:
       create: true
       path: letsencrypt/cli.ini
+    ~/.config/pycodestyle:
+      create: true
+      path: config/pycodestyle
 
     ~/.fscom_config:
     ~/.gvimrc:
