@@ -1,5 +1,7 @@
 return {
   close_if_last_window = false,
+  popup_border_style = "rounded",
+  sort_case_insensitive = true,
   event_handlers = {
     {
       event = "vim_buffer_enter",
