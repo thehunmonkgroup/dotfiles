@@ -47,6 +47,7 @@ local config = {
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
       wrap = true, -- sets vim.opt.wrap
+      undofile = false, -- Enable persistent undo
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -125,8 +126,9 @@ local config = {
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
-    virtual_text = true,
-    underline = true,
+    float = { source = "always", border = "rounded" },
+    virtual_text = false,
+    signs = true,
   },
 
   -- Extend LSP configuration
@@ -436,5 +438,10 @@ local config = {
     -- }
   end,
 }
+
+------------------------------------------
+-- Floating diagnostics message autocmd
+------------------------------------------
+vim.cmd([[ autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 return config
