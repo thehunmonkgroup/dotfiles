@@ -32,11 +32,16 @@ case "$OS" in
         ;;
 esac
 
+EDITOR="$(PATH="${PATH}:/opt/neovim/bin" which nvim)"
+if [ -z "${EDITOR}" ]; then
+  EDITOR="$(which vim)"
+fi
+
 ###############################################################################
 # ENVIRONMENT VARIABLES
 ###############################################################################
 export TERM=xterm-256color
-export EDITOR=vim
+export EDITOR="${EDITOR}"
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad;
 
@@ -79,6 +84,10 @@ cd() {
   else
     pushd "$@" > /dev/null
   fi
+}
+
+v() {
+  ${EDITOR} "$@"
 }
 
 ppath() {
