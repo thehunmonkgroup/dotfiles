@@ -249,17 +249,19 @@ local config = {
       {
         "hashivim/vim-terraform",
       },
-      -- TODO: 'config' attr breaks Mason interface when enabled.
-      -- {
-      --   "theHamsta/nvim-dap-virtual-text",
-      --   requires = {
-      --     "mfussenegger/nvim-dap",
-      --     "nvim-treesitter/nvim-treesitter",
-      --   },
-      --   config = function()
-      --     require("nvim-dap-virtual-text").setup()
-      --   end
-      -- },
+      -- TODO: 'config' attr breaks :Mason interface when enabled,
+      -- *after* a PackerSync call.
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        requires = {
+          "mfussenegger/nvim-dap",
+          "nvim-treesitter/nvim-treesitter",
+        },
+        after = {"nvim-dap", "nvim-treesitter"},
+        config = function()
+          require("nvim-dap-virtual-text").setup()
+        end
+      },
       {
         "nvim-telescope/telescope-dap.nvim",
         requires = {
