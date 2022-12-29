@@ -225,7 +225,7 @@ local config = {
   plugins = {
     init = {
       -- You can disable default plugins as follows:
-      ["numToStr/Comment.nvim"] = { disable = true },
+      -- ["numToStr/Comment.nvim"] = { disable = true },
 
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
