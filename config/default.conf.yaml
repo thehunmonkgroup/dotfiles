@@ -10,9 +10,6 @@
     ~/.bashrc.d/liquidprompt.sh:
       create: true
       path: bashrc.d/liquidprompt.sh
-    ~/.bashrc.d/nvim.sh:
-      create: true
-      path: bashrc.d/nvim.sh
     ~/.bashrc.d/salt.sh:
       create: true
       path: bashrc.d/salt.sh

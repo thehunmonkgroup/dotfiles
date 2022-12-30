@@ -58,6 +58,9 @@
     ~/.bashrc.d/linuxbrew.sh:
       create: true
       path: bashrc.d/linuxbrew.sh
+    ~/.bashrc.d/nvim.sh:
+      create: true
+      path: bashrc.d/nvim.sh
     ~/.bashrc.d/nvm.sh:
       create: true
       path: bashrc.d/nvm.sh
