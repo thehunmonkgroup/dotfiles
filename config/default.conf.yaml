@@ -25,15 +25,6 @@
     ~/bin/ix:
       create: true
       path: bin/ix
-    ~/.config/nvim/after:
-      create: true
-      path: nvim/after
-    ~/.config/nvim/ginit.vim:
-      create: true
-      path: nvim/ginit.vim
-    ~/.config/nvim/lua/user:
-      create: true
-      path: nvim/lua/user
     ~/.colordiffrc:
     ~/.curlrc:
     ~/.gitconfig:
