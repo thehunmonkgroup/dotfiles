@@ -3,8 +3,8 @@ alias sy="cat ~/sync-status.txt"
 alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 
 # lifetolive.one aliases
-alias vlog="vim ~/Documents/mcg/video-log.otl"
-alias writ="vim ~/Documents/mcg/writing-ideas.otl"
+alias vlog="v ~/Documents/mcg/video-log.otl"
+alias writ="v ~/Documents/mcg/writing-ideas.otl"
 
 # Secure access.
 alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && cd security"
