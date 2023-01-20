@@ -50,9 +50,20 @@ export LSCOLORS=exfxcxdxbxegedabagacad;
 ###############################################################################
 
 # List aliases.
-alias ls="ls -F $color"
-alias a="ls -alh"
-alias l="ls -alh | less"
+if [ -n "$(which exa 2>&1)" ]; then
+  alias ls="exa -F"
+  alias a="exa -alh --icons"
+  alias l="exa -alh --icons --color=always | less -R"
+else
+  alias ls="ls -F $color"
+  alias a="ls -alh -F $color"
+  alias l="ls -alh -F --color=always | less -R"
+fi
+
+# cat alias
+if [ -n "$(which batcat 2>&1)" ]; then
+  alias cat="batcat"
+fi
 
 #grep alias
 alias cgrep="grep -n --colour=auto"
