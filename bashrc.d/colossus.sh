@@ -10,6 +10,9 @@ alias writ="v ~/Documents/mcg/writing-ideas.otl"
 alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && cd security"
 alias fin="cd ~/Documents/reference && gocryptfs finance.encrypted security && cd security"
 
+# ChatGPT wrapper.
+alias chatgpt="chatgpt --model legacy-paid --log ~/.local/share/chatgpt-wrapper/logs/$(date +%Y-%m-%d).log --debug-log /tmp/chatgpt.log"
+
 ###############################################################################
 # FUNCTIONS
 ###############################################################################
