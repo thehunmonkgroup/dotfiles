@@ -11,7 +11,7 @@ alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && 
 alias fin="cd ~/Documents/reference && gocryptfs finance.encrypted security && cd security"
 
 # ChatGPT wrapper.
-alias chatgpt="chatgpt --model legacy-paid --log ~/.local/share/chatgpt-wrapper/logs/$(date +%Y-%m-%d).log --debug-log /tmp/chatgpt.log"
+alias chatgpt="chatgpt --log ~/.local/share/chatgpt-wrapper/logs/$(date +%Y-%m-%d).log"
 
 ###############################################################################
 # FUNCTIONS
