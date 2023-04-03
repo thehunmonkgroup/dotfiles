@@ -1,4 +1,5 @@
 export IS_COLOSSUS="true"
+NVIM_SWAP_DIR="${HOME}/.local/state/nvim/swap"
 
 # Misc aliases.
 alias sy="cat ~/sync-status.txt"
@@ -23,19 +24,19 @@ now() {
 }
 
 fswp() {
-  find . -name *.swp
+  find . ${NVIM_SWAP_DIR} -name '*.sw[klmnop]' ${1}
 }
 
 kswp() {
-  swp_files=`fswp`
+  swp_files="$(fswp)"
   if [ -z "${swp_files}" ]; then
     echo "No .swp files to kill"
   else
     echo "${swp_files}"
-    read -r -p "Kill .swp files in `pwd`? [y/N] " response
+    read -r -p "Kill .swp files in $(pwd) and ${NVIM_SWAP_DIR}? [y/N] " response
     if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
     then
-      find . -name *.swp -exec rm  {} \;
+      fswp "-delete -print"
     else
       echo "Aborted"
     fi
