@@ -76,6 +76,9 @@
     ~/.bashrc.d/poor-mans-vault.sh:
       create: true
       path: bashrc.d/poor-mans-vault.sh
+    ~/.bashrc.d/pure-linux.sh:
+      create: true
+      path: bashrc.d/pure-linux.sh
     ~/.bashrc.d/pyenv.sh:
       create: true
       path: bashrc.d/pyenv.sh
