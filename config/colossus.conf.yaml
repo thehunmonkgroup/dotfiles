@@ -235,6 +235,9 @@
     ~/bin/wcr:
       create: true
       path: bin/wcr
+    ~/bin/youtube_bitly_twitter.py:
+      create: true
+      path: bin/youtube_bitly_twitter.py
     ~/.vit/config.ini:
       create: true
       path: vit/config.ini
