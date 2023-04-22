@@ -43,6 +43,9 @@
     ~/.bashrc.d/colossus.sh:
       create: true
       path: bashrc.d/colossus.sh
+    ~/.bashrc.d/flatpak.sh:
+      create: true
+      path: bashrc.d/flatpak.sh
     ~/.bashrc.d/fzf.sh:
       create: true
       path: bashrc.d/fzf.sh
