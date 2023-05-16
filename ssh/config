@@ -562,7 +562,3 @@ Host *
   #UserKnownHostsFile /dev/null
 
 # vi: ft=sshconfig
-
-# Fig ssh integration. Keep at the bottom of this file.
-Match all
-  Include ~/.fig/ssh
