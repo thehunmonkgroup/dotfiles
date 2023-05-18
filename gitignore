@@ -34,3 +34,6 @@
 
 # Local .vimrc files.
 .local.vimrc
+
+# pyenv version files.
+.python-version
