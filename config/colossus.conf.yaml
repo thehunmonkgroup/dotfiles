@@ -9,6 +9,9 @@
     ~/.bash_completion.d/custom-server-tools.sh:
       create: true
       path: bash_completion.d/custom-server-tools.sh
+    ~/.bash_completion.d/luver:
+      create: true
+      path: bash_completion.d/luver
     ~/.bash_completion.d/pssh:
       create: true
       path: bash_completion.d/pssh
@@ -55,9 +58,9 @@
     ~/.bashrc.d/jekyll.sh:
       create: true
       path: bashrc.d/jekyll.sh
-    ~/.bashrc.d/luaver.sh:
+    ~/.bashrc.d/luver.sh:
       create: true
-      path: bashrc.d/luaver.sh
+      path: bashrc.d/luver.sh
     ~/.bashrc.d/linuxbrew.sh:
       create: true
       path: bashrc.d/linuxbrew.sh
