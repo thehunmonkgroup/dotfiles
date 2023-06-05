@@ -1,7 +1,14 @@
 export IS_COLOSSUS="true"
 NVIM_SWAP_DIR="${HOME}/.local/state/nvim/swap"
 
-# Misc aliases.
+###############################################################################
+# ENVIRONMENT VARIABLES
+###############################################################################
+export ANSIBLE_PYTHON_INTERPRETER="${HOME}/.pyenv/shims/python"
+
+###############################################################################
+# ALIASES
+###############################################################################
 alias sy="cat ~/sync-status.txt"
 alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 
@@ -41,12 +48,6 @@ kswp() {
       echo "Aborted"
     fi
   fi
-}
-
-# Man pages in preview.
-pman()
-{
-  man -t "${1}" | open -f -a /Applications/Preview.app/
 }
 
 vman()
