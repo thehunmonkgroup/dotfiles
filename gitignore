@@ -37,3 +37,6 @@
 
 # pyenv version files.
 .python-version
+
+# Egg files
+*.egg-info/
