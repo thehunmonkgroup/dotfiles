@@ -73,6 +73,7 @@ alias cl="clear"
 alias cdl="cd; clear; title bash 2> /dev/null"
 alias pd="pushd"
 alias bd="popd"
+alias ast="cd ${HOME}/.config/astronvim/lua/user/"
 
 # Include custom setup if found.
 if [ -d ~/.bashrc.d ]; then
