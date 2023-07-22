@@ -20,8 +20,8 @@ alias writ="v ~/Documents/mcg/writing-ideas.otl"
 alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && cd security"
 alias fin="cd ~/Documents/reference && gocryptfs finance.encrypted security && cd security"
 
-# ChatGPT wrapper.
-alias chatgpt="cd ~/git/chatgpt-wrapper && chatgpt --log ~/.local/share/chatgpt-wrapper/logs/$(date +%Y-%m-%d).log"
+# LLM Workflow Engine.
+alias lwe="cd ~/git/llm-workflow-engine && lwe --log ~/.local/share/llm-workflow-engine/logs/$(date +%Y-%m-%d).log"
 
 ###############################################################################
 # FUNCTIONS
