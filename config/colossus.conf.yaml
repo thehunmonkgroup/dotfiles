@@ -116,6 +116,9 @@
     ~/.config/letsencrypt/cli.ini:
       create: true
       path: letsencrypt/cli.ini
+    ~/.config/nvim/ginit.vim:
+      create: true
+      path: nvim/ginit.vim
     ~/.config/pycodestyle:
       create: true
       path: config/pycodestyle
