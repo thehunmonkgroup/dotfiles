@@ -196,6 +196,9 @@
     ~/bin/onenote_outline:
       create: true
       path: bin/onenote_outline
+    ~/bin/mkv-to-mp4-in-dir.sh:
+      create: true
+      path: bin/mkv-to-mp4-in-dir.sh
     ~/bin/onenote_todo:
       create: true
       path: bin/onenote_todo
