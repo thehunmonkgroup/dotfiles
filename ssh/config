@@ -515,6 +515,11 @@ Host combo.pijaz.com
 
 # Other servers.
 
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  User git
+
 Host vicibox
   Hostname localhost
   Port 2299
