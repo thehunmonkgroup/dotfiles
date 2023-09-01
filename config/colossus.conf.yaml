@@ -127,6 +127,7 @@
       path: config/pycodestyle
 
     ~/.fscom_config:
+    ~/.flake8:
     ~/.gvimrc:
     ~/.inputrc:
     ~/.kdiff3rc:
