@@ -49,6 +49,9 @@
     ~/.bashrc.d/docker.sh:
       create: true
       path: bashrc.d/docker.sh
+    ~/.bashrc.d/flake8.sh:
+      create: true
+      path: bashrc.d/flake8.sh
     ~/.bashrc.d/flatpak.sh:
       create: true
       path: bashrc.d/flatpak.sh
