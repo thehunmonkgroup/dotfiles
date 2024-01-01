@@ -359,6 +359,14 @@ Host orch.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+# Host orch-2.local
+#   Hostname localhost
+#   Port 10140
+#   User root
+#   HostKeyAlias orch-2.local
+#   StrictHostKeyChecking no
+#   UserKnownHostsFile /dev/null
+
 Host gw-admin.local
   Hostname localhost
   Port 10105
