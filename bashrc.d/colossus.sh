@@ -84,3 +84,11 @@ function svndiff () {
 function svndiffmeld () {
   svn diff --diff-cmd="meld" $@
 }
+
+function crtview() {
+    if [ -z "$1" ]; then
+        echo "Usage: crtview <certificate.crt>"
+        return 1
+    fi
+    openssl x509 -in "$1" -text -noout
+}
