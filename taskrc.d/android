@@ -50,6 +50,12 @@ report.hot.labels=ID,Project,Description,Due,Tags
 report.hot.sort=project+
 report.hot.filter=priority:H +PENDING
 
+report.bs.description=BS tasks
+report.bs.columns=id,entry,description.desc,tags
+report.bs.labels=ID,Created,Description,Tags
+report.bs.sort=entry+
+report.bs.filter=project:bs +PENDING
+
 report.ticklers.description=Ticklers
 report.ticklers.columns=id,scheduled,description.desc,due
 report.ticklers.labels=ID,Starts,Description,Due
@@ -98,6 +104,12 @@ report.travel.labels=ID,Description,Order
 report.travel.sort=order+
 report.travel.filter=project:checklist.travel +PENDING
 
+report.areas.description=Project areas
+report.areas.columns=id,project,description.desc,tags
+report.areas.labels=ID,Project,Description,Tags
+report.areas.sort=project+/,urgency-
+report.areas.filter=+PENDING -delegated -archive -errand -hold -milestone project:area
+
 report.review.description=Weekly review
 report.review.columns=id,project,description.desc,tags,scheduled,due
 report.review.labels=ID,Project,Description,Tags,Starts,Due
@@ -108,13 +120,13 @@ report.reviewprojects.description=Weekly review, projects only
 report.reviewprojects.columns=id,project,description.desc,tags,scheduled,due
 report.reviewprojects.labels=ID,Project,Description,Tags,Starts,Due
 report.reviewprojects.sort=project+/,urgency-
-report.reviewprojects.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description:Notes
+report.reviewprojects.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:area project.not:INBOX description:Notes
 
 report.next.description=Next actions
 report.next.columns=id,project,description.desc,tags,scheduled,due
 report.next.labels=ID,Project,Description,Tags,Starts,Due
 report.next.sort=project+/,urgency-
-report.next.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:INBOX description.not:Notes
+report.next.filter=+PENDING -delegated -archive -errand -hold -milestone project.not:maybe project.not:checklist project.not:ticklers project.not:values project.not:area project.not:INBOX description.not:Notes
 
 report.easy.description=Easy actions
 report.easy.columns=id,project,description.desc,tags,scheduled,due
@@ -175,6 +187,18 @@ report.weekly.columns=id,description.desc,tags,order
 report.weekly.labels=ID,Description,Tags,Order
 report.weekly.sort=order+
 report.weekly.filter=+PENDING project:checklist.weekly
+
+report.checklists.description=Checklists
+report.checklists.columns=id,description.desc,project
+report.checklists.labels=ID,Description,Project
+report.checklists.sort=project+
+report.checklists.filter=project:checklist +PENDING
+
+report.last_modified.description=Last modified
+report.last_modified.columns=id,description.desc,modified
+report.last_modified.labels=ID,Description,Modified
+report.last_modified.sort=modified-
+
 
 # NOTE: This is not kept in dotfiles for security reasons.
 # Sync.
