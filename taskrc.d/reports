@@ -3,6 +3,7 @@ report.inbox.columns=id,entry.age,priority,description.desc
 report.inbox.labels=ID,Age,P,Description
 report.inbox.sort=entry+
 report.inbox.filter=project:INBOX +PENDING
+report.inbox.context=0
 
 report.hot.description=Hot
 report.hot.columns=id,project,description.desc,due,tags

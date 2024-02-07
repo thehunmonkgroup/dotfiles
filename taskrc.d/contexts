@@ -1,6 +1,10 @@
-context.home=project:Home -archive
-context.business=project:Biz -archive
-context.apartmentlines=project:Biz.AL -archive
-context.stirlab=project:Biz.Stirlab -archive
+context.apartmentlines.read=project:Biz.AL -archive
+context.apartmentlines.write=project:Biz.AL -archive
+context.business.read=project:Biz -archive
+context.business.write=project:Biz -archive
+context.home.read=project:Home -archive
+context.home.write=project:Home -archive
+context.stirlab.read=project:Biz.Stirlab -archive
+context.stirlab.write=project:Biz.Stirlab -archive
 
 # vi: ft=dosini
