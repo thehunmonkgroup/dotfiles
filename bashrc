@@ -32,9 +32,9 @@ case "$OS" in
         ;;
 esac
 
-EDITOR="$(PATH="${PATH}:/opt/neovim/bin" which nvim)"
+EDITOR="$(PATH="${PATH}:/opt/neovim/bin" command -v nvim)"
 if [ -z "${EDITOR}" ]; then
-  EDITOR="$(which vim)"
+  EDITOR="$(command -v vim)"
 fi
 
 ###############################################################################
@@ -50,7 +50,7 @@ export LSCOLORS=exfxcxdxbxegedabagacad;
 ###############################################################################
 
 # List aliases.
-if [ -n "$(which exa 2>&1)" ]; then
+if [ -n "$(command -v exa 2>&1)" ]; then
   alias ls="exa -F"
   alias a="exa -alh --icons"
   alias l="exa -alh --icons --color=always | less -R"
@@ -61,7 +61,7 @@ else
 fi
 
 # cat alias
-if [ -n "$(which batcat 2>&1)" ]; then
+if [ -n "$(command -v batcat 2>&1)" ]; then
   alias cat="batcat"
 fi
 
