@@ -75,6 +75,10 @@ alias pd="pushd"
 alias bd="popd"
 alias ast="cd ${HOME}/.config/astronvim/lua/user/"
 
+if [ -r ~/.bashrc_pre ]; then
+  . ~/.bashrc_pre
+fi
+
 # Include custom setup if found.
 if [ -d ~/.bashrc.d ]; then
   files=`echo ~/.bashrc.d/*.sh 2>/dev/null`
@@ -82,6 +86,10 @@ if [ -d ~/.bashrc.d ]; then
   do
     . $file
   done
+fi
+
+if [ -r ~/.bashrc_post ]; then
+  . ~/.bashrc_post
 fi
 
 ###############################################################################
