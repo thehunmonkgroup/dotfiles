@@ -231,7 +231,7 @@ show_help() {
   echo "  -c [name]   Return list of names matching [name] for bash completion"
 }
 
-if [[ "${1}" = "-h" ]] || [[ "${1}" = "--help" ]]; then
+if [[ $# -eq 0 ]] || [[ "${1}" = "-h" ]] || [[ "${1}" = "--help" ]]; then
   show_help
   exit 0
 fi
