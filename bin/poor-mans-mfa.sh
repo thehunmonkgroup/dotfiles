@@ -2,10 +2,21 @@
 
 set -o pipefail
 
-# Define file paths
-POOR_MANS_MFA_DIR="${HOME}/.poor-mans-mfa"
-SECRET_FILE="${POOR_MANS_MFA_DIR}/2fa.gpg"
-BASH_COMPLETION_FILE="${POOR_MANS_MFA_DIR}/bash-completion"
+# Defaults file paths
+DEFAULT_POOR_MANS_MFA_DIR="${HOME}/.poor-mans-mfa"
+DEFAULT_SECRET_FILE="2fa.gpg"
+DEFAULT_COMPLETION_DATA_FILE="completion-data"
+
+# Check if environment variables are set, if so use them, otherwise use defaults
+POOR_MANS_MFA_DIR="${POOR_MANS_MFA_DIR:-${DEFAULT_POOR_MANS_MFA_DIR}}"
+POOR_MANS_MFA_SECRET_FILE="${POOR_MANS_MFA_SECRET_FILE:-${DEFAULT_SECRET_FILE}}"
+POOR_MANS_MFA_COMPLETION_DATA_FILE="${POOR_MANS_MFA_COMPLETION_DATA_FILE:-${DEFAULT_COMPLETION_DATA_FILE}}"
+
+# File paths.
+SECRET_FILE="${POOR_MANS_MFA_DIR}/${POOR_MANS_MFA_SECRET_FILE}"
+COMPLETION_DATA_FILE="${POOR_MANS_MFA_DIR}/${POOR_MANS_MFA_COMPLETION_DATA_FILE}"
+
+# Populated with GPG passphrase, set globally so it can be used throughout the script.
 GPG_PASSPHRASE=""
 
 mkdir -p "${POOR_MANS_MFA_DIR}"
@@ -28,7 +39,7 @@ get_passphrase() {
   echo -n "Enter GPG passphrase: " >&2
   read -s -r GPG_PASSPHRASE
   echo >&2
-  if [ -z "${GPG_PASSPHRASE}" ]; then
+  if [[ -z "${GPG_PASSPHRASE}" ]]; then
     echo "Passphrase cannot be empty." >&2
     exit 1
   fi
@@ -39,13 +50,13 @@ decrypt_secrets() {
 }
 
 generate_secret_file() {
-  if [ ! -f "${SECRET_FILE}" ]; then
+  if [[ ! -f "${SECRET_FILE}" ]]; then
     echo "Secret file ${SECRET_FILE} does not exist, generating..."
     local tempfile=$(mktemp)
     gpg --passphrase "${GPG_PASSPHRASE}" --batch --pinentry-mode loopback -c --cipher-algo AES256 -o "${SECRET_FILE}" "${tempfile}" && \
       chmod 600 "${SECRET_FILE}"
     rm "${tempfile}"
-    if [ ! -f "${SECRET_FILE}" ]; then
+    if [[ ! -f "${SECRET_FILE}" ]]; then
       echo "Failed to generate secret file."
     else
       echo "Secret file generated."
@@ -61,10 +72,43 @@ check_passphrase_validity() {
   echo "Passphrase verified successfully."
 }
 
+validate_name() {
+  local name="${1}"
+  if ! [[ "${name}" =~ ^[^[:space:]:]+$ ]]; then
+    return 1
+  fi
+}
+
+check_unique_names() {
+  local names=("$@")
+  local unique_names
+  mapfile -t unique_names < <(printf '%s\n' "${names[@]}" | sort | uniq -d)
+  if (( ${#unique_names[@]} > 0 )); then
+    echo "Error: duplicate names found:"
+    printf '%s\n' "${unique_names[@]}"
+    return 1
+  fi
+}
+
+check_valid_names() {
+  local names=("$@")
+  local invalid_names=()
+  for name in "${names[@]}"; do
+    if ! validate_name "${name}"; then
+      invalid_names+=("${name}")
+    fi
+  done
+  if (( ${#invalid_names[@]} > 0 )); then
+    echo "Error: invalid name format found for the following names:"
+    printf '%s\n' "${invalid_names[@]}"
+    return 1
+  fi
+}
+
 add_secret() {
   echo -n "Enter Name: "
   read -r name
-  if ! [[ "${name}" =~ ^[a-zA-Z0-9\.@_-]+$ ]]; then
+  if ! validate_name "${name}"; then
     echo "Invalid name format."
     return 1
   fi
@@ -80,10 +124,25 @@ add_secret() {
 }
 
 edit_secret_file() {
+  local names
+  local output
+  local errors=()
   local temp_file=$(mktemp)
-  trap 'rm -f "${temp_file}"' EXIT INT TERM
+  echo "Editing ${SECRET_FILE} via temp file ${temp_file}"
+  trap "rm -v '${temp_file}'" EXIT INT TERM
   decrypt_secrets > "${temp_file}"
   ${EDITOR:-vi} "${temp_file}"
+  mapfile -t names < <(awk -F ':' '{print $1}' "${temp_file}")
+  output=$(check_valid_names "${names[@]}" 2>&1)
+  local status_valid_names=$?
+  [[ ${status_valid_names} -ne 0 ]] && errors+=("${output}")
+  output=$(check_unique_names "${names[@]}" 2>&1)
+  local status_unique_names=$?
+  [[ ${status_unique_names} -ne 0 ]] && errors+=("${output}")
+  if (( ${status_valid_names} != 0 || ${status_unique_names} != 0 )); then
+    printf '%s\n' "File not saved because of the following errors:" "${errors[@]}"
+    exit 1
+  fi
   gpg --passphrase "${GPG_PASSPHRASE}" --batch --pinentry-mode loopback --yes --quiet --symmetric --cipher-algo AES256 --output "${SECRET_FILE}" "${temp_file}" && generate_completion_data
   if [[ $? -ne 0 ]]; then
     echo "Error editing the secrets file."
@@ -91,20 +150,27 @@ edit_secret_file() {
   fi
 }
 
+copy_totp_to_clipboard() {
+  local totp_code="${1}"
+  if [[ -z "${POOR_MANS_MFA_DISABLE_CLIPBOARD_INTEGRATION}" ]]; then
+    if command -v xclip &> /dev/null; then
+      echo -n "${totp_code}" | xclip -selection clipboard
+      echo "Code copied to clipboard."
+    fi
+  fi
+}
+
 generate_totp() {
   local name="${1}"
   local secret=$(decrypt_secrets | grep "^${name}:" | sed 's/ *: */:/g' | cut -d ':' -f2)
-  if [ -z "${secret}" ]; then
+  if [[ -z "${secret}" ]]; then
     echo "No valid secret found for ${name}."
     return 1
   fi
   echo "Generating TOTP code for ${name}..."
   local totp_code=$(oathtool --base32 --totp "${secret}")
   echo "TOTP code for ${name}: ${totp_code}"
-  if command -v xclip &> /dev/null; then
-    echo -n "${totp_code}" | xclip -selection clipboard
-    echo "Code copied to clipboard."
-  fi
+  copy_totp_to_clipboard "${totp_code}"
 }
 
 interactive_mode() {
@@ -113,7 +179,7 @@ interactive_mode() {
     exit 1
   fi
   echo "Interactive mode enabled"
-  rlwrap -i -b ":" -f "${BASH_COMPLETION_FILE}" ${0} -o
+  rlwrap -i -b ":" -f "${COMPLETION_DATA_FILE}" ${0} -o
 }
 
 loop_mode() {
@@ -131,14 +197,14 @@ loop_mode() {
 
 generate_completion_data() {
   echo "Generating bash completion data..."
-  decrypt_secrets | awk -F ':' '{print $1}' > "${BASH_COMPLETION_FILE}"
+  decrypt_secrets | awk -F ':' '{print $1}' > "${COMPLETION_DATA_FILE}"
 }
 
 list_names() {
-  if [ -f "${BASH_COMPLETION_FILE}" ]; then
+  if [[ -f "${COMPLETION_DATA_FILE}" ]]; then
     echo "Secret names:"
     echo
-    cat "${BASH_COMPLETION_FILE}" | sort
+    cat "${COMPLETION_DATA_FILE}" | sort
   else
     echo "No secret names found."
   fi
@@ -146,10 +212,10 @@ list_names() {
 
 list_matching_names() {
   local name="${1}"
-  if [ -z "${name}" ]; then
+  if [[ -z "${name}" ]]; then
     return
   fi
-  grep -i "${name}" "${BASH_COMPLETION_FILE}"
+  grep -i "${name}" "${COMPLETION_DATA_FILE}"
 }
 
 show_help() {
@@ -165,7 +231,7 @@ show_help() {
   echo "  -c [name]   Return list of names matching [name] for bash completion"
 }
 
-if [ ${1} = "-h" ] || [ ${1} = "--help" ]; then
+if [[ "${1}" = "-h" ]] || [[ "${1}" = "--help" ]]; then
   show_help
   exit 0
 fi
@@ -201,7 +267,7 @@ case "${1}" in
     loop_mode
     ;;
   *)
-    if [ $# -eq 1 ]; then
+    if [[ $# -eq 1 ]]; then
       generate_totp "${1}"
     else
       show_help
