@@ -213,9 +213,10 @@ list_names() {
 list_matching_names() {
   local name="${1}"
   if [[ -z "${name}" ]]; then
-    return
+    cat "${COMPLETION_DATA_FILE}"
+  else
+    grep -i "${name}" "${COMPLETION_DATA_FILE}"
   fi
-  grep -i "${name}" "${COMPLETION_DATA_FILE}"
 }
 
 show_help() {
