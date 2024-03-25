@@ -8,11 +8,11 @@
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --name-only
   st = status -sb
-	conflicts = diff --name-only --diff-filter=U
+  conflicts = diff --name-only --diff-filter=U
 [core]
   pager = less -r
-	excludesfile = ~/.gitignore
-	filemode = true
+  excludesfile = ~/.gitignore
+  filemode = true
 [branch]
   autosetuprebase = always
 [push]
@@ -35,10 +35,11 @@
   #cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  process = git-lfs filter-process
 [rebase]
-	autosquash = true
+  autosquash = true
 [tag]
-	sort = -version:refname
+  sort = -version:refname
