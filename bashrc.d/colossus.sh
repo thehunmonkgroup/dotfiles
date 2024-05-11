@@ -15,6 +15,8 @@ alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 # lifetolive.one aliases
 alias vlog="v ~/Documents/mcg/video-log.otl"
 alias writ="v ~/Documents/mcg/writing-ideas.otl"
+alias food="v ~/Documents/reference/health/food-journal.otl"
+
 
 # Secure access.
 alias sec="cd ~/Documents/reference && gocryptfs security.encrypted security && cd security"
@@ -29,6 +31,12 @@ alias pylsp_slayer='pgrep -f python-lsp-server | sort -n | head -n 1 | xargs kil
 ###############################################################################
 # FUNCTIONS
 ###############################################################################
+
+y() {
+  local filename="/tmp/yt-video.mp4"
+  rm -vf "${filename}" &&  yt-dlp -f mp4 -o "${filename}"  "${1}" && vivaldi "${filename}"
+}
+
 now() {
   echo "[$(date '+%a, %I:%M%p %Z')]: "
 }
