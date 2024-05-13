@@ -15,7 +15,7 @@ alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 # lifetolive.one aliases
 alias vlog="v ~/Documents/mcg/video-log.otl"
 alias writ="v ~/Documents/mcg/writing-ideas.otl"
-alias food="v ~/Documents/reference/health/food-journal.otl"
+alias food="v ~/Documents/reference/health/food-journal.md"
 
 
 # Secure access.
