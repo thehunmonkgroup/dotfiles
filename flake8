@@ -1,5 +1,5 @@
 [flake8]
-ignore = E501,W503,B950,E203
+extend-ignore = E203,E302,E303,E305,E306,E501,W503,W504,B950
 max-line-length = 100
 max-complexity = 18
 select = B,C,E,F,W,B9
