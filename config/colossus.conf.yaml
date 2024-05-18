@@ -12,9 +12,6 @@
     ~/.bash_completion.d/luver:
       create: true
       path: bash_completion.d/luver
-    ~/.bash_completion.d/poor-mans-mfa:
-      create: true
-      path: bash_completion.d/poor-mans-mfa
     ~/.bash_completion.d/pssh:
       create: true
       path: bash_completion.d/pssh
@@ -139,6 +136,7 @@
     ~/.kdiff3rc:
     ~/.minirc.cisco-console:
     ~/.my.cnf:
+    ~/.pytest.ini:
     ~/.rvmrc:
     ~/.siegerc:
     ~/.vimrc.local:
@@ -215,9 +213,6 @@
     ~/bin/p:
       create: true
       path: bin/p
-    ~/bin/poor-mans-mfa.sh:
-      create: true
-      path: bin/poor-mans-mfa.sh
     ~/bin/power-profile.sh:
       create: true
       path: bin/power-profile.sh
