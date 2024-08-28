@@ -559,11 +559,11 @@ Host osx-virtualbox
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host pi
-  Hostname 192.168.1.7
+Host beast
+  Hostname 192.168.1.100
   Port 22
   User hunmonk
-  HostKeyAlias pi
+  HostKeyAlias beast
 
 
 # Global defaults.
