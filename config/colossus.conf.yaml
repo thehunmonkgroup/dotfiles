@@ -173,7 +173,6 @@
     ~/bin/al-vagrant.sh:
       create: true
       path: bin/al-vagrant.sh
-
     ~/bin/btc-balance.sh:
       create: true
       path: bin/btc-balance.sh
@@ -192,6 +191,9 @@
     ~/bin/demux-video.sh:
       create: true
       path: bin/demux-video.sh
+    ~/bin/ensure-task.sh:
+      create: true
+      path: bin/ensure-task.sh
     ~/bin/file-media.sh:
       create: true
       path: bin/file-media.sh
