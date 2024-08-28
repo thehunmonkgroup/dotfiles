@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# NOTE: This script is no longer used.
+
 # Back up main video drive to backup drive.
 
 VIDEO_DIR="/media/hunmonk/VIDEO"

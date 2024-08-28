@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPT_NAME=$(basename $0)
-DEFAULT_STORAGE_LOCATION="/media/hunmonk/VIDEO"
+DEFAULT_STORAGE_LOCATION="/media/hunmonk/storage/video"
 
 function usage() {
     echo "

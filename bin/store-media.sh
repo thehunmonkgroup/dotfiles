@@ -3,7 +3,7 @@
 PROGNAME="$(basename $0)"
 
 DEFAULT_USER="hunmonk"
-DEFAULT_STORAGE_LOCATION="/media/hunmonk/VIDEO"
+DEFAULT_STORAGE_LOCATION="/media/hunmonk/storage/video"
 
 function usage() {
   echo "
