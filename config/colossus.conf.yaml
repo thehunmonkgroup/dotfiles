@@ -179,6 +179,9 @@
     ~/bin/camera-reboot.sh:
       create: true
       path: bin/camera-reboot.sh
+    ~/bin/check-beast-raid.sh:
+      create: true
+      path: bin/check-beast-raid.sh
     ~/bin/chrome-ignore-certificate-errors.sh:
       create: true
       path: bin/chrome-ignore-certificate-errors.sh
@@ -248,6 +251,9 @@
     ~/bin/store-media.sh:
       create: true
       path: bin/store-media.sh
+    ~/bin/sync-resolve-data.sh:
+      create: true
+      path: bin/sync-resolve-data.sh
     ~/bin/tw-move-project.sh:
       create: true
       path: bin/tw-move-project.sh
