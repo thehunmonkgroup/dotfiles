@@ -22,11 +22,11 @@ ensure_task() {
     [[ ${custom_tag} != +* ]] && custom_tag="+${custom_tag}"
 
     # Check if the task already exists
-    if task rc.verbose=0 rc.confirmation=0 project:INBOX +PENDING "+${AUTOTASK_TAG}" "${custom_tag}" count 2>/dev/null | grep -q '1'; then
+    if task rc.hooks=0 rc.verbose=0 rc.confirmation=0 project:INBOX +PENDING "+${AUTOTASK_TAG}" "${custom_tag}" count 2>/dev/null | grep -q '1'; then
         log_message "info" "Task already exists: ${custom_tag} ${description}"
     else
         # Add the task
-        if task rc.verbose=0 rc.confirmation=0 add project:INBOX "+${AUTOTASK_TAG}" "${custom_tag}" "${description}"; then
+        if task rc.hooks=0 rc.verbose=0 rc.confirmation=0 add project:INBOX "+${AUTOTASK_TAG}" "${custom_tag}" "${description}"; then
             log_message "info" "Added new task: ${custom_tag} ${description}"
         else
             log_message "err" "Failed to add task: ${custom_tag} ${description}"
