@@ -40,3 +40,6 @@
 
 # Egg files
 *.egg-info/
+
+# Aider files
+.aider*
