@@ -231,7 +231,7 @@ auto-commits: false
 #read:
 
 ## Use VI editing mode in the terminal (default: False)
-vim: true
+# vim: false
 
 ## Specify the language for voice using ISO 639-1 code (default: auto)
 #voice-language: en
