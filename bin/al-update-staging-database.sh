@@ -13,10 +13,18 @@ function usage() {
   echo "
 Usage: ${PROGNAME} help | execute
 
- Operations on Apartment Lines S3 storage.
+ Update Apartment Lines databases on staging and local environments.
 
-  execute: Execute the update action.
-  help: This help.
+  execute: Perform the following actions:
+           1. Update staging databases:
+              - Migrate production S3 databases to staging
+              - Update databases on staging servers
+              - Reconfigure database replication
+           2. Update local databases:
+              - Update databases on local servers
+              - Reconfigure database replication
+              - Restart local servers in standalone mode
+  help: Display this help message.
 
 With no arguments, show this help.
 "
