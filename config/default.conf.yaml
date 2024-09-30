@@ -32,6 +32,7 @@
     ~/.git-repositories:
     ~/.liquidprompt.ps1:
     ~/.liquidpromptrc:
+    ~/.sqliterc:
     ~/.tmux.conf:
     ~/.vim/autoload/pathogen.vim:
       create: true
