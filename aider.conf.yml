@@ -285,5 +285,5 @@ auto-commits: false
 #gui: false
 
 ## Enable/disable suggesting shell commands (default: True)
-#suggest-shell-commands: true
+suggest-shell-commands: false
 
