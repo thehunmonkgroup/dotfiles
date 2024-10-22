@@ -25,10 +25,14 @@
     ~/bin/ix:
       create: true
       path: bin/ix
+    ~/.config/git/config:
+      create: true
+      path: git/config
+    ~/.config/git/ignore:
+      create: true
+      path: git/ignore
     ~/.colordiffrc:
     ~/.curlrc:
-    ~/.gitconfig:
-    ~/.gitignore:
     ~/.git-repositories:
     ~/.liquidprompt.ps1:
     ~/.liquidpromptrc:

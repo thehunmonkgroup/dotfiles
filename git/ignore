@@ -43,3 +43,6 @@
 
 # Aider files
 .aider*
+
+# Env files
+.env
