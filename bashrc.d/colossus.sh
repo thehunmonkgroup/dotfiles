@@ -13,8 +13,8 @@ alias sy="cat ~/sync-status.txt"
 alias cdns="sudo killall -HUP mDNSResponder; echo 'DNS cache cleared'"
 
 # lifetolive.one aliases
-alias vlog="v ~/Documents/mcg/video-log.otl"
-alias writ="v ~/Documents/mcg/writing-ideas.otl"
+alias vlog="v ~/Documents/ltl/video-log.otl"
+alias writ="v ~/Documents/ltl/writing-ideas.otl"
 alias food="v ~/Documents/reference/health/food-journal.md"
 
 

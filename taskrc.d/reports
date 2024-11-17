@@ -107,11 +107,11 @@ report.phone.labels=ID,Project,Description,Tags,Starts,Due
 report.phone.sort=project+/,urgency-
 report.phone.filter=+PENDING +phone
 
-report.mcg.description=midlifecrisisguy.com
-report.mcg.columns=id,project,description.desc,tags,scheduled,due
-report.mcg.labels=ID,Project,Description,Tags,Starts,Due
-report.mcg.sort=project+/,urgency-
-report.mcg.filter=+PENDING project:art.mcg -hold -archive
+report.ltl.description=lifetolive.one
+report.ltl.columns=id,project,description.desc,tags,scheduled,due
+report.ltl.labels=ID,Project,Description,Tags,Starts,Due
+report.ltl.sort=project+/,urgency-
+report.ltl.filter=+PENDING project:art.ltl -hold -archive
 
 report.maybe.description=Maybe/somday
 report.maybe.columns=id,project,description.desc,tags
