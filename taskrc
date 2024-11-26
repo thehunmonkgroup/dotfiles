@@ -35,4 +35,6 @@ include ~/.taskrc.d/formatting
 include ~/.taskrc.d/reports
 include ~/.taskrc.d/urgency
 
+news.version=2.6.0
+
 # vi: ft=dosini
