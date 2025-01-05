@@ -64,7 +64,7 @@
     ~/.bashrc.d/luver.sh:
       create: true
       path: bashrc.d/luver.sh
-    ~/.bashrc.d/linuxbrew.sh:
+    ~/.bashrc.d/001-linuxbrew.sh:
       create: true
       path: bashrc.d/linuxbrew.sh
     ~/.bashrc.d/nvim.sh:
