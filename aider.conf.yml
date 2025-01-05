@@ -355,3 +355,4 @@ show-diffs: true
 auto-commits: false
 skip-sanity-check-repo: true
 suggest-shell-commands: false
+model: deepseek
