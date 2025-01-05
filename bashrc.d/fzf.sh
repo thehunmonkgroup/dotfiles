@@ -22,7 +22,7 @@ if [ -f "$FZF_PATH/shell/completion.bash" ]; then
 
     # Directory completion
     _fzf_compgen_dir() {
-        fd --type d --hidden --follow --exclude ".git" . "$1"
+        fdfind --type d --hidden --follow --exclude ".git" . "$1"
     }
 
     # Useful keybinding for editor integration
