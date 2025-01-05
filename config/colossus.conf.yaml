@@ -40,9 +40,6 @@
     ~/.bashrc.d/bash-completion.sh:
       create: true
       path: bashrc.d/bash-completion.sh
-    ~/.bashrc.d/brew-cask.sh:
-      create: true
-      path: bashrc.d/brew-cask.sh
     ~/.bashrc.d/colossus.sh:
       create: true
       path: bashrc.d/colossus.sh
