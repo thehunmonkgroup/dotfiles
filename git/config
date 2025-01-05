@@ -10,7 +10,7 @@
   st = status -sb
   conflicts = diff --name-only --diff-filter=U
 [core]
-  pager = less -r
+  # pager = less -r
   filemode = true
 [branch]
   autosetuprebase = always
@@ -42,3 +42,13 @@
   autosquash = true
 [tag]
   sort = -version:refname
+
+
+# Delta configuration.
+[core]
+  pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
