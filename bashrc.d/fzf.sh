@@ -12,8 +12,11 @@ if [ -f "$FZF_PATH/shell/completion.bash" ]; then
     # Apply the command to CTRL-T as well
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-    # Add preview window
-    export FZF_DEFAULT_OPTS="--preview 'batcat --style=numbers --color=always --line-range :500 {}'"
+    # Default options without preview
+    export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border"
+
+    # File-specific preview options for commands that work with files
+    export FZF_CTRL_T_OPTS="--preview 'batcat --style=numbers --color=always --line-range :500 {}'"
 
     # Custom path completion for common commands
     _fzf_compgen_path() {
@@ -25,6 +28,20 @@ if [ -f "$FZF_PATH/shell/completion.bash" ]; then
         fdfind --type d --hidden --follow --exclude ".git" . "$1"
     }
 
+    # Command-specific preview window configuration for fzf completion
+    # - First argument ($1) is the command name being completed
+    # - Remaining arguments ($@) must be passed to fzf
+    _fzf_comprun() {
+      local command=$1
+      shift
+      case "$command" in
+        cd)      fzf "$@" --preview 'tree -C {} | head -200' ;;
+        *)       fzf "$@" ;;
+      esac
+    }
+
     # Useful keybinding for editor integration
-    bind -x '"\C-p": ${EDITOR:-vim} $(fzf);'
+    if [[ $- == *i* ]] && [[ -t 1 ]]; then
+        bind -x '"\C-p": ${EDITOR:-vim} $(fzf);'
+    fi
 fi
