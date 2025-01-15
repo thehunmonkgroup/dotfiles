@@ -1,0 +1,1 @@
+alias aider='branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "default"); timestamp=$(date "+%Y%m%d_%H%M"); mkdir -p ".aider.history/$(dirname "$branch")" ; aider --input-history-file ".aider.history/$branch-$timestamp.input.md" --chat-history-file ".aider.history/$branch-$timestamp.chat.md"'

@@ -28,6 +28,9 @@
       create: true
       path: bash_completion.d/vagrant
 
+    ~/.bashrc.d/aider.sh:
+      create: true
+      path: bashrc.d/aider.sh
     ~/.bashrc.d/android.sh:
       create: true
       path: bashrc.d/android.sh
