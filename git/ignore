@@ -38,6 +38,9 @@
 # pyenv version files.
 .python-version
 
+# pyright config files
+pyrightconfig.json
+
 # Egg files
 *.egg-info/
 
