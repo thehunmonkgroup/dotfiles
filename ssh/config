@@ -565,6 +565,14 @@ Host beast
   User hunmonk
   HostKeyAlias beast
 
+Host remote-beast
+  Hostname 45.46.89.55
+  Port 10022
+  User hunmonk
+  HostKeyAlias remote-beast
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 
 # Global defaults.
 Host *
