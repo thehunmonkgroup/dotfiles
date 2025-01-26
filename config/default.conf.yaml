@@ -7,6 +7,9 @@
 
 - link:
     ~/.bashrc:
+    ~/.bashrc.d/fzf.sh:
+      create: true
+      path: bashrc.d/fzf.sh
     ~/.bashrc.d/liquidprompt.sh:
       create: true
       path: bashrc.d/liquidprompt.sh

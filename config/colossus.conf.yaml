@@ -55,9 +55,6 @@
     ~/.bashrc.d/flatpak.sh:
       create: true
       path: bashrc.d/flatpak.sh
-    ~/.bashrc.d/fzf.sh:
-      create: true
-      path: bashrc.d/fzf.sh
     ~/.bashrc.d/go.sh:
       create: true
       path: bashrc.d/go.sh
