@@ -573,6 +573,14 @@ Host remote-beast
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host remote-colossus
+  Hostname 45.46.89.55
+  Port 20022
+  User hunmonk
+  HostKeyAlias remote-colossus
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 
 # Global defaults.
 Host *
