@@ -1,0 +1,34 @@
+- name: openrouter/anthropic/claude-3.5-sonnet
+  extra_params:
+    extra_body:
+      provider:
+        # Only use these providers, in this order
+        order: ["Anthropic", "Together"]
+        # Don't fall back to other providers
+        allow_fallbacks: false
+        # Skip providers that may train on inputs
+        data_collection: "deny"
+        # Only use providers supporting all parameters
+        require_parameters: true
+
+- name: openrouter/deepseek/deepseek-r1
+  extra_params:
+    extra_body:
+      provider:
+        # Only use these providers, in this order
+        order: ["Nebius", "Fireworks", "Kluster"]
+        # Don't fall back to other providers
+        allow_fallbacks: false
+        # Skip providers that may train on inputs
+        data_collection: "deny"
+        # Only use providers supporting all parameters
+        require_parameters: true
+
+- name: openrouter/deepseek/deepseek-chat
+  extra_params:
+    extra_body:
+      provider:
+        # Skip providers that may train on inputs
+        data_collection: "deny"
+        # Only use providers supporting all parameters
+        require_parameters: true

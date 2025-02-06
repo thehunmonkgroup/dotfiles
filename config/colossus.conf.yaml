@@ -127,6 +127,7 @@
       path: config/pycodestyle
 
     ~/.aider.conf.yml:
+    ~/.aider.model.settings.yml:
     ~/.fscom_config:
     ~/.flake8:
     ~/.gvimrc:
