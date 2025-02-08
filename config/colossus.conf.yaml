@@ -91,6 +91,9 @@
     ~/.bashrc.d/pyenv.sh:
       create: true
       path: bashrc.d/pyenv.sh
+    ~/.bashrc.d/rustup.sh:
+      create: true
+      path: bashrc.d/rustup.sh
     ~/.bashrc.d/rvm.sh:
       create: true
       path: bashrc.d/rvm.sh
