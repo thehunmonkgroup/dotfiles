@@ -103,6 +103,9 @@
     ~/.bashrc.d/ssh.sh:
       create: true
       path: bashrc.d/ssh.sh
+    ~/.bashrc.d/starship.sh:
+      create: true
+      path: bashrc.d/starship.sh
     ~/.bashrc.d/stirlab.sh:
       create: true
       path: bashrc.d/stirlab.sh
