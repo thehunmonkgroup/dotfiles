@@ -40,7 +40,8 @@
     # ~/.liquidprompt.ps1:
     # ~/.liquidpromptrc:
     ~/.sqliterc:
-    ~/.tmux.conf:
+    ~/.config/tmux:
+      path: tmux
     ~/.vim/autoload/pathogen.vim:
       create: true
       path: vim/autoload/pathogen.vim
