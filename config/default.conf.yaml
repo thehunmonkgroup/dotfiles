@@ -10,9 +10,9 @@
     ~/.bashrc.d/fzf.sh:
       create: true
       path: bashrc.d/fzf.sh
-    ~/.bashrc.d/liquidprompt.sh:
-      create: true
-      path: bashrc.d/liquidprompt.sh
+    # ~/.bashrc.d/liquidprompt.sh:
+    #   create: true
+    #   path: bashrc.d/liquidprompt.sh
     ~/.bashrc.d/salt.sh:
       create: true
       path: bashrc.d/salt.sh
