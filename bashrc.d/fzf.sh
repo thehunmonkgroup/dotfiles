@@ -1,10 +1,9 @@
-USR_SHARE_DIR="/usr/share"
+FZF_PATH="$(brew --prefix)/opt/fzf"
 
 # Check if both fzf completion and key-bindings files exist before proceeding
-if [ -f "${USR_SHARE_DIR}/bash-completion/completions/fzf" ] && [ -f "${USR_SHARE_DIR}/doc/fzf/examples/key-bindings.bash" ]; then
-    # Source fzf keybindings and completion from Homebrew installation
-    source "${USR_SHARE_DIR}/doc/fzf/examples/key-bindings.bash"
-    source "${USR_SHARE_DIR}/bash-completion/completions/fzf"
+if [ -f "${FZF_PATH}/shell/completion.bash" ] && [ -f "${FZF_PATH}/shell/key-bindings.bash" ]; then
+    source "${FZF_PATH}/shell/completion.bash"
+    source "${FZF_PATH}/shell/key-bindings.bash"
 
     # Use ripgrep as the default source for fzf
     export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
