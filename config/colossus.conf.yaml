@@ -131,6 +131,9 @@
     ~/.config/nvim/ginit.vim:
       create: true
       path: nvim/ginit.vim
+    ~/.config/lazygit/config.yml:
+      create: true
+      path: lazygit/config.yml
     ~/.config/pycodestyle:
       create: true
       path: config/pycodestyle
