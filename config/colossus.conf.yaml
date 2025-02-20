@@ -121,6 +121,9 @@
     ~/.bashrc.d/vit.sh:
       create: true
       path: bashrc.d/vit.sh
+    ~/.bashrc.d/zoxide.sh:
+      create: true
+      path: bashrc.d/zoxide.sh
 
     ~/.config/letsencrypt/cli.ini:
       create: true
