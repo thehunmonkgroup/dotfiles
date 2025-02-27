@@ -1,8 +1,6 @@
-if [ -n "`which brew`" ]; then
-  export NVM_DIR="$(brew --prefix nvm)/.nvm"
-else
-  export NVM_DIR="$HOME/.nvm"
+if [ -n "$(which brew)" ]; then
+  export NVM_DIR="${HOME}/.nvm"
+  NVM_BASE_DIR="$(brew --prefix nvm)"
+  [ -s "${NVM_BASE_DIR}/nvm.sh" ] && \. "${NVM_BASE_DIR}/nvm.sh"  # This loads nvm
+  [ -s "${NVM_BASE_DIR}/etc/bash_completion.d/nvm" ] && \. "${NVM_BASE_DIR}/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
