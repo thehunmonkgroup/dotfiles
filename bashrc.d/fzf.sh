@@ -1,9 +1,19 @@
-FZF_PATH="$(brew --prefix)/opt/fzf"
+if [ -n "$(command -v brew 2>&1)" ]; then
+  FZF_PATH="$(brew --prefix)/opt/fzf"
+  FZF_KEYBINDINGS="${FZF_PATH}/shell/completion.bash"
+  FZF_COMPLETIONS="${FZF_PATH}/shell/key-bindings.bash"
+else
+  USR_SHARE_DIR="/usr/share"
+  FZF_KEYBINDINGS="${USR_SHARE_DIR}/doc/fzf/examples/key-bindings.bash"
+  FZF_COMPLETIONS="${USR_SHARE_DIR}/bash-completion/completions/fzf"
+fi
 
 # Check if both fzf completion and key-bindings files exist before proceeding
-if [ -f "${FZF_PATH}/shell/completion.bash" ] && [ -f "${FZF_PATH}/shell/key-bindings.bash" ]; then
-    source "${FZF_PATH}/shell/completion.bash"
-    source "${FZF_PATH}/shell/key-bindings.bash"
+if [ -f "${FZF_KEYBINDINGS}" ] && [ -f "${FZF_COMPLETIONS}" ]; then
+    # shellcheck source=/dev/null
+    source "${FZF_KEYBINDINGS}"
+    # shellcheck source=/dev/null
+    source "${FZF_COMPLETIONS}"
 
     # Use ripgrep as the default source for fzf
     export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
