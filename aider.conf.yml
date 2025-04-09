@@ -350,14 +350,22 @@
 ## Specify the language for voice using ISO 639-1 code (default: auto)
 #voice-language: en
 
+read:
+  - /home/hunmonk/git/coding-guidelines/comments.md
+
 dark-mode: true
 show-diffs: true
 auto-commits: false
 skip-sanity-check-repo: true
 suggest-shell-commands: false
-# model: o3-mini
+# architect: true
+
+# thinking-tokens: 16000
 # reasoning-effort: high
-architect: true
-model: openrouter/deepseek/deepseek-r1
-editor-model: sonnet
-weak-model: openrouter/deepseek/deepseek-chat
+
+# model: sonnet
+# model: o3-mini
+# model: openrouter/deepseek/deepseek-r1
+# editor-model: sonnet
+# weak-model: openrouter/deepseek/deepseek-chat
+model: gemini-2.5-pro
