@@ -25,8 +25,12 @@ alias fin="cd ~/Documents/reference && gocryptfs finance.encrypted security && c
 # LLM Workflow Engine.
 alias lwe="cd ~/git/llm-workflow-engine && lwe --log ~/.local/share/llm-workflow-engine/logs/$(date +%Y-%m-%d).log"
 
+# Aider
+alias aio="pyenv shell aider"
+alias aic="pyenv shell --unset"
+
 # Shortcut to kill python-lsp-server, it goes nuts sometimnes and hogs CPU.
-alias pylsp_slayer='pgrep -f python-lsp-server | sort -n | head -n 1 | xargs kill -9 && echo "Killed python-lsp-server"'
+# alias pylsp_slayer='pgrep -f python-lsp-server | sort -n | head -n 1 | xargs kill -9 && echo "Killed python-lsp-server"'
 
 ###############################################################################
 # FUNCTIONS
