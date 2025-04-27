@@ -364,8 +364,8 @@ suggest-shell-commands: false
 # reasoning-effort: high
 
 # model: sonnet
-# model: o3-mini
+# model: o4-mini
 # model: openrouter/deepseek/deepseek-r1
 # editor-model: sonnet
 # weak-model: openrouter/deepseek/deepseek-chat
-model: gemini-2.5-pro
+model: gemini
