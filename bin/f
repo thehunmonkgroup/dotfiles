@@ -10,10 +10,4 @@
 
 default_newlines=100
 newlines=${1:-$default_newlines}
-
-for (( c=1; c<=$newlines; c++ ))
-do
-  newline_string="${newline_string}\n"
-done
-
-echo -e $newline_string
+yes "" | head -n "${newlines}"
