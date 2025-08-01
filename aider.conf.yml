@@ -361,11 +361,12 @@ suggest-shell-commands: false
 # architect: true
 
 # thinking-tokens: 16000
-# reasoning-effort: high
+reasoning-effort: high
 
 # model: sonnet
 # model: o4-mini
 # model: openrouter/deepseek/deepseek-r1
 # editor-model: sonnet
 # weak-model: openrouter/deepseek/deepseek-chat
-model: gemini
+# model: gemini
+model: o3
