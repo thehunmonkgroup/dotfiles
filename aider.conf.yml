@@ -369,4 +369,5 @@ reasoning-effort: high
 # editor-model: sonnet
 # weak-model: openrouter/deepseek/deepseek-chat
 # model: gemini
-model: o3
+# model: o3
+model: gpt-5
