@@ -581,6 +581,12 @@ Host remote-colossus
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host prisma-tensordock
+  Hostname pvb.xylil.com
+  Port 22
+  User root
+  HostKeyAlias prisma-tensordock
+
 
 # Global defaults.
 Host *
