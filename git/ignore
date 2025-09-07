@@ -49,3 +49,5 @@ pyrightconfig.json
 
 # Env files
 .env
+
+**/.claude/settings.local.json
