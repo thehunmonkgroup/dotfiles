@@ -40,6 +40,9 @@
     ~/.bashrc.d/awscli.sh:
       create: true
       path: bashrc.d/awscli.sh
+    ~/.bashrc.d/codex-session-picker.sh:
+      create: true
+      path: bashrc.d/codex-session-picker.sh
     ~/.bashrc.d/bash-completion.sh:
       create: true
       path: bashrc.d/bash-completion.sh
