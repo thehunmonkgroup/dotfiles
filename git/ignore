@@ -38,6 +38,9 @@
 # pyenv version files.
 .python-version
 
+# Python cache files.
+__pycache__
+
 # pyright config files
 pyrightconfig.json
 
