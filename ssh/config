@@ -463,6 +463,14 @@ Host xylil.local
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
+Host voicebot1.local
+  Hostname localhost
+  Port 10510
+  User root
+  HostKeyAlias voicebot1.local
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host rails.local
   Hostname localhost
   Port 2296

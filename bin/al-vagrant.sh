@@ -30,7 +30,8 @@ voice1-central.local
 web1-central.local
 orch.local
 repo.local
-monitor.local"
+monitor.local
+voicebot1.local"
 
 standalone_server="union1-east.local"
 
