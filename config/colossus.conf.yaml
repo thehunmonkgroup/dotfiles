@@ -97,6 +97,9 @@
     ~/.bashrc.d/rustup.sh:
       create: true
       path: bashrc.d/rustup.sh
+    ~/.bashrc.d/quine.sh:
+      create: true
+      path: bashrc.d/quine.sh
     ~/.bashrc.d/rvm.sh:
       create: true
       path: bashrc.d/rvm.sh
