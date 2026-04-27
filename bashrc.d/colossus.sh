@@ -29,6 +29,9 @@ alias lwe="cd ~/git/llm-workflow-engine && lwe --log ~/.local/share/llm-workflow
 alias aio="pyenv shell aider"
 alias aic="pyenv shell --unset"
 
+# Google drive mount.
+alias drivemount="rclone mount google-team: ~/Documents/apartmentlines/google-drive/team"
+
 # Shortcut to kill python-lsp-server, it goes nuts sometimnes and hogs CPU.
 # alias pylsp_slayer='pgrep -f python-lsp-server | sort -n | head -n 1 | xargs kill -9 && echo "Killed python-lsp-server"'
 
