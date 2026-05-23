@@ -278,6 +278,13 @@ Host temp
   #ForwardX11 yes
   #ForwardX11Trusted yes
 
+Host hermes
+  Hostname localhost
+  Port 10610
+  User root
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host vagrant-pijaz
 	Hostname localhost
 	Port 2222
