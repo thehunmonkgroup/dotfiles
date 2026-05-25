@@ -41,6 +41,9 @@
 # Python cache files.
 __pycache__
 
+# Flake8 config
+.flake8
+
 # pyright config files
 pyrightconfig.json
 
