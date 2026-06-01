@@ -1,4 +1,4 @@
-if [ -n "$(command -v brew 2>&1)" ]; then
+if command -v brew >/dev/null 2>&1; then
   FZF_PATH="$(brew --prefix)/opt/fzf"
   FZF_COMPLETIONS="${FZF_PATH}/shell/completion.bash"
   FZF_KEYBINDINGS="${FZF_PATH}/shell/key-bindings.bash"
@@ -9,11 +9,11 @@ else
 fi
 
 # Check if both fzf completion and key-bindings files exist before proceeding
-if [ -f "${FZF_KEYBINDINGS}" ] && [ -f "${FZF_COMPLETIONS}" ]; then
-    # shellcheck source=/dev/null
-    source "${FZF_KEYBINDINGS}"
+if [ -f "${FZF_COMPLETIONS}" ] && [ -f "${FZF_KEYBINDINGS}" ]; then
     # shellcheck source=/dev/null
     source "${FZF_COMPLETIONS}"
+    # shellcheck source=/dev/null
+    source "${FZF_KEYBINDINGS}"
 
     # Use ripgrep as the default source for fzf
     export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
@@ -29,12 +29,12 @@ if [ -f "${FZF_KEYBINDINGS}" ] && [ -f "${FZF_COMPLETIONS}" ]; then
 
     # Custom path completion for common commands
     _fzf_compgen_path() {
-        rg --files --follow --glob "!.git/*" "${1:-.}"
+        rg --files --hidden --follow --glob "!.git/*" "${1:-.}"
     }
 
     # Directory completion
     _fzf_compgen_dir() {
-        fdfind --type d --hidden --follow --exclude ".git" . "${1}"
+        fdfind --type d --hidden --follow --exclude ".git" . "${1:-.}"
     }
 
     # Command-specific preview window configuration for fzf completion
