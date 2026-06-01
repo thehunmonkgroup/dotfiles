@@ -1,7 +1,7 @@
 if [ -n "$(command -v brew 2>&1)" ]; then
   FZF_PATH="$(brew --prefix)/opt/fzf"
-  FZF_KEYBINDINGS="${FZF_PATH}/shell/completion.bash"
-  FZF_COMPLETIONS="${FZF_PATH}/shell/key-bindings.bash"
+  FZF_COMPLETIONS="${FZF_PATH}/shell/completion.bash"
+  FZF_KEYBINDINGS="${FZF_PATH}/shell/key-bindings.bash"
 else
   USR_SHARE_DIR="/usr/share"
   FZF_KEYBINDINGS="${USR_SHARE_DIR}/doc/fzf/examples/key-bindings.bash"
