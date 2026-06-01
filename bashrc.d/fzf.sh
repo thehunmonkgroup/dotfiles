@@ -29,7 +29,7 @@ if [ -f "${FZF_KEYBINDINGS}" ] && [ -f "${FZF_COMPLETIONS}" ]; then
 
     # Custom path completion for common commands
     _fzf_compgen_path() {
-        rg --files --glob "!.git" . "${1}"
+        rg --files --follow --glob "!.git/*" "${1:-.}"
     }
 
     # Directory completion
