@@ -584,7 +584,7 @@ Host beast
   HostKeyAlias beast
 
 Host remote-beast
-  Hostname 45.46.89.55
+  Hostname 173.48.138.251
   Port 10022
   User hunmonk
   HostKeyAlias remote-beast
