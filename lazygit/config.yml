@@ -1,7 +1,7 @@
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --dark --diff-so-fancy --paging=never
+      command: delta --dark --diff-so-fancy --paging=never
 gui:
   theme:
     activeBorderColor:
