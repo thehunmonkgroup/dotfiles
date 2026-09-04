@@ -131,6 +131,9 @@
       create: true
       path: bashrc.d/zoxide.sh
 
+    ~/.config/ghostty/config.ghostty:
+      create: true
+      path: ghostty/config.ghostty
     ~/.config/letsencrypt/cli.ini:
       create: true
       path: letsencrypt/cli.ini
@@ -142,7 +145,7 @@
       path: lazygit/config.yml
     ~/.config/pycodestyle:
       create: true
-      path: config/pycodestyle
+      path: pycodestyle
     ~/.config/starship.toml:
       create: true
       path: starship.toml

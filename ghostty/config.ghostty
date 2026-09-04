@@ -1,0 +1,32 @@
+auto-update = off
+
+theme = Catppuccin Mocha
+font-family = UbuntuMono Nerd Font
+
+window-show-tab-bar = auto
+working-directory = home
+tab-inherit-working-directory = false
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+adjust-cell-height = 8%
+window-theme = ghostty
+gtk-titlebar-style = tabs
+gtk-toolbar-style = flat
+unfocused-split-opacity = 0.85
+split-divider-color = #89b4fa
+cursor-style-blink = false
+minimum-contrast = 1.1
+mouse-scroll-multiplier = precision:3,discrete:9
+link-url = true
+selection-word-chars = " \t"
+scrollback-limit = 10000000
+bell-features = no-system,no-audio
+
+keybind = alt+arrow_left=previous_tab
+keybind = alt+arrow_right=next_tab
+keybind = alt+arrow_up=toggle_tab_overview
+keybind = alt+shift+arrow_left=move_tab:-1
+keybind = alt+shift+arrow_right=move_tab:1
+keybind = alt+c=copy_to_clipboard:plain
+keybind = alt+v=paste_from_clipboard
