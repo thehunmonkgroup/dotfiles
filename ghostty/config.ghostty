@@ -19,7 +19,8 @@ cursor-style-blink = false
 minimum-contrast = 1.1
 mouse-scroll-multiplier = precision:3,discrete:9
 link-url = true
-selection-word-chars = " \t"
+# Use default word boundaries, including quotes, brackets, and parentheses.
+selection-word-chars =
 scrollback-limit = 10000000
 bell-features = no-system,no-audio
 
